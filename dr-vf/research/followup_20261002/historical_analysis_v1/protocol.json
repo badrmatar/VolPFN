@@ -1,0 +1,31 @@
+{
+  "blocks": [
+    60,
+    20,
+    120
+  ],
+  "direction": "Historical regularized loss minus synthetic loss; positive favours synthetic",
+  "inputs": {
+    "full": {
+      "path": "/Users/badrmatar/.codex/worktrees/e786/Diss_Project/dr-vf/research/outputs/experiment_programme_20260930/component_aggregate_v1/component_evaluation/full/forecasts.csv",
+      "sha256": "179a452a02bc324305ccae944224a25fb314cfd15b773e7851ad50ed0a252a4d"
+    },
+    "historical": {
+      "path": "/Users/badrmatar/.codex/worktrees/e786/Diss_Project/dr-vf/research/outputs/experiment_programme_20260930/component_aggregate_v1/component_evaluation/historical/forecasts.csv",
+      "sha256": "5770ab9d7013eea394facd46abec6f8c8c52766cc351a1d4464bed25dbb4cc00"
+    },
+    "noaux": {
+      "path": "/Users/badrmatar/.codex/worktrees/e786/Diss_Project/dr-vf/research/outputs/experiment_programme_20260930/component_aggregate_v1/component_evaluation/noaux/forecasts.csv",
+      "sha256": "e24b2d64307f4dcd7673365d664591ea91e36412675f057b5ec800beb31650e8"
+    }
+  },
+  "interpretation": "Comparisons of fixed synthetic and development-selected regularized historical procedures; not isolated prior-distribution effects",
+  "primary_family": [
+    "noaux_vs_historical_regularized_qlike",
+    "full_vs_historical_regularized_qlike"
+  ],
+  "resamples": 20000,
+  "scope": "Retrospective follow-up; primary training/stopping rules frozen before runs. This analysis specification is recorded after the first new seed result became visible, before the other four completed. No untouched or formal preregistration claim.",
+  "secondary": "native density NLL and common zero-mean t8 NLL descriptive; no native density for models without it",
+  "seed": 2026100202
+}

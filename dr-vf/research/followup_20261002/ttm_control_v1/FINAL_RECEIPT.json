@@ -1,0 +1,18 @@
+{
+  "POST_WARMUP_DIAGNOSTIC.json": "4d332597f4db9ef732905d96a0bf04c208464b733f5ae34344974ca1396639c1",
+  "VERIFICATION.json": "5df8cf09a0267f404032ff1a6af3e6b054a688f0ab3b9dbacb20bd56db751e0a",
+  "inputs/common_mask.csv": "c1e262035ec33ded660150b7e646d4989a63cf3f269d4ec8647d35f6184d138c",
+  "inputs/row_forecasts/gjr_garch_t+ttm_rk.csv.gz": "eccdc09d7cfffcccdd2914eb6c8598cacc080c8acfec737ca7845a4e359f7a0b",
+  "inputs/row_forecasts/ttm_rk.csv.gz": "71305c6334dd9b9194cff7b5247a2fbd62ca83485ef13736f8a590411443d9ac",
+  "inputs/row_forecasts/volpfn_20260930_full+ttm_rk.csv.gz": "31f6ef311790159c06e878fc072826e27176c6c5a51bcadba46a58f9ff6958fd",
+  "leaderboard.csv": "e15ed83cca66f0749ba7ba6c334eb73bfda14af29ec1c44d15b8a221c54e431d",
+  "protocol.json": "c803ebf88b5a526f09d9e4832a8621318c56b50ca7524fb6198f8eaf17ee2838",
+  "row_forecasts/gjr_garch_t+ttm_rk.csv.gz": "db3d52ad13d4f550a9f261a753f63c3aade8fe6b157904d5fcf3699b0f18d2f0",
+  "row_forecasts/ttm_affine.csv.gz": "ee9aa373c5fcb5cb0e042e369826aa7058bfd584037d8811fb5b69eff10954fa",
+  "row_forecasts/ttm_rk.csv.gz": "86213f6e0348ab44f7c786b506f2e5c06cf1c6f985d0d6411b43538d3d4f63b2",
+  "row_forecasts/ttm_scale.csv.gz": "531502873d82e845d8460295f8cb75f73a1d47de50442620e62cf3c6fb815c8d",
+  "row_forecasts/volpfn_20260930_full+ttm_rk.csv.gz": "1f0c77e5bd3b37b396c1d070ea5a1dbf401f92469a2e5de97836e183805e1aef",
+  "statistics.json": "dc61088cadb067a310374f1390dadcedfe68c9bb8b294b0420e2434a99a5db3c",
+  "ttm_control_source.py": "56b64fdaf5b499c9550e42088316afe1d9d8d15b1301b8d316254684beac6856",
+  "weights.json": "054d566030743618df4e6c50caec4d5cd1a8096b701e9b6f9eb84aa29e2a20da"
+}

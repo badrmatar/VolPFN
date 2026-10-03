@@ -1,0 +1,26 @@
+{
+  "bootstrap": {
+    "blocks": [
+      60,
+      20,
+      120
+    ],
+    "resamples": 20000,
+    "seed": 2026100203
+  },
+  "comparisons": "Blend minus each control, both proxies; 4-slot Holm family; raw TTM and GJR+TTM descriptive",
+  "created_utc": "2026-10-02T17:18:54.444334+00:00",
+  "input_hashes": {
+    "inputs/common_mask.csv": "c1e262035ec33ded660150b7e646d4989a63cf3f269d4ec8647d35f6184d138c",
+    "inputs/row_forecasts/gjr_garch_t+ttm_rk.csv.gz": "eccdc09d7cfffcccdd2914eb6c8598cacc080c8acfec737ca7845a4e359f7a0b",
+    "inputs/row_forecasts/ttm_rk.csv.gz": "71305c6334dd9b9194cff7b5247a2fbd62ca83485ef13736f8a590411443d9ac",
+    "inputs/row_forecasts/volpfn_20260930_full+ttm_rk.csv.gz": "31f6ef311790159c06e878fc072826e27176c6c5a51bcadba46a58f9ff6958fd",
+    "ttm_control_source.py": "56b64fdaf5b499c9550e42088316afe1d9d8d15b1301b8d316254684beac6856"
+  },
+  "kind": "retrospective_TTM_online_calibration_control_v1",
+  "primary_control": "ttm_affine: log h = a + b log hTTM, two fitted parameters like the blend",
+  "proxies": "Separate r2 and RK fits, identical original masks and units; not a coherent joint density",
+  "schedule": "First 60 union dates raw TTM; pooled QLIKE on strictly earlier completed union dates only; refit every 20 union dates",
+  "scope": "Conditional saved-forecast calendar uncertainty; excludes online calibration re-estimation, training/pretraining and research-selection uncertainty; exposed retrospective panel",
+  "secondary_control": "ttm_scale: analytic multiplicative calibration, one parameter"
+}

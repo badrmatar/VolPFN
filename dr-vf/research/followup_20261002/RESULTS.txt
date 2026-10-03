@@ -1,0 +1,70 @@
+FOLLOW-UP EXPERIMENTS — 2 OCTOBER 2026
+
+All new work is in research/followup_20261002. Earlier code, data, checkpoints, forecast files, dissertation versions and GPU pods were preserved. ORIGINALS_PRESERVED.json verifies the consumed old inputs. Five new H100 pods were used; all are stopped after downloading and verifying the completed results. GPU_CLEANUP.json records their final states.
+
+2. DEVELOPMENT-SELECTED HISTORICAL COMPARATOR
+
+All five seeds (8101–8105) completed. The same base VolPFN mixture model was trained on the retained 28 markets through 2010-12-31, with no auxiliary latent labels. The new procedure adds residual dropout 0.1, AdamW weight decay 0.1 and learning rate 0.0001. It uses 8,192 input positions per update, a 20,000-update cap and six non-improving development checks for stopping.
+
+Checkpoint selection used equal-market squared-return QLIKE on 1,792 fixed, evenly spaced 2011–2014 development origins, with 1,024 preceding sessions per forecast. Every seed selected update 500 and stopped at update 3,500. Final evaluation retained the exact original 50,073 rows per seed from 2015 through 2022-02-25, including zero returns.
+
+Mean QLIKE (lower is better):
+  Synthetic no-auxiliary model:             0.590118
+  Synthetic full VolPFN:                   0.590700
+  New regularized historical procedure:    0.602085
+  Preserved original fixed-final historical run: 221.292094
+
+New historical seed scores: 0.600664, 0.600698, 0.612527, 0.600172 and 0.596363. The new historical model has one QLIKE>100 event per seed, versus 15,163 such events across the original historical model's five seeds. These exceptional days were retained.
+
+Synthetic noaux improves on the new historical procedure by 0.011966 QLIKE; full VolPFN improves by 0.011385. Both corrected primary p-values are 0.079196 in the two-comparison family. Neither comparison meets the registered superiority criterion. The lead has the same sign in all five paired seeds, but the calendar uncertainty remains material. This conclusion also holds under the 20- and 120-date block sensitivities.
+
+Native NLL averages: full 1.178272, noaux 1.177252, regularized historical 1.202152. Common zero-mean t8 NLL averages: full 1.184313, noaux 1.183908, regularized historical 1.187763. These density endpoints are descriptive here.
+
+Interpretation: development selection and regularisation make historical training competitive. The synthetic models retain a modest point-estimate lead. The original failed procedure is an optimization diagnostic and must be reported separately from this stronger comparison. The new procedure changes regularisation, checkpoint selection and training distribution together; selected-update budgets differ from the fixed-final synthetic runs, so this comparison does not isolate a single prior or architecture effect.
+
+3. TTM-ONLY CAUSAL CALIBRATION CONTROL
+
+The original 22,026 market-day rows, 28 markets, dates, targets and saved forecasts were retained. The primary TTM-only control fits log h = a + b log hTTM, giving it two fitted parameters, like the blend. A secondary control fits a multiplicative scale. Both use the first 60 union dates without learned calibration and refit every 20 union dates using only strictly earlier completed dates. Fits are pooled over the same available market-day observations, separately for squared returns and realised kernel. The two-parameter control uses the original calibration optimizer and tolerances; numerical replay agrees to approximately 7e-15.
+
+Model                          Return QLIKE   Kernel QLIKE
+VolPFN+TTM blend                0.672139       0.598944
+GJR+TTM blend                   0.675318       0.601493
+Saved standalone TTM           0.676869       0.611457
+Scale-calibrated TTM            0.681754       0.612566
+Affine-calibrated TTM           0.685450       0.622200
+
+The VolPFN blend improves on affine TTM by 0.013311 on squared returns and 0.023257 on realised kernel. Four-slot corrected p-values are 0.001800 and 0.003900. Against scale-calibrated TTM the gains are 0.009615 and 0.013622, with corrected p-values 0.003900 and 0.000200. All four family-adjusted intervals exclude zero, and every VolPFN seed has a positive gain. Support survives the 20- and 120-date block sensitivities. A descriptive post-warm-up check retains the same ordering.
+
+Interpretation: this closes the missing calibration-control comparison for the stated causal procedures. Calibrating TTM alone did not improve its saved-panel performance. These results support the blend against both declared calibration controls; comparisons with GJR+TTM and other stronger alternatives retain their original evidence and uncertainty. The return and kernel fits are separate risk-level procedures, without a new jointly coherent return-density claim.
+
+4. FROZEN EXTERNAL ETF COMPARISON
+
+The roster, dates, source checks, original neural checkpoint identities and comparisons were frozen before downloading the ETF histories. The fixed roster is XLB, XLE, XLF, XLI, XLK, XLP, XLU, XLV, XLY, GLD, SLV, TLT, IEF, LQD, HYG, EWJ, EWZ, EWG, EWU and EWA. All 20 passed the preset eligibility rules. Each contributes 1,130 evaluation sessions from 2022-03-01 through 2026-08-31: 22,600 rows per model and seed. Targets are 100*log(Close/Open), with vendor-local daily dates and zero returns retained.
+
+Full and noaux use their original, bitwise-identical weights. The historical models use only the preceding index-development selection rule. ETF data selected no neural checkpoint and updated no neural weight. The comparator is a rolling GJR-GARCH-t with fitted constant mean, 1,000 past returns and a refit every 20 market sessions. Its 1,140 refits include four failed attempts handled by the frozen carry-forward policy; all evaluation rows remain covered. Target-date/future-return invariance was verified independently.
+
+Model                          Return QLIKE   Native NLL
+Synthetic noaux                0.437251       1.111585
+Synthetic full                 0.438591       1.111583
+Rolling GJR-GARCH-t             0.452051       1.117771
+Regularized historical         0.458122       1.138492
+
+In the registered three-comparison primary family, noaux improves on the historical procedure by 0.020872 QLIKE; corrected p=0.029999, family interval [0.000599, 0.039524]. All five paired seeds improve and 18/20 ETFs improve. This support survives the 20- and 120-date sensitivities.
+
+The full and noaux neural models improve on rolling GJR by 0.013460 and 0.014800 respectively, but both corrected primary p-values are 0.100195 and their intervals include zero. The evidence therefore establishes a point-estimate lead, with inconclusive superiority against rolling GJR.
+
+Exposure classification: new ETF outcomes were absent from the targeted project inventory, and the protocol preceded data acquisition. Prior human exposure remains unverified because the exposure question has not been answered. Dates and common market shocks overlap earlier index studies. Describe this as frozen external population validation, with the documented exposure limitation; a genuinely untouched, independent calendar confirmation remains unestablished.
+
+VERIFICATION AND INTERPRETATION
+
+Exact masks, all five neural seeds, target units, moment identities and QLIKE formulas were checked. The original full/noaux inference tensors were compared bitwise with their copied weights. Historical and all three ETF neural procedures passed independent CPU forecast and native-density replay. Source/data seals, strictly earlier forecast contexts and causal refit metadata were verified. No row, failed refit, difficult observation or seed was silently discarded.
+
+All inference uses 20,000 synchronized circular calendar resamples, equal-market weighting, a 60-date primary block, 20/120-date sensitivities, basic intervals and Holm within the stated follow-up families. The intervals condition on saved forecasts and exclude neural-training, online-refit re-estimation and research-selection uncertainty. The three follow-up families do not provide a dissertation-wide multiplicity guarantee.
+
+The strongest new conclusion is the TTM calibration-control result. The historical comparison becomes fairer and less decisive, while the ETF comparison supports synthetic noaux over the historical procedure and leaves rolling-GJR superiority uncertain. These findings strengthen the research through better controls and clearer limits. A module mark still depends on incorporating them accurately into a separately revised dissertation and the official marking rubric. The supplied dissertation has not been edited.
+
+Detailed files:
+  historical_analysis_v1/leaderboard.csv, statistics.json, VERIFICATION.json
+  ttm_control_v1/leaderboard.csv, statistics.json, VERIFICATION.json
+  external_confirmation_v1/leaderboard.csv, statistics.json, VERIFICATION.json
+  ORIGINALS_PRESERVED.json, GPU_CLEANUP.json

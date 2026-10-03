@@ -1,0 +1,170 @@
+{
+  "status": "passed",
+  "all_original_masks_exact": true,
+  "all_five_seeds": true,
+  "all_checkpoints_development_selected": true,
+  "all_hashes_matched": true,
+  "original_results_read_only": true,
+  "new_run_receipts": [
+    {
+      "status": "complete",
+      "seed": 8101,
+      "smoke_unpromotable": false,
+      "protocol_sha256": "91c039d7c0021b75b3d5197c6d0355bc6eaad8693e30bbb7ef92f8f5dff08f9a",
+      "initial_state_sha256": "b0137a2bcd29dc17dfc8aff09bad9ec0c07c2962049c67bbdd294366f6afd7c9",
+      "runtime": {
+        "python": "3.12.3",
+        "numpy": "2.2.6",
+        "scipy": "1.15.3",
+        "torch": "2.8.0+cu128",
+        "cuda": "12.8",
+        "gpu": "NVIDIA H100 80GB HBM3",
+        "platform": "Linux-6.8.0-106-generic-x86_64-with-glibc2.39"
+      },
+      "best_step": 500,
+      "completed_updates": 3500,
+      "development_qlike": 0.6473253501455545,
+      "stale_checks": 6,
+      "elapsed_seconds": 355.80817317962646,
+      "evaluation": {
+        "qlike": 0.6006637462101635,
+        "native_nll": 1.20417536377872
+      },
+      "forecast_rows": 50073,
+      "checkpoint_sha256": "76fb47d6a604e0fce671f1cb4d26cee51e8908bf41e04f4f723d329261264461",
+      "forecast_sha256": "4bef6e3b69b54ad5da9857c71fd3a49f4fad0abb572b93746ceca2ee219a70a1",
+      "training_unique_windows": 30985,
+      "training_unique_observations": 70160,
+      "input_positions": 28672000,
+      "batch_chain_sha256": "d0db505d8782da718a674834d22af1cc4ee9b85d8b6d73b232e54e21963210af"
+    },
+    {
+      "status": "complete",
+      "seed": 8102,
+      "smoke_unpromotable": false,
+      "protocol_sha256": "91c039d7c0021b75b3d5197c6d0355bc6eaad8693e30bbb7ef92f8f5dff08f9a",
+      "initial_state_sha256": "0bd215d25f5720a22312864b34be6d15f8bc061ffd01f487baa62a4b34429125",
+      "runtime": {
+        "python": "3.12.3",
+        "numpy": "2.2.6",
+        "scipy": "1.15.3",
+        "torch": "2.8.0+cu128",
+        "cuda": "12.8",
+        "gpu": "NVIDIA H100 80GB HBM3",
+        "platform": "Linux-6.8.0-90-generic-x86_64-with-glibc2.39"
+      },
+      "best_step": 500,
+      "completed_updates": 3500,
+      "development_qlike": 0.6596762928412252,
+      "stale_checks": 6,
+      "elapsed_seconds": 376.808217048645,
+      "evaluation": {
+        "qlike": 0.6006981480635292,
+        "native_nll": 1.2004221115489877
+      },
+      "forecast_rows": 50073,
+      "checkpoint_sha256": "df23c96e235ae29a043bc77b80699456a9f675250660c02785b83ea6b18640b2",
+      "forecast_sha256": "29d44d303f10b1055c5f36f7d59e8adcd1dd49722e42f2de81a74533d71d9396",
+      "training_unique_windows": 31405,
+      "training_unique_observations": 70154,
+      "input_positions": 28672000,
+      "batch_chain_sha256": "be2b890f6f620bfe052c24d63d4263d4e87bcd0126db3054c0be5936f2fb2e16"
+    },
+    {
+      "status": "complete",
+      "seed": 8103,
+      "smoke_unpromotable": false,
+      "protocol_sha256": "91c039d7c0021b75b3d5197c6d0355bc6eaad8693e30bbb7ef92f8f5dff08f9a",
+      "initial_state_sha256": "d5ce5f928814237776a0bae445aff992f35e141a34460b050aabc525310dfd0e",
+      "runtime": {
+        "python": "3.12.3",
+        "numpy": "2.2.6",
+        "scipy": "1.15.3",
+        "torch": "2.8.0+cu128",
+        "cuda": "12.8",
+        "gpu": "NVIDIA H100 80GB HBM3",
+        "platform": "Linux-6.8.0-90-generic-x86_64-with-glibc2.39"
+      },
+      "best_step": 500,
+      "completed_updates": 3500,
+      "development_qlike": 0.6484289479502624,
+      "stale_checks": 6,
+      "elapsed_seconds": 602.2140128612518,
+      "evaluation": {
+        "qlike": 0.6125267829463104,
+        "native_nll": 1.2074262437160936
+      },
+      "forecast_rows": 50073,
+      "checkpoint_sha256": "7c392024856bdf91d8f74aa5248a85640b225522ce88fe79f647db05266b8302",
+      "forecast_sha256": "dad629fa896f38c7d2d19ab03d4fddc5ec98644ad3ea5cfab4cc5d4a1678f153",
+      "training_unique_windows": 31597,
+      "training_unique_observations": 70145,
+      "input_positions": 28672000,
+      "batch_chain_sha256": "5b6ebf76ec595d75f8d7927cf8729a7735b942613e4a6c29816565d7c0a2c188"
+    },
+    {
+      "status": "complete",
+      "seed": 8104,
+      "smoke_unpromotable": false,
+      "protocol_sha256": "91c039d7c0021b75b3d5197c6d0355bc6eaad8693e30bbb7ef92f8f5dff08f9a",
+      "initial_state_sha256": "9d88762196bab73d8b6f627d68e33de313883c09d2cdb7de8a303b309981d028",
+      "runtime": {
+        "python": "3.12.3",
+        "numpy": "2.2.6",
+        "scipy": "1.15.3",
+        "torch": "2.8.0+cu128",
+        "cuda": "12.8",
+        "gpu": "NVIDIA H100 80GB HBM3",
+        "platform": "Linux-6.8.0-90-generic-x86_64-with-glibc2.39"
+      },
+      "best_step": 500,
+      "completed_updates": 3500,
+      "development_qlike": 0.6468845908931574,
+      "stale_checks": 6,
+      "elapsed_seconds": 630.4040174484253,
+      "evaluation": {
+        "qlike": 0.6001721603039353,
+        "native_nll": 1.1988942461609267
+      },
+      "forecast_rows": 50073,
+      "checkpoint_sha256": "0a370dd62df81180c921ba9374d710a69d138bbd6bc7f9bd773f67a42d0b8ae9",
+      "forecast_sha256": "081e258f512f92245d8f4dd1726cffa3005d614f41ba396f322509053ffa74fc",
+      "training_unique_windows": 31267,
+      "training_unique_observations": 70145,
+      "input_positions": 28672000,
+      "batch_chain_sha256": "4c093e617c89a5e0397a59462c5cf60bfd73b0ad66c5edbe34550971bcb1c97f"
+    },
+    {
+      "status": "complete",
+      "seed": 8105,
+      "smoke_unpromotable": false,
+      "protocol_sha256": "91c039d7c0021b75b3d5197c6d0355bc6eaad8693e30bbb7ef92f8f5dff08f9a",
+      "initial_state_sha256": "b617e5972182be77b3632a6a05da50a741df09cfd257f4612fa1a9437ffee844",
+      "runtime": {
+        "python": "3.12.3",
+        "numpy": "2.2.6",
+        "scipy": "1.15.3",
+        "torch": "2.8.0+cu128",
+        "cuda": "12.8",
+        "gpu": "NVIDIA H100 80GB HBM3",
+        "platform": "Linux-6.8.0-90-generic-x86_64-with-glibc2.39"
+      },
+      "best_step": 500,
+      "completed_updates": 3500,
+      "development_qlike": 0.6449021086815272,
+      "stale_checks": 6,
+      "elapsed_seconds": 610.9977242946625,
+      "evaluation": {
+        "qlike": 0.5963627162950028,
+        "native_nll": 1.1998420544256727
+      },
+      "forecast_rows": 50073,
+      "checkpoint_sha256": "91f2c78f4efa35cc607703463046984b92d90f58264212c584b19be651b0b309",
+      "forecast_sha256": "dfd4a7596d7e82958c711d32bd386b44391fa7e014811187eebe8c79ba484530",
+      "training_unique_windows": 31556,
+      "training_unique_observations": 70161,
+      "input_positions": 28672000,
+      "batch_chain_sha256": "1aaf132ad6b36a8c021f53706cf8f1097ea3826864c997258a5bf780ee4415df"
+    }
+  ]
+}

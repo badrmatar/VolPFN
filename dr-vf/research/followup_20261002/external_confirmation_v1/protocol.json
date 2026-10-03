@@ -1,0 +1,65 @@
+{
+  "created_utc": "2026-10-02T17:30:54.919535+00:00",
+  "econometric_policy": "Registered existing rolling GJR-GARCH(1,1,1)-t with constant mean, 1000 past sessions, refit every 20 market sessions, public arch recursion, retain failed-refit carries and failures; same M2 target.",
+  "eligibility": "All20 fixed tickers required; ETF metadata and US session timezone; 1024 valid pre-evaluation returns; at least800 test rows; invalid test OHLC<=1%; unique increasing dates; no performance filter",
+  "end_exclusive": "2026-09-01",
+  "evaluation_end": "2026-08-31",
+  "evaluation_start": "2022-03-01",
+  "execution_gate": "Do not score a claimed untouched confirmation until human exposure is established; prepare/source-check data while waiting.",
+  "exposure": "No ticker-named ETF results located in targeted main-project/worktree inventory. This does not prove zero human exposure; classification requires user attestation. Overlapping calendar dates/common shocks are not independent of index panels.",
+  "family_slots": 3,
+  "forecast_context": 1024,
+  "inference": "20000 synchronized circular calendar resamples, blocks60(primary)/20/120, equal markets then seeds, Holm3-slot family, basic95% and Bonferroni family intervals; conditional forecasts only",
+  "models": [
+    "full",
+    "noaux",
+    "historical_regularized",
+    "gjr_garch_t_rolling1000"
+  ],
+  "neural_policy": "Freeze original full/noaux checkpoint identities before data acquisition; historical checkpoint chosen only by already frozen 2011-2014 index-development procedure. No ETF data updates/selects neural weights.",
+  "price_policy": "Yahoo/yfinance daily unadjusted OHLC; auto_adjust=False/back_adjust=False/repair=False; vendor-local date labels, no forward fill, no outcome-driven ticker replacement",
+  "primary_family": [
+    "full_vs_gjr_qlike",
+    "noaux_vs_gjr_qlike",
+    "noaux_vs_historical_qlike"
+  ],
+  "scope": "New external population, frozen before data download. Neural models trained on old indices/synthetic data. Not a prospective new-calendar holdout; vendor revisions/asset correlations limit interpretation.",
+  "secondary": "Native return NLL and common zero-mean t8 NLL descriptive. No realised-kernel or TTM comparison: new panel lacks certified intraday proxy.",
+  "seed": 2026100204,
+  "seeds": [
+    8101,
+    8102,
+    8103,
+    8104,
+    8105
+  ],
+  "source_hashes": {
+    "econometric.py": "d816b03aba2851336f32c7ed1b0bf528abc22e9862bcf440b358ea5b35db8b17",
+    "external_source.py": "25ccd9e20a3973901f62faaa7e4dcc54bd57360613f988a6b7ba9f3af2e7ab4a",
+    "historical_source.py": "6072c0018f78051389b2ba4e0f2d638cb33399839a6a3e057eaa3e85e564f916"
+  },
+  "start": "2005-01-01",
+  "target": "Next observed session 100*log(Close/Open), retain zero returns, no total-return or overnight substitution",
+  "tickers": [
+    "XLB",
+    "XLE",
+    "XLF",
+    "XLI",
+    "XLK",
+    "XLP",
+    "XLU",
+    "XLV",
+    "XLY",
+    "GLD",
+    "SLV",
+    "TLT",
+    "IEF",
+    "LQD",
+    "HYG",
+    "EWJ",
+    "EWZ",
+    "EWG",
+    "EWU",
+    "EWA"
+  ]
+}

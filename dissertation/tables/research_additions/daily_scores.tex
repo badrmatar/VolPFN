@@ -1,0 +1,13 @@
+\begin{table}[!htbp]\centering
+\begingroup\small\setlength{\tabcolsep}{4pt}
+\caption[Scores for daily financial neural predictors]{Complete daily neural procedures, 28 markets and 50,073 rows per seed, 2015--February 2022. Five seed losses receive equal weight. Squared-return QLIKE uses second moment; common-$t_8$ NLL fixes shape and native NLL uses the issued density. Lower is better.}\label{tab:new-daily-scores}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Procedure & $r^2$ QLIKE & Common-$t_8$ NLL & Native NLL \\
+\midrule
+Full VolPFN & 0.590700 & 1.184313 & 1.178272 \\
+ARCH-LSTM & 0.966913 & 1.349906 & 1.268911 \\
+GARCH-LSTM & 0.661074 & 1.217295 & 1.208403 \\
+GINN & 0.637127 & 1.205744 & 1.204040 \\
+\bottomrule
+\end{tabular}\endgroup\end{table}

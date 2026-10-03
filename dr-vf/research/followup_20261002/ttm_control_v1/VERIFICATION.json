@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "matched_original_calibration_function": true,
+  "original_function_source_sha256": "6317fbefbff667d172ec1276da59ea887ffd2ae0089c555dc03a2fb4bd1c4ccc",
+  "max_forecast_difference": 7.105427357601002e-15,
+  "causal_refit_metadata": true,
+  "all_rows": 22026,
+  "main_contrasts": 4,
+  "bootstrap_sensitivity_support": {
+    "60": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "20": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "120": [
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "receipt_note": "Initial receipt included the then-open run.log; final receipt excludes mutable logs and binds completed artifacts."
+}

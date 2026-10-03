@@ -1,0 +1,19 @@
+\begin{table}[!htbp]\centering
+\begingroup\small\setlength{\tabcolsep}{4pt}
+\caption[Selected common-period daily scores]{Selected raw daily-return procedures on the identical 22,026 keys, 2019--February 2022. Squared-return scoring uses second moment and RK scoring uses central variance. The full 30 September arm is the registered reference. Other daily rows, older versions and ablations remain in Appendix~\ref{sec:new-research-results}; this selection is not a claim of supported superiority over every row.}\label{tab:new-daily-common}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{6.5cm}rrr@{}}
+\toprule
+Procedure & $r^2$ QLIKE & RK QLIKE & Seeds \\
+\midrule
+Full VolPFN (30 September) & 0.703714 & 0.625668 & 5 \\
+GJR-GARCH-$t$ & 0.718424 & 0.634702 & 1 \\
+APARCH-$t$ & 0.722381 & 0.642651 & 1 \\
+GARCH-$t$ & 0.740170 & 0.656740 & 1 \\
+GINN & 0.748601 & 0.673846 & 5 \\
+UniVol & 0.754697 & 0.681621 & 1 \\
+GARCH-LSTM & 0.765202 & 0.710314 & 5 \\
+EWMA & 0.770326 & 0.695458 & 1 \\
+TabPFN-TS & 0.866181 & 0.760323 & 1 \\
+ARCH-LSTM & 1.052799 & 1.021653 & 5 \\
+\bottomrule
+\end{tabular}\endgroup\end{table}

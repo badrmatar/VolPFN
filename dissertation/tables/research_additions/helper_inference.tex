@@ -1,0 +1,23 @@
+\begingroup\footnotesize\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{2.7cm}lrccr@{}}
+\caption[Cross-market-helper inference]{All primary-block contrasts in the separate twelve-slot helper family, VolPFN+helper reference. Ordinary and family intervals are distinct. Joint support requires both proxies and corresponding seed directions; no contrast meets the complete rule.}\label{tab:new-helper-inference}\\
+\toprule
+Comparator & Proxy & Gain & Ordinary 95\% & Family 95\% & Holm $p$ \\
+\midrule\endfirsthead
+\toprule
+Comparator & Proxy & Gain & Ordinary 95\% & Family 95\% & Holm $p$ \\
+\midrule\endhead
+Calibrated helper & $r^2$ & 0.020853 & $[-0.000781,0.034324]$ & $[-0.014486,0.037312]$ & 0.207540 \\
+Calibrated helper & RK & 0.040641 & $[-0.011515,0.068908]$ & $[-0.051015,0.071198]$ & 0.419679 \\
+GJR+helper & $r^2$ & 0.003929 & $[0.000753,0.006443]$ & $[-0.001145,0.007410]$ & 0.093595 \\
+GJR+helper & RK & 0.003238 & $[0.001269,0.004910]$ & $[0.000142,0.005580]$ & 0.019799 \\
+Cross-market helper & $r^2$ & 0.012900 & $[0.004429,0.020533]$ & $[0.000455,0.023670]$ & 0.020349 \\
+Cross-market helper & RK & 0.014822 & $[0.005537,0.021121]$ & $[-0.000029,0.023125]$ & 0.021499 \\
+Full VolPFN+TTM-RK & $r^2$ & -0.001887 & $[-0.010294,0.006141]$ & $[-0.013763,0.009722]$ & 1.000000 \\
+Full VolPFN+TTM-RK & RK & -0.004634 & $[-0.010436,0.002143]$ & $[-0.012897,0.005651]$ & 0.712464 \\
+GNNHAR adaptation & $r^2$ & -0.004675 & $[-0.016137,0.008789]$ & $[-0.020064,0.016260]$ & 1.000000 \\
+GNNHAR adaptation & RK & -0.008772 & $[-0.022388,0.014764]$ & $[-0.025260,0.029053]$ & 1.000000 \\
+Transfer-XGBoost & $r^2$ & 0.019223 & $[0.002313,0.033344]$ & $[-0.006677,0.038430]$ & 0.130793 \\
+Transfer-XGBoost & RK & 0.004068 & $[-0.003265,0.012671]$ & $[-0.006041,0.017110]$ & 1.000000 \\
+\bottomrule
+\end{longtable}\endgroup

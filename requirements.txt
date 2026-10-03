@@ -1,0 +1,11 @@
+# Core versions present in the environment used for the recorded checks.
+# External pretrained-model adapters use their separately specified environments.
+numpy==1.26.4
+scipy==1.13.1
+pandas==2.3.3
+torch==2.8.0
+matplotlib==3.9.4
+arch==7.2.0
+yfinance==1.2.0
+scikit-learn==1.6.1
+statsmodels==0.14.6

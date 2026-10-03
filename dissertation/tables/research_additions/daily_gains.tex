@@ -1,0 +1,13 @@
+\begin{table}[!htbp]\centering
+\begingroup\small\setlength{\tabcolsep}{4pt}
+\caption[Gains against daily financial neural predictors]{Full VolPFN versus the dedicated daily adaptations, 2015--February 2022. The four-slot external family retains unavailable RECH at $p=1$. Ordinary 95\% intervals are not simultaneous intervals. Gains favour full when positive.}\label{tab:new-daily-gains}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{4.1cm}rcr@{}}
+\toprule
+Comparison & Gain & Ordinary 95\% interval & Holm $p$ \\
+\midrule
+ARCH-LSTM & 0.376213 & $[0.295777,0.453705]$ & 0.000200 \\
+GARCH-LSTM & 0.070375 & $[0.050145,0.089188]$ & 0.000200 \\
+GINN & 0.046427 & $[0.031970,0.059823]$ & 0.000200 \\
+rech & --- & --- & 1.000000 \\
+\bottomrule
+\end{tabular}\endgroup\end{table}

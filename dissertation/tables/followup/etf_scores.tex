@@ -1,0 +1,13 @@
+\begin{table}[!htbp]\centering\small
+\caption[Frozen external ETF scores]{Frozen twenty-ETF population, 22,600 rows per model/seed, March 2022--August 2026. Means weight ETFs and neural seeds equally. Squared-return QLIKE is primary; native NLL is descriptive. Lower is better. Original full/noaux weights and index-development-selected historical weights receive no ETF training.}
+\label{tab:followup-etfs}
+\begin{tabular}{lrr}
+\toprule
+Procedure & Return QLIKE & Native NLL \\
+\midrule
+Synthetic noaux & 0.437251 & 1.111585 \\
+Synthetic full & 0.438591 & 1.111583 \\
+Rolling GJR-GARCH-$t$ & 0.452051 & 1.117771 \\
+Development-selected historical & 0.458122 & 1.138492 \\
+\bottomrule\end{tabular}
+\end{table}

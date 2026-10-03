@@ -1,0 +1,248 @@
+{
+  "classification": "new external ETF population; prior human exposure unverified; never call untouched absent attestation",
+  "family_slots": 3,
+  "resamples": 20000,
+  "blocks": [
+    60,
+    20,
+    120
+  ],
+  "direction": "Comparator loss minus reference loss; positive favours reference",
+  "contrasts": [
+    {
+      "block": 60,
+      "reference": "full",
+      "comparator": "gjr_garch_t_rolling1000",
+      "gain": 0.013459911524533042,
+      "interval95": [
+        -0.004077886180981179,
+        0.026623726421148065
+      ],
+      "family_interval95": [
+        -0.008814840415112638,
+        0.02842962154465051
+      ],
+      "p_raw": 0.08179591020448977,
+      "paired_seed_gains": [
+        0.013030267742979143,
+        0.013659116506343142,
+        0.012383134845178483,
+        0.014154741483060613,
+        0.014072297045103817
+      ],
+      "markets_improved": 16,
+      "p_holm": 0.10019499025048748,
+      "supports_reference_advantage": false,
+      "supports_reference_disadvantage": false
+    },
+    {
+      "block": 60,
+      "reference": "noaux",
+      "comparator": "gjr_garch_t_rolling1000",
+      "gain": 0.01480005540576774,
+      "interval95": [
+        -0.0024272995146585614,
+        0.027628511521732013
+      ],
+      "family_interval95": [
+        -0.0069858155536773065,
+        0.029455985688100886
+      ],
+      "p_raw": 0.05009749512524374,
+      "paired_seed_gains": [
+        0.01525150958566535,
+        0.014563312525162329,
+        0.014045580307385248,
+        0.015866420124309007,
+        0.014273454486316775
+      ],
+      "markets_improved": 16,
+      "p_holm": 0.10019499025048748,
+      "supports_reference_advantage": false,
+      "supports_reference_disadvantage": false
+    },
+    {
+      "block": 60,
+      "reference": "noaux",
+      "comparator": "historical_regularized",
+      "gain": 0.020871648897346586,
+      "interval95": [
+        0.004305164806016389,
+        0.036359185580943684
+      ],
+      "family_interval95": [
+        0.00059925554414509,
+        0.039524478525990246
+      ],
+      "p_raw": 0.00999950002499875,
+      "paired_seed_gains": [
+        0.0184444460668464,
+        0.019941080769474154,
+        0.031796112193584955,
+        0.01984999518902929,
+        0.014326610267798138
+      ],
+      "markets_improved": 18,
+      "p_holm": 0.02999850007499625,
+      "supports_reference_advantage": true,
+      "supports_reference_disadvantage": false
+    },
+    {
+      "block": 20,
+      "reference": "full",
+      "comparator": "gjr_garch_t_rolling1000",
+      "gain": 0.013459911524533042,
+      "interval95": [
+        0.00046814966266724156,
+        0.024153729525178365
+      ],
+      "family_interval95": [
+        -0.003162302561437397,
+        0.025859454518138314
+      ],
+      "p_raw": 0.025948702564871758,
+      "paired_seed_gains": [
+        0.013030267742979143,
+        0.013659116506343142,
+        0.012383134845178483,
+        0.014154741483060613,
+        0.014072297045103817
+      ],
+      "markets_improved": 16,
+      "p_holm": 0.03029848507574621,
+      "supports_reference_advantage": false,
+      "supports_reference_disadvantage": false
+    },
+    {
+      "block": 20,
+      "reference": "noaux",
+      "comparator": "gjr_garch_t_rolling1000",
+      "gain": 0.01480005540576774,
+      "interval95": [
+        0.0018578208201668837,
+        0.02536287856967854
+      ],
+      "family_interval95": [
+        -0.001676713760476881,
+        0.027039079366289784
+      ],
+      "p_raw": 0.015149242537873106,
+      "paired_seed_gains": [
+        0.01525150958566535,
+        0.014563312525162329,
+        0.014045580307385248,
+        0.015866420124309007,
+        0.014273454486316775
+      ],
+      "markets_improved": 16,
+      "p_holm": 0.03029848507574621,
+      "supports_reference_advantage": false,
+      "supports_reference_disadvantage": false
+    },
+    {
+      "block": 20,
+      "reference": "noaux",
+      "comparator": "historical_regularized",
+      "gain": 0.020871648897346586,
+      "interval95": [
+        0.006781639437547723,
+        0.03466116600616556
+      ],
+      "family_interval95": [
+        0.003598593604583065,
+        0.037268510393969834
+      ],
+      "p_raw": 0.0034498275086245686,
+      "paired_seed_gains": [
+        0.0184444460668464,
+        0.019941080769474154,
+        0.031796112193584955,
+        0.01984999518902929,
+        0.014326610267798138
+      ],
+      "markets_improved": 18,
+      "p_holm": 0.010349482525873706,
+      "supports_reference_advantage": true,
+      "supports_reference_disadvantage": false
+    },
+    {
+      "block": 120,
+      "reference": "full",
+      "comparator": "gjr_garch_t_rolling1000",
+      "gain": 0.013459911524533042,
+      "interval95": [
+        -0.004869463705873123,
+        0.02768307892302173
+      ],
+      "family_interval95": [
+        -0.009299580190089881,
+        0.0296118985534995
+      ],
+      "p_raw": 0.10244487775611219,
+      "paired_seed_gains": [
+        0.013030267742979143,
+        0.013659116506343142,
+        0.012383134845178483,
+        0.014154741483060613,
+        0.014072297045103817
+      ],
+      "markets_improved": 16,
+      "p_holm": 0.12919354032298386,
+      "supports_reference_advantage": false,
+      "supports_reference_disadvantage": false
+    },
+    {
+      "block": 120,
+      "reference": "noaux",
+      "comparator": "gjr_garch_t_rolling1000",
+      "gain": 0.01480005540576774,
+      "interval95": [
+        -0.0031172833536290464,
+        0.0286921824112563
+      ],
+      "family_interval95": [
+        -0.007565662746496593,
+        0.030506726604735183
+      ],
+      "p_raw": 0.06459677016149193,
+      "paired_seed_gains": [
+        0.01525150958566535,
+        0.014563312525162329,
+        0.014045580307385248,
+        0.015866420124309007,
+        0.014273454486316775
+      ],
+      "markets_improved": 16,
+      "p_holm": 0.12919354032298386,
+      "supports_reference_advantage": false,
+      "supports_reference_disadvantage": false
+    },
+    {
+      "block": 120,
+      "reference": "noaux",
+      "comparator": "historical_regularized",
+      "gain": 0.020871648897346586,
+      "interval95": [
+        0.004302098703610965,
+        0.03723815516547277
+      ],
+      "family_interval95": [
+        0.0008403465686561522,
+        0.040641710523537856
+      ],
+      "p_raw": 0.012549372531373431,
+      "paired_seed_gains": [
+        0.0184444460668464,
+        0.019941080769474154,
+        0.031796112193584955,
+        0.01984999518902929,
+        0.014326610267798138
+      ],
+      "markets_improved": 18,
+      "p_holm": 0.03764811759412029,
+      "supports_reference_advantage": true,
+      "supports_reference_disadvantage": false
+    }
+  ],
+  "limitations": "New fixed ETF population, not verified untouched human exposure or an independent calendar/shock holdout. Conditional saved-forecast inference excludes model training, online refits, source revisions, and research selection."
+}

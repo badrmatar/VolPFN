@@ -1,0 +1,47 @@
+\subsection{Convergence-checked historical tail sensitivity}
+\label{sec:optimizer-sensitivity}
+
+\code{tail\_optimizer\_repair\_v2} retains the historical cohorts, forecast conventions, masks, safeguards, refit/wrapper rules and bootstrap conventions, changing fit acceptance/continuation. Each refit adds the reconstructed historical-budget endpoint to its starts. Acceptance requires finite, feasible convergence and objective no worse within $10^{-7}$. Initial failure would invalidate coverage; later failure would retain previous parameters. Neither occurs.
+
+All 3,400 historical objectives reconstruct exactly; 850 actual FHS refits pass comparison tolerance, and 9,408 unchanged-method daily-loss arrays match bitwise. These gates establish neither global optimisation nor future performance. Failed v1 remains unsuccessful. Selection, neural losses and binding counts are unchanged; Chapter~\ref{ch:tailresults} discusses the material GAS point-tolerance change.
+
+\begin{table}[htbp]
+\centering\small
+\caption[New optimiser sensitivity for GAS tolerances]{Later-panel GAS correction minus its own original FZ0. Original archive values are retained alongside the separately generated convergence-checked sensitivity. The ratio row is informational; the guard rows are binding. ``Pass'' concerns the displayed point budget.}
+\label{tab:optimizer-gas-sensitivity}
+\begin{tabular}{lrrrrl}
+\toprule
+Correction & $\alpha$ & Historical excess & v2 excess & Budget & v2 rule \\
+\midrule
+Guard, 1,000 & 0.050 & 0.000552 & 0.000762 & 0.0035 & Pass \\
+Guard, 1,000 & 0.025 & 0.005184 & 0.005790 & 0.0060 & Pass \\
+Guard, 1,000 & 0.010 & 0.016112 & 0.014328 & 0.0130 & Fail \\
+Ratio, 1,000 & 0.025 & 0.005186 & 0.006170 & 0.0060 & Fail \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+All six full-history correction/FHS intervals include zero, without establishing equivalence. The later guard underperforms FHS at 2.5/1\%; the inherited marginal post-hoc procedure supplies no broader adjusted superiority claim.
+
+\begin{table}[htbp]
+\centering\small
+\caption[New optimiser sensitivity against FHS]{Gaussian-GARCH residual correction minus GARCH FHS after convergence-checked refits. Intervals and probabilities use the inherited supplementary marginal procedure, with no multiplicity adjustment. Positive differences favour FHS.}
+\label{tab:optimizer-fhs-sensitivity}
+\begin{tabular}{llrrr}
+\toprule
+Panel and correction & $\alpha$ & Difference & 95\% interval & Raw $p$ \\
+\midrule
+Development, full history & 0.050 & -0.000375 & $[-0.002268,+0.001715]$ & 0.6980 \\
+Development, full history & 0.025 & -0.000536 & $[-0.002412,+0.001397]$ & 0.5800 \\
+Development, full history & 0.010 & -0.000191 & $[-0.003736,+0.003553]$ & 0.9140 \\
+Later, full history & 0.050 & +0.000161 & $[-0.002567,+0.003286]$ & 0.9420 \\
+Later, full history & 0.025 & +0.001073 & $[-0.001846,+0.004657]$ & 0.5140 \\
+Later, full history & 0.010 & +0.004418 & $[-0.000253,+0.010344]$ & 0.0720 \\
+\midrule
+Later, guard 1,000 & 0.025 & +0.014629 & $[+0.004623,+0.027610]$ & 0.0020 \\
+Later, guard 1,000 & 0.010 & +0.021390 & $[+0.009310,+0.033483]$ & 0.0005 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Policy, diagnostics and reconstruction are under \path{research/outputs/scientific_followup_20260930/optimizer/repaired_v2/}. This sensitivity does not replace the rolling GARCH density benchmark, daily leaderboards, compact-driver fits or GP-Vol experiments.

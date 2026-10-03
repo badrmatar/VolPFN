@@ -1,0 +1,156 @@
+\chapter{Background: from volatility models to reusable forecasters}
+\label{ch:background}
+
+To assess VolPFN, we need to connect three ideas: how volatility changes, how a forecasting rule can be reused, and how forecast scale becomes a prediction of extreme losses. This chapter introduces the concepts behind those ideas and the relevant modelling approaches. It also explains why a comparison that establishes useful performance may not identify the source of that performance.
+
+\section{The forecasting objects}
+\label{sec:bg-concepts}
+
+The forecast interval determines what is being predicted. An open-to-close log return is the logarithm of closing price divided by opening price and approximates proportional price change for small movements. It measures movement within the session, excluding overnight movement. A close-to-close forecast covers a different interval, so its performance cannot be ranked directly against this target.
+
+We use the term \emph{information set} for the observations available when a forecast is issued. A causal procedure must respect this boundary throughout preprocessing and prediction. For example, normalising a series with observations from its whole history introduces later information, even if the network itself subsequently receives only past observations.
+
+Three related quantities describe the size of uncertain returns. Variance is the expected squared deviation from the conditional mean, volatility is its square root, and the second moment is expected squared return. Variance and second moment coincide under the zero-conditional-mean working model used here. However, one observed squared return remains a noisy proxy for that expectation, rather than a direct observation of it.
+
+Several patterns describe these uncertain movements. \emph{Clustering} places large movements near other large movements; \emph{heavy tails} make extremes more frequent than under a Gaussian law; and \emph{asymmetry} gives equal-sized positive and negative shocks different volatility responses. A predictive \emph{density} assigns probabilities to intervals through its area. These features explain why variance alone cannot specify tail risk.
+
+Tail shape is a separate part of the prediction. In a Student distribution, degrees of freedom control tail thickness, while its scale parameter differs from its standard deviation. A mixture combines densities through non-negative weights that sum to one. Consequently, an improvement in density prediction can come from better scale, better shape, or both; the score alone does not identify which changed.
+
+\section{Persistent variance: ARCH and GARCH}
+
+ARCH describes changing variance through past squared shocks \citep{engle1982arch}. GARCH adds earlier variance estimates, allowing persistent information to be retained with fewer coefficients \citep{bollerslev1986generalized}. Maximum likelihood fits these coefficients by rewarding density assigned to observed returns. Once fitted, the model can update its state without refitting the coefficients. Keeping these operations separate matters when comparing fitting cost and forecasting behaviour.
+
+A variance recursion does not determine the complete return distribution. The same GARCH scale can support Gaussian or Student forecasts, so a density gain may reflect the scale update or the assumed tail law. We therefore use fitted GARCH as an economical benchmark and also compare scale forecasts under a common scoring distribution. The latter comparison holds the scoring law fixed rather than attributing every density difference to volatility prediction.
+
+\section{Asymmetry, hidden states and residual tails}
+
+Several extensions allow behaviour beyond a symmetric variance recursion. EGARCH makes log variance depend on the sign of a shock \citep{nelson1991conditional}, while GJR-GARCH adds a separate response to negative shocks \citep{glosten1993relation}. Stochastic-volatility models give hidden variance its own disturbances \citep{harvey1994multivariate}. Because several hidden paths can explain the same returns, filtering updates beliefs about the hidden state instead of following a single recursion with known parameters.
+
+Bayesian prediction combines parameter assumptions with the likelihood of the observed history, then averages future predictions over posterior uncertainty. Prior-fitted learning aims to approximate this operation through a reusable predictor. Simpler updating methods avoid that inference: RiskMetrics' exponentially weighted moving averages (EWMA), for example, give progressively less weight to older squared returns \citep{riskmetrics1996}.
+
+Filtered historical simulation (FHS) separates changing scale from residual tail shape \citep{baroneadesi1999var}. A return of minus two percent divided by forecast volatility of two percent becomes a residual of minus one. Restoring that residual at one-percent volatility produces a minus-one-percent outcome. Removing and restoring scale in this way allows an empirical residual distribution to replace a fixed tail law. A longer history improves precision under stability, but may adapt slowly when the tails change. The later tail chapters evaluate this established operation and its trade-off.
+
+\section{Realised measurements and multiple horizons}
+
+Intraday observations offer another source of risk information. Realised variance sums intraday squared returns, while related estimators reduce microstructure effects such as bid--ask noise \citep{andersen2003modeling}. These quantities estimate variability over a specified interval. As inputs or evaluation proxies, they measure realised variability over that interval, not tomorrow's conditional variance directly.
+
+The heterogeneous autoregressive model (HAR) combines daily, weekly and monthly realised-risk summaries \citep{corsi2009simple}. Component models distinguish rapid responses from persistent risk \citep{engle1999permanent}, and smooth-transition exponential smoothing (STES) changes responsiveness with observed conditions \citep{taylor2004smooth}. These approaches motivate the multiple return horizons in VolPFN and the compact rules. Their information still differs: HAR uses intraday measurements unavailable to the daily-return model, whereas scoring a daily-return model against a realised measure does not give that model the measure as an input.
+
+\section{Flexible dynamics and reusable inference}
+
+Score-driven models provide an explicit way to adapt parameters using the derivative of log likelihood \citep{creal2013generalized,harvey2013dynamic}. The assumed return distribution controls the response to an extreme observation. This connects the forecast law to state updating and supplies a statistical alternative to learning the shock response through a network.
+
+A Gaussian process (GP) defines a probability distribution over functions through a covariance kernel. Mat\'ern kernels can vary regularity and persistence \citep{rasmussen2006gaussian}. Exponentiating a GP log-variance path produces positive variance without a return-driven GARCH recursion. We use this construction as the alternative simulation design in the matched-prior experiment.
+
+GP methods already provide flexible approaches to volatility. Gaussian Copula Process Volatility models volatility using GPs \citep{wilson2010copula}, and GP-Vol combines transitions from earlier volatility and returns with regularised auxiliary particle chain filtering \citep{wu2014gaussian}. These are precedents for flexible dynamics and explicit uncertainty. VolPFN instead spreads learning across tasks to obtain a reusable prediction mapping. These methodological differences do not establish a performance ranking in this dissertation.
+
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm,>=Latex]
+\draw[->,line width=1pt,black!45] (0,0.15) -- (0,-5.6);
+\foreach \y in {0,-1.05,-2.1,-3.15,-4.2,-5.25}
+  \fill[blue!55!black] (0,\y) circle (2.2pt);
+\node[anchor=north west,align=left,text width=13.2cm,font=\small] at (.3,.13)
+  {\textbf{1982--1986: ARCH and GARCH.} Carry persistent variance forward through a short recursion.};
+\node[anchor=north west,align=left,text width=13.2cm,font=\small] at (.3,-.92)
+  {\textbf{1990s: asymmetry, latent states and risk.} Distinguish shock signs, hidden uncertainty and residual tails.};
+\node[anchor=north west,align=left,text width=13.2cm,font=\small] at (.3,-1.97)
+  {\textbf{2000s: realised measures and HAR.} Improve measurement and combine information across horizons.};
+\node[anchor=north west,align=left,text width=13.2cm,font=\small] at (.3,-3.02)
+  {\textbf{2010s: score-driven and GP models.} Increase flexibility while retaining statistical structure.};
+\node[anchor=north west,align=left,text width=13.2cm,font=\small] at (.3,-4.07)
+  {\textbf{2017 onward: learned sequence models.} Share a predictive mapping across related observations and series.};
+\node[anchor=north west,align=left,text width=13.2cm,font=\small] at (.3,-5.12)
+  {\textbf{2022 onward: PFNs and pretrained forecasting.} Reuse prediction learned from simulated tasks or broad corpora.};
+\end{tikzpicture}
+\caption[Selected developments leading to VolPFN]{The limitations addressed by selected research lines. Dates identify the contributions discussed here, not the first appearance of every underlying idea. Earlier methods remain relevant comparators.}
+\label{fig:background-timeline}
+\end{figure}
+
+\section{Learning across sequences}
+
+A neural forecaster learns a mapping from history to prediction by minimising a loss. DeepAR shares probabilistic recurrent learning across related series and carries a state forward through time \citep{salinas2020deepar}. DeepVol uses causal convolutions with high-frequency inputs \citep{morenopino2024deepvol}. Sharing a learned mapping across series and supplying high-frequency inputs are distinct routes to forecasting improvement; DeepVol's information therefore falls outside our daily-return-only comparison.
+
+Transformer attention learns how sequence positions contribute to a representation \citep{vaswani2017attention}. Multiple heads and layers can represent different patterns, while temporal information establishes order and a causal mask excludes future positions. These components specify a computation, but their presence alone does not define a volatility model.
+
+The remaining choices determine what that computation learns and produces. Architecture supplies the computation, the prior supplies training tasks, the loss rewards particular predictions, and the output head constructs the forecast. A predicted mean need not provide a calibrated density. Our matched experiment changes the prior of a density-output transformer while holding architecture fixed, allowing the observed difference to be attributed to the tested training design.
+
+\subsection{Dedicated financial neural predictors}
+
+Dedicated financial neural models incorporate structure in several ways. ARCH-LSTM uses squared innovations with a hybrid squared-error and Student likelihood loss \citep{acevedo2026archlstm}; LSTM denotes long short-term memory, a recurrent architecture. Our fixed-tail adaptation follows author code without reproducing every published setting. GARCH-LSTM embeds a GARCH recurrence in a recurrent controller \citep{zhao2024garchnn}, while the GARCH-informed neural network (GINN) uses innovations and a fitted GARCH teaching signal \citep{xu2024ginn}. Structure thus enters through inputs, updates or objectives.
+
+We fit these models separately by market, with training data, context lengths and selection opportunities that differ from VolPFN's. Section~\ref{sec:new-daily-comparison} consequently compares completed adaptations rather than controlling architecture alone. Their squared innovations are observed, noisy risk proxies and should not be interpreted as latent variance labels.
+
+\section{Prior-fitted prediction}
+\label{sec:bg-pfn}
+
+Prior-data fitted networks learn approximate Bayesian prediction from simulated tasks \citep{muller2022transformers}. Each task draws a process and parameters, generates observations, and asks for an unseen outcome given the available history. If all targets are scored, the information matches and the predictor is unrestricted, population negative-log-likelihood optimisation targets the prior's posterior predictive distribution. This provides the idealised starting point for the approach.
+
+VolPFN's training changes that target in two ways. Excluding stale next observations selects which outcomes contribute, while dividing by the batch's scored-target count determines their weight. The population likelihood target is consequently a weighted distribution of selected observations conditional on the supplied history summaries. It differs from the complete simulator law, which includes a point mass at zero. Appendix~\ref{app:technical} defines the target formally. Even within this selected distribution, bounded context, the bounded four-component output family and the shared auxiliary objective introduce approximation and optimisation limits.
+
+Reusing the learned mapping is called \emph{amortisation}. During \emph{in-context} prediction, the model receives a history without changing its weights. Consequently, \emph{zero-shot} does not mean prediction without observations or a procedure with no fitted preprocessing or calibration. Our development-fitted scale multipliers illustrate that distinction.
+
+TabPFN established prior-fitted tabular classification \citep{hollmann2023tabpfn}, and ForecastPFN extended synthetic-task learning to reusable time-series forecasts \citep{dooley2023forecastpfn}. VolPFN builds on this line through a volatility prior, causal summaries, density output and a matched prior comparison. We do not claim verified worldwide priority in volatility or finance.
+
+Two sources of error remain distinct. Approximation error concerns how closely the learned predictor achieves the simulator-based target; misspecification concerns how well that target describes markets. A predictor could approximate its training target closely and still perform poorly when the market process differs. Exact synthetic references can investigate the former without establishing market validity. Our broad--Mat\'ern intervention retains the same shocks and observation modifications while changing the combined volatility design. It therefore tests that design without isolating a single mechanism.
+
+\section{General forecasting alternatives}
+
+General foundation forecasters reuse broad pretraining, which need not involve synthetic Bayesian task learning. Chronos trains on a large series corpus supplemented by synthetic data \citep{ansari2024chronos}. Chronos-2 adds multivariate forecasting and covariates alongside the target's history \citep{ansari2025chronos2}, while decoder-only Moirai-2 predicts quantiles at specified cumulative probabilities \citep{liu2025moirai2}. These methods provide alternative reusable forecasting procedures.
+
+TabPFN-TS takes a different route by expressing time-series forecasting as a tabular prediction problem \citep{hoo2025tables}. Nijland also applies TabPFN to realised volatility, with a different target and construction \citep{nijland2026performance}. These earlier applications limit the novelty claim for VolPFN; we evaluate the performance of its return forecasts.
+
+Table~\ref{tab:positioning-final} sets out the role of each research line, and Chapter~\ref{ch:data} fixes the evaluated versions and adapters. An adapter's conversion from a point or quantile output into the scored risk quantity belongs to the forecasting procedure. This is why a benchmark ranking assesses the complete procedure, whereas a matched prior intervention tests a particular training change.
+
+\begin{table}[!htbp]
+\centering\small
+\caption[Nearby methods and their comparison roles]{Research lines relevant to the construction and evaluation. Inclusion does not imply a new head-to-head experiment with every method.}
+\label{tab:positioning-final}
+\begin{tabular}{@{}p{2.8cm}p{4.4cm}p{6.9cm}@{}}
+\toprule
+Research line & Information and fitting & Role in this dissertation \\
+\midrule
+GARCH variants & Returns; fitted recursive coefficients & Economical variance and density references; asymmetry and tail law can change the comparison. \\
+HAR & Intraday-based realised measures; regression & Motivates multiple horizons, with a richer information set than daily returns alone. \\
+GP-Vol & Returns and hidden volatility; sequential inference & Precedent for flexible dynamics with an explicit inference method. \\
+DeepAR / DeepVol & Related series / high-frequency inputs; neural training & Shared learning and richer information are distinct routes to improved prediction. \\
+ForecastPFN / TabPFN-TS & Synthetic training; time-series or tabular context & Establish reusable PFN forecasting before the present construction. \\
+Chronos-2 / Moirai-2 & Broad pretraining; time-series context & General forecasting alternatives evaluated through fixed output adapters. \\
+VolPFN & Synthetic volatility tasks; causal daily-return summaries & Return-density construction whose scale and prior design are tested here. \\
+FHS & Standardised returns; empirical residual distribution & Essential comparator for tail correction and its estimation cost. \\
+Calibeating / adaptive calibration & Past forecasts and outcomes; target-specific updating & Related guarantees motivate questions, but do not imply a VaR--ES guarantee automatically. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Realised-risk methods and information access}
+
+The realised-risk comparisons introduce further information and fitting differences. GNNHAR links assets through a graph of HAR summaries \citep{zhang2025gnnhar}; Transfer-XGBoost uses source histories \citep{teller2026transfer}; and QLIKE-HAR fits with the variance loss used for evaluation \citep{puke2026coherent}. Foundation-model realised-volatility comparisons motivate TTM \citep{brini2026foundation}. Our adaptations keep their stated branches and populations without replicating every published experiment. M2VN requires timestamped news unavailable for these indices \citep{kong2025m2vn}, exact DeepRGARCH was not run, and GP-Vol coverage is incomplete. Chapter~\ref{ch:forecast} evaluates the completed procedures under their actual information and fitting opportunities.
+
+\section{Scores and the claims they support}
+\label{sec:bg-scoring}
+
+Proper distributional scores reward honest probability reporting in expectation \citep{gneiting2007strictly}. For log density, larger values are better and the units are nats. A difference of 0.01 corresponds to a geometric-mean density ratio near 1.01, rather than a trading gain. The return units must agree for the comparison to have this meaning.
+
+QLIKE evaluates risk by adding the log forecast to squared return divided by the forecast, apart from forecast-independent terms. Lower loss is better. It penalises severe underprediction without rewarding arbitrary inflation and, under zero mean, targets the second moment. Using another proxy requires an appropriate relationship to that target \citep{patton2011volatility}. Similarly, the median squared return need not equal its mean, so those outputs are not interchangeable.
+
+To assess scale without changing the scoring shape, we place forecasts under the same Student-$t$ return law. This standardises the scoring distribution while leaving the other procedural differences intact. Chapter~\ref{ch:data} specifies how each forecast is converted.
+
+Value-at-Risk (VaR) is a lower-return quantile, and Expected Shortfall (ES) averages the corresponding tail, including fractional boundary mass where required. Five-percent VaR gives the predicted five-percent loss threshold; ES describes average severity below it. Because returns are signed, more negative values indicate worse losses. FZ0 rewards the VaR--ES pair jointly, with lower scores preferred \citep{fissler2016higher,fissler2021correction,patton2019dynamic}. Correct breach frequency alone establishes neither accurate ES nor an absence of crisis clustering.
+
+Four distinctions determine how we interpret the scores:
+\begin{itemize}
+\item \textbf{Performance and attribution.} Ranking complete procedures establishes their performance in the comparison. Testing a matched change identifies the contribution of the part changed.
+\item \textbf{Superiority and equivalence.} An undetected gain does not establish equivalent forecasts. Equivalence needs a stated margin and its own test.
+\item \textbf{Support and materiality.} Evidence for a positive mean does not necessarily show that the gain exceeds a useful size. A protocol can apply its size threshold to the point estimate without requiring the whole interval to exceed it.
+\item \textbf{Coverage and joint tail accuracy.} Breach frequency assesses the VaR threshold, while joint VaR--ES scoring also assesses severity. Better unconditional frequency settles neither conditional coverage nor ES accuracy.
+\end{itemize}
+Chapter~\ref{ch:data} gives the paired date-block uncertainty and multiplicity rules used for these claims.
+
+\section{The resulting research position}
+
+The literature supplies the computational and statistical ingredients for the construction. Our contribution is to evaluate their volatility-oriented combination, test a matched combined prior design, and examine a compact predictive alternative. UniVol, the project's non-neural comparator, combines explicit filters and updates their weights using predictive performance. Chapter~\ref{ch:forecast} specifies this procedure before the compact-rule comparisons.
+
+Calibeating and adaptive calibration raise related questions about adjusting forecasts under stated targets and assumptions \citep{foster2023calibeating,gibbs2021adaptive}. Their guarantees do not automatically extend to VaR--ES or our archived correction procedure. We evaluate the implemented residual correction in controlled simulations and market comparisons, with FHS as the established residual method and the measured gains subject to the stated limits.
+
+The next chapter specifies the forecast targets, matching conditions and decision rules needed to evaluate these methods. Those choices determine which comparisons each result can support.

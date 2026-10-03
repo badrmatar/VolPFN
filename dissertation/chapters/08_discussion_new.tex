@@ -1,0 +1,68 @@
+\chapter{Discussion and conclusion}
+\label{ch:discussion}
+
+\section{What the completed studies establish}
+
+The matched experiment supports a contribution from the simulated training design: broad training improves on the Mat\'ern alternative under a common law. Benchmarks evaluate the resulting procedures, while historical and intraday controls test explanations of their performance. Fixed ETF evaluation extends the population with mixed comparator outcomes. Compact recovery and tail correction then identify where a large model or another correction adds value, and where support remains limited.
+
+These comparisons answer complementary parts of the overarching question. RQ1 and RQ5 concern performance of issued procedures, RQ2--RQ4 concern training choices and compact recovery, and RQ6 examines the tail limitation of scale prediction. Keeping these roles explicit prevents a successful ranking from becoming an unsupported explanation of why the network works.
+
+\section{Prior design as a modelling contribution}
+
+Holding architecture, initial weights and allocation fixed makes the combined prior design testable. The broad-minus-Mat\'ern gain is about 0.0052 nats per return, with all five pairs and seventeen markets positive. Its small size and concentration also matter: three markets contribute about half of the net gain. The gain is therefore positive in many markets, but modest and uneven.
+
+The prior sets the tasks used to learn a reusable forecasting rule \citep{muller2022transformers}. Our intervention shows that their composition matters relative to the specified alternative, while changing several features together. It cannot identify leverage, switching or return feedback as the cause; those questions need narrower interventions. Nor does it establish that more simulations compensate for an unsuitable task distribution.
+
+The benchmark gains establish usefulness against the specified competitors. Different models and samples prevent assigning those margins to the prior by subtraction, and earlier density findings retain their own checkpoint identity. GP-Vol provides a precedent for flexible dynamics and sequential inference \citep{wu2014gaussian}, but incomplete coverage gives no head-to-head ranking. The contribution remains the evaluated construction and matched training-design result, without depending on new attention machinery, general-purpose inference or verified worldwide priority.
+
+\section{Components, failed configurations and richer information}
+
+The component comparison favours return-distribution prediction over direct expected-squared-return prediction under the tested procedure. Output and loss change together, so neither is isolated. Removing auxiliary simulated-volatility supervision produces no detected deterioration at the recorded weight and budget. These findings identify an effective configuration without establishing that every component is necessary.
+
+The improved historical procedure changes the interpretation of the original training-source comparison. Adding regularisation and development selection reduces mean QLIKE from about 221 in the failed run to about 0.60 on the same index observations. Synthetic means remain slightly lower, but both adjusted probabilities are about $p=0.08$ and both family intervals cross zero. Historical training is therefore competitive. The original underprediction remains a run-specific diagnostic; changing dropout, selection and source together does not identify one cause of its recovery.
+
+The intraday blend adds information from earlier realised kernels and fits their contribution alongside daily risk. Its October controls test whether TTM-only calibration accounts for the observed advantage. Neither the level-and-slope control nor the scale-only control recovers the blend's performance at either proxy; all four comparisons have positive family intervals and retain support under the alternative block lengths. The blend outperforms those controls under their family rules, but its rank among the stronger intraday predictors remains unresolved. GNNHAR retains lower descriptive losses, principal stronger comparisons remain inconclusive, and warm-up forecasts differ. Pooled fitting and unverified RK vintages limit causal interpretation. The cross-market helper still lacks a comparison holding other settings fixed while removing foreign inputs.
+
+The ETF evaluation transfers original weights to a fixed new population. Noaux improves on the stronger historical procedure by about 0.021 QLIKE units, with a positive family interval, five positive seed means and eighteen positive ETF means. Full and noaux also have lower means than rolling GJR, but fail the primary support rule. This supports one training-procedure contrast rather than another broad--Mat\'ern intervention. Unverified human exposure and shared calendar shocks prevent treating it as untouched independent confirmation.
+
+\section{What the simpler rule explains}
+
+Fitting the nine-parameter rule directly to returns retains about 83\% of the earlier network's development advantage over UniVol, after which the rule runs independently. A small predictor therefore retains much of its useful scale performance. Imitation fits recover less, and similar average scores would not establish similar internal computation.
+
+Horizon terms allow the rule to respond when recent variation differs from slower variation. Their attained gain over the converged asymmetric core is consistent with component and HAR-style ideas \citep{engle1999permanent,corsi2009simple}. However, unequal convergence across expanded specifications prevents an intrinsic driver-class ranking. The synthetic stress tests also reject the proposed near-reference tracking explanation, while finite length curves establish no asymptotic error rate.
+
+Compact recovery does not contradict prior contribution. A useful predictor learned from simulation can later have much of its observed advantage retained by a smaller fitted rule. Learning from simulated tasks and fitting compact coefficients to market returns place the assumptions and estimation costs at different stages. Their comparison depends on predictive performance under the stated design rather than parameter count alone.
+
+\section{Why tail correction helps selectively}
+
+FHS separates changing scale from the empirical distribution of standardised residuals \citep{baroneadesi1999var}. We evaluate both the repair this permits and the estimation error it introduces. We score VaR and ES jointly because improved breach frequency alone does not establish better severe-loss prediction \citep{fissler2016higher,patton2019dynamic}.
+
+The clearest correction gains occur with Gaussian tails. Neural joint-score gains remain inconclusive, and the fixed guard sometimes performs worse than FHS. Convergence-checked refitting retains these principal conclusions while changing one supplementary tolerance decision for unguarded GAS.
+
+The simulations explain why the benefit is conditional. Estimating a new tail can damage a correct forecast, with that cost declining as stable history grows. After a shape change, old residuals delay adaptation. These controlled examples connect the market findings to starting error and available information, but select neither an optimal market window nor a universally improving correction.
+
+\section{Limits of the conclusions}
+
+\paragraph{Data exposure and population.}
+Prior index-data contact remains documented in Section~\ref{sec:exposure}; later freezes constrain choices without undoing exposure. The ETF protocol preceded acquisition, but prior human exposure is unverified and its dates share index-study shocks. Index exclusions, the fixed ETF roster and the open-to-close target define our population. External-pretraining overlap remains unknown, preventing a claim that every evaluated observation was unseen by every pretrained competitor. Source revisions and RK publication vintages also remain incompletely resolved, so chronological indexing alone cannot certify what data were available at the time. These limits restrict generalisation, and the evaluation establishes neither overnight portfolio performance nor trading returns.
+
+\paragraph{Attribution and comparison scope.}
+The changes controlled in each comparison determine what it can explain. Prior matching changes several simulation ingredients together, while distribution-versus-direct changes both output and loss. Benchmark contexts, selection opportunities and median or mean outputs also differ, so the rankings cannot isolate architecture. Within VolPFN, auxiliary labels omit some covariances and masked training does not target the complete zero-inclusive simulator law. The compact and tail findings also concern an earlier checkpoint. Calibration can adjust forecast level without aligning native objectives, and RK has not been equated to next-session return risk. These differences limit what each result can attribute to an individual modelling choice.
+
+\paragraph{Conditional inference and selection.}
+Calendar intervals measure date variation conditional on the saved forecasts, markets and masks. They do not repeat training, calibration or online fitting within each resample, and therefore omit that estimation uncertainty as well as research-selection uncertainty. Five seeds help describe consistency across training runs without covering every possible run. Selection history also matters: the historical analysis specification was recorded after its first seed result became visible, so the documented freezes are not formal preregistration. Finally, adjustment within separate families gives no dissertation-wide multiplicity guarantee, and correlated market signs cannot be counted as independent replications.
+
+\paragraph{Simulation transfer and numerical estimation.}
+Simulation findings apply to the stated processes, lengths and seeds, with privileged references and finite ranges limiting market transfer. Solver convergence establishes neither a global optimum nor freedom from numerical safeguards. Floors and retrospectively fitted, unscored prefixes remain part of the tail procedures; saved losses cannot show that constraints never activate. Causal updating establishes information order rather than calibration or improvement.
+
+\section{Conclusion}
+
+The five matched broad--Mat\'ern pairs support a modest contribution from the combined simulation design. The result answers the prior question at that level, leaving individual causal ingredients unidentified.
+
+VolPFN ranks first in the tested general pretrained benchmark, and its variants lead the daily-return-only leaderboard of dedicated financial models and general pretrained forecasters. Leadership describes the evaluated procedures and does not establish adjusted superiority over every competitor. Distribution prediction outperforms direct risk prediction; extra volatility supervision has no detected benefit; and the stronger historical procedure is competitive on indices. The intraday blend improves on TTM-only calibration controls, while stronger alternatives remain unresolved. Fixed ETF evaluation supports noaux over the improved historical procedure, but leaves superiority over rolling GJR inconclusive.
+
+A compact rule independently retains much of the earlier checkpoint's scale advantage. This supports a simpler predictive alternative without explaining the network's computation.
+
+Residual correction adds value most clearly for Gaussian tails. Additional neural joint-score gains remain uncertain, and the fixed guard sometimes loses to FHS. Its value therefore depends on the original forecast and the evidence available for estimating a replacement.
+
+The synthetic design contributes to prediction in the evaluated comparisons, subject to the documented exposure and conditional uncertainty. The results support forecasting performance and a contribution from the combined training design. They do not explain the network's internal mechanism.

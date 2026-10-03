@@ -1,0 +1,50 @@
+\section{Technical records for the added research}
+\label{sec:new-research-methods}
+
+Chapter~\ref{ch:data} specifies component matching, budgets, periods and masks. Reused seed numbers do not imply identical checkpoints. Thirteen checkpoint evaluations required CUDA device-alias recovery without retraining; external continuations retained completed fits. GINN's interrupted tuning configuration was recomputed; its lost intermediate state and partial compute remain unknown. These repairs do not establish bitwise training reproduction.
+
+\subsection{Component interventions and complete execution}
+
+Full/noaux retain identical physical heads and initialisation; noaux disables auxiliary loss. Direct retains trunk initialisation and supplied synthetic batches while changing output/loss. Historical uses noaux density training on pre-2011 returns, without invented latent labels. Fixed-final checkpoints remain regardless of diagnostic validation. The seven complete procedures supply 1,752,555 forecasts, retaining every registered market/seed rather than selected survivors.
+
+\subsection{Financial neural adaptations and selection}
+
+TRAIN-only means and centred RMS are restored before scoring. Tuning seed 717311 selects by development squared-return QLIKE; all five final seeds are retained.
+
+\begin{table}[!htbp]\centering\small
+\caption[Registered daily neural grids]{Actual frozen daily-runner settings. Every method uses learning-rate candidates $\{0.0003,0.001\}$. These are adaptation settings selected on development observations, not replicated published optima.}
+\label{tab:new-daily-grids}
+\begin{tabular}{@{}p{2.7cm}p{1.4cm}p{3.3cm}p{6.2cm}@{}}
+\toprule Procedure & Context & Fixed/search settings & Operation and adaptation \\
+\midrule
+ARCH-LSTM & 1 & Fixed $\nu=3$; loss weight $\{0,0.5,1\}$ & Author-code fixed-tail branch; squared centred returns; clipped-exponential variance head. \\
+GARCH-LSTM & 126 & Fixed $\nu=5$ & GARCH kernel and recurrent modulation; Student likelihood; single next-session target. \\
+GINN & 90 & Observed-innovation weight $\{0,0.01,0.1\}$ & Frozen TRAIN AR/GARCH teachers and recurrent squared-innovation inputs; imposed $t_5$ evaluation density. \\
+\bottomrule\end{tabular}
+\end{table}
+
+ARCH-LSTM follows the documented author-code hybrid-loss branch, without cross-framework weight parity. Its frozen grid is $\{0,0.5,1\}$; the original source's $\{0.1,0.5,1\}$ sentence is stale. GARCH-LSTM's positive kernel restrictions do not prove hybrid stationarity; its published five-day target becomes next-session open-to-close return. GINN freezes TRAIN AR(1)/normal-GARCH teachers rather than refitting them, using ninety-session squared-innovation contexts. These innovations are observed proxies, not latent variance.
+
+\subsection{Realised-risk procedures and their available information}
+
+QLIKE-HAR fits an intercept and own HAR1/5/22 RK levels on 1,000 preceding target sessions. Nonpositive predictions reject the objective; positive-constant starts, retries and objective gates remain. All 22,026 fits converged; repaired verification reproduces forecasts. This level-target procedure differs from CaPiRe's square-root target.
+
+GNNHAR freezes its through-2017 graph/weights after whole-2018 checkpoint selection, rather than monthly refitting. Foreign histories end strictly before the target's previous-session origin. Failed seed 8104 continues its original trajectory under the full-TRAIN constant-baseline gate, without seed replacement.
+
+Transfer-XGBoost uses exact dynamic time warping against eligible earlier segments from the other 27 markets, selecting the fiftieth percentile. Source labels precede forecast blocks; refits occur every five own sessions. XGBoost 1.7.1 uses forty trees, depth five and learning rate 0.1. Scaling is undone once; negative outputs use the declared positive TRAIN minimum. The RK/index adaptation differs from the published new-issue/FirstRate experiment.
+
+TTM-RK, Log-HAR, MS-HAR and Log-Rough-HAR retain saved source versions. RK risk points lack separately predicted means/densities. Missing targets are not fabricated; invalid past RK inputs use documented causal carrying. Session chronology does not establish publication latency or vintage availability.
+
+\subsection{Online combination and the cross-market helper}
+
+Equation~\eqref{eq:new-online-blend} fits two parameters separately by proxy/seed on pooled prior dates. Sixty initial union dates use $a=0,w=0.5$; refits occur every twenty dates. Fixed-start Nelder--Mead must pass convergence/objective gates; failure rejects the procedure without removing scored keys. Fitting pools observations, while reporting weights markets equally.
+
+The helper uses 84 HAR1/5/22 RK features: one triplet per market. Foreign inputs precede the target's previous-session origin; windows count native sessions and dates are not predictors. Only own positive RK labels through 2017 are fitted. Source/target TRAIN means remain frozen, with target scaling undone once; 2018 is diagnostic without selection.
+
+XGBoost 1.7.1 uses gamma objective, forty trees, depth three, learning rate 0.1, subsample 0.75 and frozen exact-CPU settings. All 140 fits pass TRAIN gates and replay 110,130 predictions; models stay frozen in 2019--2022. No ablation removing foreign-market inputs was run.
+
+Helper-only calibration fits $\log h=a+b\log h_{\mathrm{helper}}$ with unconstrained slope, starting at $a=0,b=1$. Its two parameters/refit dates match the blend. The twelve-slot family uses six controls and two proxies, with registered seed correspondence rather than assumed common training randomness.
+
+\subsection{Sources, records and reproduction}
+
+Programme manifests are under \path{research/outputs/experiment_programme_20260930/}; harmonised, intraday and helper records retain separate provenance. Full reproduction also requires the separately pinned daily-loader inventory, which was omitted from the original runtime closure. The source bundles summaries in \path{research_evidence/} and pins in \path{verification/new_evidence_manifest.json}. Exact paths/commands remain in the unabridged source appendix. Full reproduction needs the original data, checkpoints, forecasts and pinned runtimes beyond this manuscript bundle.

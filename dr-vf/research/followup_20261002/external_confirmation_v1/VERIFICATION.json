@@ -1,0 +1,152 @@
+{
+  "status": "passed",
+  "fixed_20_ETFs": true,
+  "rows_per_model_seed": 22600,
+  "all_five_neural_seeds": true,
+  "all_masks_exact": true,
+  "all_scores_recomputed": true,
+  "context_and_fit_cutoffs_verified": true,
+  "original_weights_unchanged": true,
+  "neural_seed_receipts": [
+    {
+      "status": "complete",
+      "seed": 8101,
+      "rows_per_model": 22600,
+      "input_checkpoint_hashes": {
+        "full": "e0946e65219cdd1086a9b19483fdb95e1af9d68eb36933d8da5db188c405c6f9",
+        "noaux": "0f809c1e28fb6ee9ffbaca90d393ec8147d09c0c582b5e983600d68449f7eab6",
+        "historical_regularized": "76fb47d6a604e0fce671f1cb4d26cee51e8908bf41e04f4f723d329261264461"
+      },
+      "protocol_sha256": "9c9db5f6d770e6efdeafd6e712a3b770ba3ef00d95128cb85dbd6781dc2f984a",
+      "execution_protocol_sha256": "31ba02f01479a8f90221464538534228889006a9bc5026648bedece1b34b3177",
+      "runtime": {
+        "python": "3.12.3",
+        "numpy": "2.2.6",
+        "scipy": "1.15.3",
+        "torch": "2.8.0+cu128",
+        "cuda": "12.8",
+        "gpu": "NVIDIA H100 80GB HBM3",
+        "platform": "Linux-6.8.0-90-generic-x86_64-with-glibc2.39"
+      },
+      "elapsed_seconds": 115.80485486984253,
+      "exposure_classification": "new recorded ETF population; human exposure unverified; do not label untouched",
+      "forecast_hashes": {
+        "historical_regularized.csv": "372e27e1fca4b8a339dbf6683d9fc4b8d55f0e11e7ddf39c2be46a3aa4a44a07",
+        "noaux.csv": "3a601c02ff93845c8bd6b88177916114d1376b6a99464a1d736b7167b440f99f",
+        "full.csv": "b529cc55ca34db409d8c7188e65a5962d26d3b2cd02ba0a1f7768d190d452148"
+      }
+    },
+    {
+      "status": "complete",
+      "seed": 8102,
+      "rows_per_model": 22600,
+      "input_checkpoint_hashes": {
+        "full": "0317e2f5bbfeecdd15afc2e3741d18d81dda04050bbdf56078efcaff2549cb53",
+        "noaux": "57e2cbd00cffb32477663758d384ab82e8e96f64a66ddea17ac1241c4c65a700",
+        "historical_regularized": "df23c96e235ae29a043bc77b80699456a9f675250660c02785b83ea6b18640b2"
+      },
+      "protocol_sha256": "9c9db5f6d770e6efdeafd6e712a3b770ba3ef00d95128cb85dbd6781dc2f984a",
+      "execution_protocol_sha256": "31ba02f01479a8f90221464538534228889006a9bc5026648bedece1b34b3177",
+      "runtime": {
+        "python": "3.12.3",
+        "numpy": "2.2.6",
+        "scipy": "1.15.3",
+        "torch": "2.8.0+cu128",
+        "cuda": "12.8",
+        "gpu": "NVIDIA H100 80GB HBM3",
+        "platform": "Linux-6.8.0-90-generic-x86_64-with-glibc2.39"
+      },
+      "elapsed_seconds": 111.1120240688324,
+      "exposure_classification": "new recorded ETF population; human exposure unverified; do not label untouched",
+      "forecast_hashes": {
+        "historical_regularized.csv": "8ba9c3f91874137948d5d3f1ff7699bfcef60378cfc029033e1534245402bf61",
+        "noaux.csv": "b78e4800d702d5e867d4365e9bd18e163b7a1d8e50ac8a3919c04f272dea5b39",
+        "full.csv": "f35679cebb3a3a0a6c85be14ad002b3da036f61da767f9c2081dcef17233322b"
+      }
+    },
+    {
+      "status": "complete",
+      "seed": 8103,
+      "rows_per_model": 22600,
+      "input_checkpoint_hashes": {
+        "full": "b649cd4d81767e03dea35d6a1b33b3be66c2254b922d2ebdbcc5846e76a0895d",
+        "noaux": "a049e28b337852bf2df1dd2b077e56a6ad4362175b03cca85b472143d1526a71",
+        "historical_regularized": "7c392024856bdf91d8f74aa5248a85640b225522ce88fe79f647db05266b8302"
+      },
+      "protocol_sha256": "9c9db5f6d770e6efdeafd6e712a3b770ba3ef00d95128cb85dbd6781dc2f984a",
+      "execution_protocol_sha256": "31ba02f01479a8f90221464538534228889006a9bc5026648bedece1b34b3177",
+      "runtime": {
+        "python": "3.12.3",
+        "numpy": "2.2.6",
+        "scipy": "1.15.3",
+        "torch": "2.8.0+cu128",
+        "cuda": "12.8",
+        "gpu": "NVIDIA H100 80GB HBM3",
+        "platform": "Linux-6.8.0-90-generic-x86_64-with-glibc2.39"
+      },
+      "elapsed_seconds": 116.47367739677429,
+      "exposure_classification": "new recorded ETF population; human exposure unverified; do not label untouched",
+      "forecast_hashes": {
+        "historical_regularized.csv": "2999c54ccece9abe3d735ebfed729915a400578b268ad9bf2aceff1ff5b4a651",
+        "noaux.csv": "fae1a318b39276956a4ebff3518d7d0aad6a6e909b71e11d2780d459318ede33",
+        "full.csv": "bd6de8cda8146da50cf2276b6313da704245de6f7a7b9779f80f6133f6352305"
+      }
+    },
+    {
+      "status": "complete",
+      "seed": 8104,
+      "rows_per_model": 22600,
+      "input_checkpoint_hashes": {
+        "full": "08cf20239bd0373bc6a219f7a0a7741524ca03a10a955ca51964c3ecedb58c89",
+        "noaux": "488dcb64b53172e56f3ec5bde8ec7858efaf3fdcd8ab7ad9e442ee42d26f7c48",
+        "historical_regularized": "0a370dd62df81180c921ba9374d710a69d138bbd6bc7f9bd773f67a42d0b8ae9"
+      },
+      "protocol_sha256": "9c9db5f6d770e6efdeafd6e712a3b770ba3ef00d95128cb85dbd6781dc2f984a",
+      "execution_protocol_sha256": "31ba02f01479a8f90221464538534228889006a9bc5026648bedece1b34b3177",
+      "runtime": {
+        "python": "3.12.3",
+        "numpy": "2.2.6",
+        "scipy": "1.15.3",
+        "torch": "2.8.0+cu128",
+        "cuda": "12.8",
+        "gpu": "NVIDIA H100 80GB HBM3",
+        "platform": "Linux-6.8.0-90-generic-x86_64-with-glibc2.39"
+      },
+      "elapsed_seconds": 111.41844367980957,
+      "exposure_classification": "new recorded ETF population; human exposure unverified; do not label untouched",
+      "forecast_hashes": {
+        "historical_regularized.csv": "44362cde467a93845e4a8870a1be953c5aa32060b5e1a8647f7129d85ff0ad39",
+        "noaux.csv": "043b70c25647fcee27e5e04e3fc5f8b558f3d1a562ed3dbab8b1bed5a8e63ba5",
+        "full.csv": "e3a97df2ec899280419ec2d7cd9894c7b7428dd679657c04947a63ccdd431b8f"
+      }
+    },
+    {
+      "status": "complete",
+      "seed": 8105,
+      "rows_per_model": 22600,
+      "input_checkpoint_hashes": {
+        "full": "b3846fbf8775a650d53f4e2b1963eaad68b483a4087f7aae70024ea8f54e551f",
+        "noaux": "f22aab325ee13d765cb731fc81980f60a61f05975c337304034559f68e377508",
+        "historical_regularized": "91f2c78f4efa35cc607703463046984b92d90f58264212c584b19be651b0b309"
+      },
+      "protocol_sha256": "9c9db5f6d770e6efdeafd6e712a3b770ba3ef00d95128cb85dbd6781dc2f984a",
+      "execution_protocol_sha256": "31ba02f01479a8f90221464538534228889006a9bc5026648bedece1b34b3177",
+      "runtime": {
+        "python": "3.12.3",
+        "numpy": "2.2.6",
+        "scipy": "1.15.3",
+        "torch": "2.8.0+cu128",
+        "cuda": "12.8",
+        "gpu": "NVIDIA H100 80GB HBM3",
+        "platform": "Linux-6.8.0-90-generic-x86_64-with-glibc2.39"
+      },
+      "elapsed_seconds": 111.43200278282166,
+      "exposure_classification": "new recorded ETF population; human exposure unverified; do not label untouched",
+      "forecast_hashes": {
+        "historical_regularized.csv": "4abcebfb35722c492354802857f342ddc9360b3d01c03b807eb3e3adae55bf83",
+        "noaux.csv": "de489fc306dfca8c82cb4e16e26d8e20308feb4462335c130ae6303c7125cd75",
+        "full.csv": "b1787e821e8dcb70270a5e32ac1979105e5e8b83ba210721ae8215600ded02eb"
+      }
+    }
+  ]
+}

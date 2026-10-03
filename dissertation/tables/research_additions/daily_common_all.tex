@@ -1,0 +1,32 @@
+\begingroup\small\setlength{\tabcolsep}{4pt}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{6.5cm}rrr@{}}
+\caption[Complete common-period daily scores]{Complete saved daily table and supplementary configurations, 22,026 keys in 2019--February 2022. The 26 September model and ablations retain distinct identities. RK scoring uses central variance; direct RK is unavailable. Descriptive loss ordering does not transfer tests between model versions.}\label{tab:new-daily-common-all}\\
+\toprule
+Procedure & $r^2$ QLIKE & RK QLIKE & Seeds \\
+\midrule\endfirsthead
+\toprule
+Procedure & $r^2$ QLIKE & RK QLIKE & Seeds \\
+\midrule\endhead
+VolPFN (26 September) & 0.703689 & 0.625397 & 5 \\
+Full VolPFN (30 September) & 0.703714 & 0.625668 & 5 \\
+GJR-GARCH-$t$ & 0.718424 & 0.634702 & 1 \\
+APARCH-$t$ & 0.722381 & 0.642651 & 1 \\
+GARCH-$t$ & 0.740170 & 0.656740 & 1 \\
+GINN & 0.748601 & 0.673846 & 5 \\
+UniVol & 0.754697 & 0.681621 & 1 \\
+GARCH-LSTM & 0.765202 & 0.710314 & 5 \\
+EWMA & 0.770326 & 0.695458 & 1 \\
+TabPFN-TS & 0.866181 & 0.760323 & 1 \\
+ARCH-LSTM & 1.052799 & 1.021653 & 5 \\
+Historical variance (250) & 1.072036 & 1.076967 & 1 \\
+EGARCH-$t$ & 2.376730 & 2.303764 & 1 \\
+Chronos-2 & 2.478397 & 2.191879 & 1 \\
+Moirai-2 & $7.03773\times10^{5}$ & $1.30930\times10^{6}$ & 1 \\
+TTM square-root RK diagnostic & 0.687005 & 0.607298 & 1 \\
+Noaux & 0.702624 & 0.624696 & 5 \\
+Compact nine-parameter rule & 0.705530 & 0.642068 & 1 \\
+Direct second moment & 0.712596 & --- & 5 \\
+Mean-log HAR diagnostic & 0.713198 & 0.663236 & 1 \\
+Historical training & 222.674179 & $1.92096\times10^{4}$ & 5 \\
+\bottomrule
+\end{longtable}\endgroup

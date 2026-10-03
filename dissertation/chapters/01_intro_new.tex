@@ -1,0 +1,53 @@
+\chapter{Introduction}
+\label{ch:introduction}
+
+\section{The problem: forecasting uncertainty}
+
+Forecasting a financial return involves estimating how large tomorrow's movement might be as well as its direction. Two forecasts with similar expected returns can carry different levels of risk. To describe this uncertainty, we use \emph{volatility}, the conditional standard deviation of returns, whose square is conditional variance.
+
+We forecast the open-to-close log returns of stock-market indices, which summarise groups of stocks. This target measures movement within a trading session, leaving overnight movement outside the study. Rather than describing uncertainty through one risk value alone, a \emph{predictive distribution} assigns probabilities to possible returns. Its width describes the overall scale of uncertainty, while its tails determine the probabilities of extreme outcomes. Consequently, forecasts with equal variance can still disagree about the likelihood of a severe loss.
+
+An illustrative turbulent week in the S\&P 500 makes this distinction useful. A forecaster needs to assess whether a large movement is an isolated shock or part of a persistent rise in uncertainty. Even if it estimates the overall scale sensibly, it may assign too little probability to severe losses. This illustrative case connects forecasting performance to the assumptions learned during training and the conversion of scale into tail risk. It supplies no additional empirical evidence.
+
+We address these concerns while asking whether a large network can respond to changing market conditions without being repeatedly fitted to each market. The benchmarks assess the usefulness of the resulting forecasts against other procedures, while Chapter~\ref{ch:analysis} tests what simulated training histories contribute. The tail studies then examine whether useful scale forecasts also provide reliable predictions of extreme losses.
+
+\section{The proposed approach and its motivation}
+
+Conventional volatility models learn an updating rule from market histories. For example, GARCH combines recent squared shocks with earlier variance estimates through a relatively inexpensive recursion \citep{bollerslev1986generalized}. These economical procedures provide a benchmark for a more flexible forecaster. Added complexity needs to be justified by forecasting performance.
+
+The approach developed here is VolPFN, a volatility-oriented prior-data fitted network trained on simulated histories. Its \emph{training prior} defines the artificial processes and parameter settings from which those histories are generated. Following the prior-fitted approach of \citet{muller2022transformers}, the network learns to predict a return distribution from the supplied history. During market use, each new history changes the prediction, but the neural weights remain fixed.
+
+Simulation allows us to generate training examples whose underlying volatility is known. However, this is useful only to the extent that the tasks teach an appropriate forecasting rule: omitted market behaviour and irrelevant simulated tasks can both make that rule unsuitable. A benchmark cannot isolate this issue because its competitors also differ in architecture, training data and outputs. We therefore compare two simulation designs with the remaining network settings matched, allowing us to test the contribution of the combined training design.
+
+We also fit a small explicit predictor to examine how much of an earlier network's forecasting advantage can be retained with a simpler rule. Once fitted, the rule uses returns alone and runs independently of the network. Its predictive performance can therefore help assess whether a large model is needed. Similar scores, however, would neither establish shared internal computation nor amount to reverse-engineering the network.
+
+The final part of the argument concerns the conversion from scale to tails. Dividing returns by their forecast scale produces \emph{standardised residuals}, whose empirical distribution can replace an assumed tail shape through filtered historical simulation \citep{baroneadesi1999var}. This can repair unsuitable tails, but estimating them from a short history introduces sampling error. We evaluate both the benefit of correction and the cost of estimating it.
+
+\section{Research questions and contributions}
+
+The overarching question is: \emph{what does a synthetic volatility prior contribute to useful market forecasts, and where does that contribution stop?} We develop this question through six research questions. Two extensions broaden the evaluation in different ways. Exchange-traded funds (ETFs) extend the asset population beyond indices, whereas Tiny Time Mixers (TTM), a pretrained model using past intraday risk measurements, adds information to a forecast. Keeping their roles distinct helps identify what each extension can establish.
+
+\begin{enumerate}[label=RQ\arabic*.,leftmargin=1.5cm]
+\item Does VolPFN improve forecasting scores against the specified general and financial benchmarks, including evaluation on a fixed external ETF population?
+\item Does the broad simulation design improve prediction relative to a matched Mat\'ern design?
+\item What do the component comparisons and a historical model selected using earlier development observations establish about the training procedure?
+\item How much of an earlier neural forecast's advantage can a compact rule recover?
+\item What changes when daily forecasts are combined with realised-risk information, including comparison with calibration of TTM alone?
+\item When does residual tail correction improve forecasts of Value-at-Risk and Expected Shortfall together?
+\end{enumerate}
+
+The questions follow the distinction between performance and explanation. RQ1 and RQ5 assess forecasting performance under the information available to each procedure. RQ2--RQ4 examine training choices and whether neural complexity is needed to retain useful prediction. RQ6 then considers whether correcting a scale forecast improves its prediction of extreme-loss risk. Each question requires an appropriate comparison and score, so a single leaderboard cannot answer the whole argument.
+
+The dissertation makes four contributions in the following order:
+\begin{enumerate}
+\item \textbf{A matched test of prior contribution.} We train five broad--Mat\'ern pairs with architecture, initial weights and training allocation held fixed. The broad design improves the common log score by about 0.0052 nats per return, with positive means in all five pairs and most markets. This supports a contribution from the combined simulation design, while leaving the causal contribution of individual ingredients unresolved.
+\item \textbf{A volatility-oriented forecaster and a differentiated evaluation.} VolPFN predicts a heavy-tailed return distribution from past returns. It ranks first in the tested general pretrained benchmark, and its variants lead the daily-return-only leaderboard, which includes dedicated financial models and general pretrained forecasters. These rankings describe the evaluated procedures; adjusted tests do not establish superiority over every competitor. The component comparisons favour distribution prediction over direct prediction of expected squared return and detect no benefit from extra volatility supervision. The improved historical procedure is competitive on indices. The intraday blend improves on the specified TTM-only calibration controls, while fixed ETF evaluation supports the synthetic model without extra supervision over the improved historical procedure. Superiority over rolling GJR and the principal stronger intraday alternatives remains inconclusive.
+\item \textbf{Evidence on predictive compression.} Fitting a small rule directly to observed returns retains about 83\% of an earlier network's development advantage over UniVol, the project's non-neural combination of risk filters. We report fits that imitate the network separately, because retaining forecasting performance and faithfully reproducing another predictor answer different questions.
+\item \textbf{An evaluation of tail correction and its cost.} Simulations and market comparisons show that residual correction helps selectively, with the clearest benefit for Gaussian tails. Additional neural gains in the joint tail score remain inconclusive, and the fixed rule for applying correction sometimes performs worse than filtered historical simulation.
+\end{enumerate}
+
+\section{Organisation and scope}
+
+The chapter sequence develops this argument from concepts to evaluation and interpretation. Chapter~\ref{ch:background} introduces the relevant concepts and literature, followed by the targets, populations and decision rules in Chapter~\ref{ch:data}. Chapter~\ref{ch:forecast} explains VolPFN and evaluates its forecasts. Chapter~\ref{ch:analysis} then examines training choices and the performance retained by a small rule. Chapters~\ref{ch:recalibration} and \ref{ch:tailresults} specify and evaluate residual tail correction, before Chapter~\ref{ch:discussion} brings the answers together.
+
+Our conclusions apply to the recorded markets, dates and forecasting procedures. Section~\ref{sec:exposure} documents prior research contact with the data, which limits the interpretation of the evaluations. The appendices retain implementation details, supporting results and unsuccessful comparisons so that the main argument can remain readable without separating it from the evidence needed to check its scope.

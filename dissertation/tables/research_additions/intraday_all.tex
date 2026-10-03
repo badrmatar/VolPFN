@@ -1,0 +1,29 @@
+\begingroup\small\setlength{\tabcolsep}{4pt}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{6.5cm}rrr@{}}
+\caption[Complete realised-risk scores]{All eighteen completed intraday-extension procedures on the common 2019--February 2022 panel. Lower is better; complete-procedure comparisons do not isolate architecture. Unavailable M2VN and DeepRGARCH retain statistical slots without fabricated scores.}\label{tab:new-intraday-all}\\
+\toprule
+Procedure & $r^2$ QLIKE & RK QLIKE & Seeds \\
+\midrule\endfirsthead
+\toprule
+Procedure & $r^2$ QLIKE & RK QLIKE & Seeds \\
+\midrule\endhead
+Full VolPFN+TTM-RK & 0.672139 & 0.598944 & 5 \\
+VolPFN (26 Sept.)+TTM-RK & 0.672203 & 0.598948 & 5 \\
+Full VolPFN+Log-HAR & 0.675699 & 0.605183 & 5 \\
+Full VolPFN+MS-HAR & 0.682335 & 0.609285 & 5 \\
+GJR-GARCH-$t$+TTM-RK & 0.675318 & 0.601493 & 1 \\
+GJR-GARCH-$t$+Log-HAR & 0.679109 & 0.607935 & 1 \\
+MS-HAR+Log-HAR & 0.684291 & 0.615649 & 1 \\
+Full VolPFN (30 September) & 0.703714 & 0.625668 & 5 \\
+VolPFN (26 September) & 0.703689 & 0.625397 & 5 \\
+GJR-GARCH-$t$ & 0.718424 & 0.634702 & 1 \\
+HAR & 28.898514 & 31.530660 & 1 \\
+Log-HAR & 0.686607 & 0.612740 & 1 \\
+TTM-RK & 0.676869 & 0.611457 & 1 \\
+MS-HAR & 0.698336 & 0.623273 & 1 \\
+Log-Rough-HAR & 0.710735 & 0.656406 & 1 \\
+GNNHAR adaptation & 0.669351 & 0.594805 & 5 \\
+QLIKE-HAR & 0.678331 & 0.599113 & 1 \\
+Transfer-XGBoost & 0.693250 & 0.607646 & 5 \\
+\bottomrule
+\end{longtable}\endgroup

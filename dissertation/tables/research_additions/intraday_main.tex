@@ -1,0 +1,18 @@
+\begin{table}[!htbp]\centering
+\begingroup\small\setlength{\tabcolsep}{4pt}
+\caption[Selected realised-risk scores]{Selected realised-risk procedures, 22,026 common keys in 2019--February 2022. These have different information and fitting opportunities. Return-moment inputs use M2 for $r^2$ and variance for RK; native RK procedures use their issued risk level. Proxy-specific blends are fitted separately. GNNHAR's lower mean is included; these descriptive rows do not identify supported superiority.}\label{tab:new-intraday}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{6.5cm}rrr@{}}
+\toprule
+Procedure & $r^2$ QLIKE & RK QLIKE & Seeds \\
+\midrule
+GNNHAR adaptation & 0.669351 & 0.594805 & 5 \\
+Full VolPFN+TTM-RK & 0.672139 & 0.598944 & 5 \\
+GJR-GARCH-$t$+TTM-RK & 0.675318 & 0.601493 & 1 \\
+QLIKE-HAR & 0.678331 & 0.599113 & 1 \\
+Transfer-XGBoost & 0.693250 & 0.607646 & 5 \\
+TTM-RK & 0.676869 & 0.611457 & 1 \\
+Log-HAR & 0.686607 & 0.612740 & 1 \\
+MS-HAR & 0.698336 & 0.623273 & 1 \\
+Log-Rough-HAR & 0.710735 & 0.656406 & 1 \\
+\bottomrule
+\end{tabular}\endgroup\end{table}
