@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "volpfn"
+version = "0.1.0"
+description = "Volatility forecasting from a synthetic prior"
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.24", "scipy>=1.10", "torch>=2.8", "pandas>=1.5"]
+
+[project.optional-dependencies]
+experiments = ["arch>=7.2", "matplotlib>=3.9", "yfinance>=1.2", "scikit-learn>=1.6", "statsmodels>=0.14"]
+
+[project.scripts]
+volpfn = "volpfn.forecasting:main"

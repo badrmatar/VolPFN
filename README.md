@@ -1,77 +1,85 @@
 # VolPFN
 
-Code and supporting material for **VolPFN: Volatility Forecasting from a Synthetic Prior**, Bader Matar's MSc dissertation.
+Volatility forecasting from a synthetic prior. This repository contains the model, the experiments used in the MSc dissertation, and the associated tests.
 
-## Contents
+**Start with [the model](src/volpfn/model.py), [the synthetic prior](src/volpfn/prior.py), or [the forecasting interface](src/volpfn/forecasting.py).**
 
-| Folder | Purpose |
+## Structure
+
+```text
+src/
+  volpfn/            model, prior, preprocessing, losses, training and forecasting
+  calibeat/          VaR/ES recalibration used in the tail-risk study
+experiments/         dissertation comparisons, baselines and analysis procedures
+tests/              core regression tests, fixtures and study-specific tests
+docs/               study map, verification record and LaTeX source
+```
+
+The main code no longer lives in a research/testing folder. Experiment code calls the package; the package does not depend on the experiment folders.
+
+## Model files
+
+| File | Responsibility |
 | --- | --- |
-| [`dr-vf/`](dr-vf/) | VolPFN, its simulator, causal forecasting interface, dissertation experiments and their tests. |
-| [`calibeat-var-es/`](calibeat-var-es/) | The VaR/ES recalibration implementation used in Chapters 6–7. |
-| [`dissertation/`](dissertation/) | Active LaTeX source, figures and bibliography. |
-| [`docs/`](docs/SCOPE.md) | Chapter-to-code map, provenance, reproduction limits and recorded test results. |
+| [`model.py`](src/volpfn/model.py) | Transformer blocks and mixture prediction heads. |
+| [`prior.py`](src/volpfn/prior.py) | Corrected synthetic prior and reference filters. |
+| [`data.py`](src/volpfn/data.py) | Raw synthetic training batches. |
+| [`preprocessing.py`](src/volpfn/preprocessing.py) | Causal normalisation, features and target alignment. |
+| [`distributions.py`](src/volpfn/distributions.py) | Student-t densities, moments, VaR and ES. |
+| [`losses.py`](src/volpfn/losses.py) | Predictive and auxiliary training losses. |
+| [`training.py`](src/volpfn/training.py) | Seeded training, validation and checkpoint utilities. |
+| [`inference.py`](src/volpfn/inference.py) | Corrected causal forecasts from an in-memory model. |
+| [`forecasting.py`](src/volpfn/forecasting.py) | Checkpoint validation and the forecasting command. |
+| [`legacy/`](src/volpfn/legacy/) | Explicit support for retained older checkpoints and comparisons. |
 
-[Find the relevant implementation](docs/SCOPE.md)
+The small `_causal.py` module and two experiment import bridges retain the original experiment interfaces without duplicating the implementation.
 
-The original project folder names are retained because imports, relative paths and the dissertation's evidence references use them. This is a focused source repository; it does not contain the full local research archive.
+## Install
 
-## Core setup
-
-The recorded core checks use Python 3.9 and the package versions in `requirements.txt`.
+Python 3.9 or later is required. From the repository root:
 
 ```sh
 python3 -m venv .venv
 source .venv/bin/activate
-python -m pip install -r requirements.txt
+python -m pip install --upgrade pip
+python -m pip install -e .
 ```
 
-The requirements record the working scientific environment; a fresh installation was not tested during publication. External pretrained-model adapters have their own runtime and model requirements in the relevant research protocols. No cloud jobs are started by setup.
+For the additional common baseline dependencies, use `python -m pip install -e '.[experiments]'`. The original tested dependency versions remain in `requirements.txt`. Specialist pretrained-model adapters still require their separately specified runtimes and weights.
 
-## Forecasting
-
-Use the checkpoint-aware interface, which checks the declared preprocessing and records forecast provenance:
+## Forecast
 
 ```sh
-cd dr-vf
-python -m research.forecast_checkpoint --help
+volpfn --help
+volpfn --ckpt path/to/checkpoint.pt --data returns.csv --out forecasts.csv
 ```
 
-Forecasting requires a compatible trained checkpoint and an input return series. The dissertation's daily target is the next observed session's open-to-close log return in percent units. The root `volpfn.py` CLI is a retained legacy interface; use `research.forecast_checkpoint` for corrected causal checkpoints.
+`python -m volpfn` provides the same command. Input CSVs require increasing, unique `date` values and a finite `return` column. Supply the units expected by the checkpoint; the dissertation's daily target is open-to-close log return in percent units. The command records preprocessing and output provenance. Older checkpoints require `--allow-legacy` explicitly.
+
+For library use:
+
+```python
+from volpfn.forecasting import forecast
+
+predictions, provenance = forecast("checkpoint.pt", returns, device="cpu")
+```
+
+Checkpoints and market datasets are not bundled. No training or cloud job starts on import or installation.
 
 ## Tests
 
-From `dr-vf/`, run the selected self-contained checks:
-
 ```sh
 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 \
-python -m unittest \
-  research.test_forecast_checkpoint \
-  research.test_volpfn_causality \
-  research.test_reference \
-  research.seed_replication.test_causal \
-  research.programme_closure.test_simulator_correction -v
+  python -m unittest discover -s tests -p 'test_*.py' -v
+python -m unittest discover -s tests/tail -p test_fz.py -v
 ```
 
-From `calibeat-var-es/`, run the tail-score checks:
+The core suite checks causal timing, checkpoint dispatch, simulator corrections, reference calculations and numerical parity with the version before reorganisation. `tests/experiments/` holds additional study-specific checks; some require archived inputs and are intentionally separate from core test discovery. See [the verification record](docs/verification.json) for the checks actually run.
 
-```sh
-python -m unittest discover -s tests -p test_fz.py -v
-```
+## Dissertation experiments
 
-Other historical tests and experiment drivers may require the separately retained data, checkpoints or saved results. They are not all clean-clone smoke tests. No dissertation training or market experiment was rerun for this repository.
+See [the study map](docs/SCOPE.md) and [`experiments/README.md`](experiments/README.md). The scientific algorithms and settings are retained, while imports, test locations and source inventories have been updated. The October duplicate implementation and downloaded third-party source tree have been removed; required implementation code is shared instead.
 
-## Build the dissertation
+Historical hash-bound protocols identify their original source versions. Exact historical replay uses the recorded inputs and the pre-reorganisation commit `7cde0f7`, not newly generated hashes presented as old provenance. Existing absolute archive paths and unavailable datasets still limit which historical runners work in a fresh checkout. Reorganisation does not recreate those inputs or certify all archived workflows.
 
-With TeX Live or MacTeX and the packages declared in `dissertation/main.tex`:
-
-```sh
-sh dissertation/build.sh
-```
-
-The LaTeX source corresponds to the final Stage 4 delivery, with the scientific revision dated 2 October 2026 and the editorial revision dated 3 October. The active inputs, bibliography and referenced figures were copied from that delivery without changing their contents. The build helper uses the installed TeX distribution rather than bundling one.
-
-## Scope and reproducibility
-
-The selection follows the dissertation's evidence map and the dependencies of its experiments. It includes the corrected simulator, matched-prior procedure, benchmark and component comparisons, compact-rule analysis, tail-risk study and October follow-ups. The October frozen source bundle is retained because its protocol and import paths explicitly depend on that version.
-
-Datasets, checkpoints, full forecast tables, caches, old manuscript copies, interview material, editorial tooling and unrelated exploratory projects are not included. Compact October result tables and protocol records accompany their code. Some frozen scripts still record original absolute paths and source hashes; the [scope notes](docs/SCOPE.md) explain what is needed before reproducing those runs.
+The compiled dissertation PDF is not included. Its remaining [LaTeX source and figures](docs/dissertation/) can be built with an installed TeX distribution using `sh docs/dissertation/build.sh`.
