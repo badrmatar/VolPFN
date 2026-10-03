@@ -35,3 +35,6 @@ __pycache__/
 *.fdb_latexmk
 *.synctex.gz
 /dissertation/main.pdf
+
+# Keep the compiled dissertation local.
+/dissertation/VolPFN.pdf

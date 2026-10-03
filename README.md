@@ -8,10 +8,10 @@ Code and supporting material for **VolPFN: Volatility Forecasting from a Synthet
 | --- | --- |
 | [`dr-vf/`](dr-vf/) | VolPFN, its simulator, causal forecasting interface, dissertation experiments and their tests. |
 | [`calibeat-var-es/`](calibeat-var-es/) | The VaR/ES recalibration implementation used in Chapters 6–7. |
-| [`dissertation/`](dissertation/) | Final dissertation PDF and the active LaTeX source, figures and bibliography. |
+| [`dissertation/`](dissertation/) | Active LaTeX source, figures and bibliography. |
 | [`docs/`](docs/SCOPE.md) | Chapter-to-code map, provenance, reproduction limits and recorded test results. |
 
-[Read the dissertation](dissertation/VolPFN.pdf) · [Find the relevant implementation](docs/SCOPE.md)
+[Find the relevant implementation](docs/SCOPE.md)
 
 The original project folder names are retained because imports, relative paths and the dissertation's evidence references use them. This is a focused source repository; it does not contain the full local research archive.
 
@@ -68,7 +68,7 @@ With TeX Live or MacTeX and the packages declared in `dissertation/main.tex`:
 sh dissertation/build.sh
 ```
 
-The included `VolPFN.pdf` is the final Stage 4 delivery. Its scientific revision is dated 2 October 2026 and its editorial revision 3 October. The active LaTeX inputs, bibliography and referenced figures were copied from that delivery without changing their contents. The build helper uses the installed TeX distribution rather than bundling one.
+The LaTeX source corresponds to the final Stage 4 delivery, with the scientific revision dated 2 October 2026 and the editorial revision dated 3 October. The active inputs, bibliography and referenced figures were copied from that delivery without changing their contents. The build helper uses the installed TeX distribution rather than bundling one.
 
 ## Scope and reproducibility
 
