@@ -276,7 +276,7 @@ def yule_walker_ar(cov_fn, p):
 def pf_ar_reference(r2, cov_fn, rng, p=64, N=2000, innov='gaussian'):
     """Near-Bayes reference that KNOWS the latent covariance (to lag p): bootstrap particle filter for the
     AR(p) Yule-Walker approximation of the stationary latent process, chi^2 likelihood, systematic resampling.
-    Forecast = posterior-mean variance (Bayes act for QLIKE).  Causal.  Cheats (knows the model)."""
+    Forecast = posterior-mean variance (Bayes act for QLIKE).  Causal.  Oracle (knows the model)."""
     a, sig2 = yule_walker_ar(cov_fn, p); sig = math.sqrt(sig2)
     T = len(r2)
     X = np.zeros((N, p))

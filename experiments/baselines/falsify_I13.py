@@ -43,7 +43,7 @@ FILTERS
                     experts are not held back by stale history.  Closest stand-in for the Theorem I.2 wrapper.
       exp-weights rate ETA = 1/2 (= the exact Bayesian mixture for QLIKE), switching rate 1/T,
       aggregation in log-variance (Jensen-safe since l is convex in log h).
-  reference (CHEATS -- uses the true jump times, never a candidate):
+  reference (ORACLE -- uses the true jump times, never a candidate):
       oracle_restart : running mean of r^2 restarted exactly at the true jump times.  A floor only when jumps
                     are large (sparse family); on the dense family restarting at every tiny jump is a BAD
                     strategy, so there it is not a floor.
@@ -283,7 +283,7 @@ def fs_cusum_bank(r2, hstar, clip=False, rhos=(2.0, 4.0, 8.0)):
     return hhat
 
 def oracle_restart(r2, hstar, times):
-    """CHEATS: running mean of r^2 restarted at the true jump times (prior pseudo-count at its own last value)."""
+    """ORACLE: running mean of r^2 restarted at the true jump times (prior pseudo-count at its own last value)."""
     T = len(r2)
     hhat = np.empty(T)
     cnt, ssum = N0_PRIOR, N0_PRIOR * hstar[0]
@@ -427,7 +427,7 @@ def build_report(rows, Ts, Vs, a):
     P('FALSIFICATION SANDBOX -- Claims I.1 (rate) and I.3 (gap), QLIKE dynamic regret vs the TRUE log-variance path')
     P(f'T in {Ts}, V in {Vs}, families sparse/dense, seeds per cell = {len(set(r["seed"] for r in g_rows))}, Gaussian innovations')
     P('Regret = sum_t [l(hhat_t,r_t) - l(h*_t,r_t)], l(h,r) = r^2/h + log h; all filters causal and warm-started at h*_1.')
-    P('fixed-gain baselines = best parameters in hindsight per cell; adaptive banks = no hindsight; oracle_restart CHEATS (true jump times).')
+    P('fixed-gain baselines = best parameters in hindsight per cell; adaptive banks = no hindsight; oracle_restart ORACLE (true jump times).')
     P('=' * 100)
     for fam in ('sparse', 'dense'):
         fr = [r for r in g_rows if r['family'] == fam]
@@ -541,7 +541,7 @@ def make_figures(rows, Ts, Vs, a):
     SURF, INK, INK2, MUTED, GRID = '#fcfcfb', '#0b0b0b', '#52514e', '#898781', '#e1e0d9'
     C = {'ewma_best': '#2a78d6', 'garch_best': '#eb6834', 'fs_ewma': '#1baf7a', 'saol_restart': '#eda100', 'fs_cusum': '#e87ba4', 'oracle_restart': '#898781'}
     NAME = {'ewma_best': 'EWMA, best gain in hindsight', 'garch_best': 'GARCH(1,1), best params in hindsight', 'fs_ewma': 'Fixed-Share over EWMA bank (no hindsight)',
-            'saol_restart': 'SAOL-style dyadic-restart wrapper (no hindsight)', 'fs_cusum': 'EWMA bank + CUSUM-triggered restart (no hindsight)', 'oracle_restart': 'oracle restart (cheats: true jump times)'}
+            'saol_restart': 'SAOL-style dyadic-restart wrapper (no hindsight)', 'fs_cusum': 'EWMA bank + CUSUM-triggered restart (no hindsight)', 'oracle_restart': 'oracle restart (oracle: true jump times)'}
     g_rows = [r for r in rows if r['innov'] == 'gaussian']
     plt.rcParams.update({'font.family': 'sans-serif', 'font.size': 10, 'axes.edgecolor': '#c3c2b7', 'axes.labelcolor': INK2, 'xtick.color': MUTED, 'ytick.color': MUTED, 'axes.titlecolor': INK})
     fig, axes = plt.subplots(2, 2, figsize=(12, 8.5), facecolor=SURF)

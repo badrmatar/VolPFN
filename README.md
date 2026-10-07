@@ -12,7 +12,6 @@ src/
   calibeat/          VaR/ES recalibration used in the tail-risk study
 experiments/         dissertation comparisons, baselines and analysis procedures
 tests/              core regression tests, fixtures and study-specific tests
-docs/               study map, verification record and LaTeX source
 ```
 
 The main code no longer lives in a research/testing folder. Experiment code calls the package; the package does not depend on the experiment folders.
@@ -74,12 +73,12 @@ OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 VECLIB_MAXIMUM_THREAD
 python -m unittest discover -s tests/tail -p test_fz.py -v
 ```
 
-The core suite checks causal timing, checkpoint dispatch, simulator corrections, reference calculations and numerical parity with the version before reorganisation. `tests/experiments/` holds additional study-specific checks; some require archived inputs and are intentionally separate from core test discovery. See [the verification record](docs/verification.json) for the checks actually run.
+The core suite checks causal timing, checkpoint dispatch, simulator corrections, reference calculations and numerical parity with the version before reorganisation. `tests/experiments/` holds additional study-specific checks; some require archived inputs and are intentionally separate from core test discovery.
 
 ## Dissertation experiments
 
-See [the study map](docs/SCOPE.md) and [`experiments/README.md`](experiments/README.md). The scientific algorithms and settings are retained, while imports, test locations and source inventories have been updated. The October duplicate implementation and downloaded third-party source tree have been removed; required implementation code is shared instead.
+See [`experiments/README.md`](experiments/README.md). The scientific algorithms and settings are retained, while imports, test locations and source inventories have been updated. The October duplicate implementation and downloaded third-party source tree have been removed; required implementation code is shared instead.
 
 Historical hash-bound protocols identify their original source versions. Exact historical replay uses the recorded inputs and the pre-reorganisation commit `7cde0f7`, not newly generated hashes presented as old provenance. Existing absolute archive paths and unavailable datasets still limit which historical runners work in a fresh checkout. Reorganisation does not recreate those inputs or certify all archived workflows.
 
-The compiled dissertation PDF is not included. Its remaining [LaTeX source and figures](docs/dissertation/) can be built with an installed TeX distribution using `sh docs/dissertation/build.sh`.
+The dissertation itself is submitted separately and is not included in this repository.

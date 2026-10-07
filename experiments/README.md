@@ -9,7 +9,7 @@ python -m experiments.programme_closure.gpu_training --help
 python -m experiments.experiment_programme_20260930.programme --help
 ```
 
-Reading `--help` does not start a study. Actual experiments may need data, checkpoints, frozen manifests and the original runtime. Use a new output location for new work and retain the appropriate protocol and provenance. Some historical runners still depend on original archive paths and hashes; see `docs/SCOPE.md` before replaying them.
+Reading `--help` does not start a study. Actual experiments may need data, checkpoints, frozen manifests and the original runtime. Use a new output location for new work and retain the appropriate protocol and provenance. Some historical runners still depend on original archive paths and hashes.
 
 The `seed_replication/causal.py` and `training.py` files are short import bridges to the core package. There is one active implementation of each. The `baselines/` directory contains comparison methods and the retained switching-study helpers.
 
