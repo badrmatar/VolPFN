@@ -1,0 +1,29 @@
+{
+  "unavailable_market_levels": [
+    {
+      "market": "IXIC",
+      "model": "es_caviar",
+      "alpha": 0.05,
+      "reason": "invalid_scored_es_caviar_tail_path"
+    },
+    {
+      "market": "IXIC",
+      "model": "es_caviar",
+      "alpha": 0.025,
+      "reason": "invalid_scored_es_caviar_tail_path"
+    },
+    {
+      "market": "MXX",
+      "model": "es_caviar",
+      "alpha": 0.05,
+      "reason": "invalid_scored_es_caviar_tail_path"
+    },
+    {
+      "market": "MXX",
+      "model": "es_caviar",
+      "alpha": 0.025,
+      "reason": "invalid_scored_es_caviar_tail_path"
+    }
+  ],
+  "failed_fit_attempts": []
+}

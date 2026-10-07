@@ -1,0 +1,16 @@
+{
+  "protocol_changes": [],
+  "unresolved_missing_inputs": [],
+  "declared_implementation_differences": [
+    "MPS float32 inference with sampled CPU parity check",
+    "Native guard initialises at first available forecast, index one",
+    "Historical comparator acceptance policy retained"
+  ],
+  "validation_observations": {
+    "maximum_archived_return_roundoff": 8.673617379884035e-19,
+    "maximum_score_effect": 0.0
+  },
+  "reporting_note": "Secondary lower/higher findings are unadjusted; the term beats is reserved for the primary Holm family in REPORT.txt and results_table.csv.",
+  "prior_panel_exposure": true,
+  "source_seal_unchanged": true
+}

@@ -1,0 +1,1408 @@
+{
+  "checks": [
+    {
+      "panel": "later",
+      "market": "AEX",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "AEX",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "AEX",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "AORD",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "AORD",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "AORD",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "BFX",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "BFX",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "BFX",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "BSESN",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "BSESN",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "BSESN",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "BVSP",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "BVSP",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "BVSP",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "DJI",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "DJI",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "DJI",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "FCHI",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "FCHI",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "FCHI",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "FTSE",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "FTSE",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "FTSE",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "GDAXI",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "GDAXI",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "GDAXI",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "GSPTSE",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "GSPTSE",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "GSPTSE",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "HSI",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "HSI",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "HSI",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "IBEX",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "IBEX",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "IBEX",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "IXIC",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "IXIC",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "IXIC",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "KS11",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "KS11",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "KS11",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "KSE",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "KSE",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "KSE",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "MXX",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "MXX",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "MXX",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "N225",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "N225",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "N225",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "NSEI",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "NSEI",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "NSEI",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "OMXC20",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "OMXC20",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "OMXC20",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "OMXHPI",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "OMXHPI",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "OMXHPI",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "OMXSPI",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "OMXSPI",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "OMXSPI",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "OSEAX",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "OSEAX",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "OSEAX",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "RUT",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "RUT",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "RUT",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "SMSI",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "SMSI",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "SMSI",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "SPX",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "SPX",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "SPX",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "SSEC",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "SSEC",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "SSEC",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "SSMI",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "SSMI",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "SSMI",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "STOXX50E",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "STOXX50E",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "later",
+      "market": "STOXX50E",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "AEX",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "AEX",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "AEX",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "AORD",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "AORD",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "AORD",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "BFX",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "BFX",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "BFX",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "BSESN",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 8.673617379884035e-19,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "BSESN",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 8.673617379884035e-19,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "BSESN",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 8.673617379884035e-19,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "BVSP",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "BVSP",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "BVSP",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "DJI",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 8.673617379884035e-19,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "DJI",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 8.673617379884035e-19,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "DJI",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 8.673617379884035e-19,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "FCHI",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 8.673617379884035e-19,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "FCHI",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 8.673617379884035e-19,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "FCHI",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 8.673617379884035e-19,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "FTSE",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 8.673617379884035e-19,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "FTSE",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 8.673617379884035e-19,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "FTSE",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 8.673617379884035e-19,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "GDAXI",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "GDAXI",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "GDAXI",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "GSPTSE",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "GSPTSE",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "GSPTSE",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "HSI",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "HSI",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "HSI",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "IBEX",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "IBEX",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "IBEX",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "IXIC",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 4.336808689942018e-19,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "IXIC",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 4.336808689942018e-19,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "IXIC",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 4.336808689942018e-19,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "KS11",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "KS11",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "KS11",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "KSE",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 8.673617379884035e-19,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "KSE",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 8.673617379884035e-19,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "KSE",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 8.673617379884035e-19,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "MXX",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "MXX",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "MXX",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "N225",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 4.336808689942018e-19,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "N225",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 4.336808689942018e-19,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "N225",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 4.336808689942018e-19,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "NSEI",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "NSEI",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "NSEI",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "OMXC20",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "OMXC20",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "OMXC20",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "OMXHPI",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "OMXHPI",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "OMXHPI",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "OMXSPI",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "OMXSPI",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "OMXSPI",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "OSEAX",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "OSEAX",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "OSEAX",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "RUT",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "RUT",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "RUT",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "SMSI",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "SMSI",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "SMSI",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "SPX",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 8.673617379884035e-19,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "SPX",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 8.673617379884035e-19,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "SPX",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 8.673617379884035e-19,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "SSEC",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "SSEC",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "SSEC",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "SSMI",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "SSMI",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "SSMI",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "STOXX50E",
+      "alpha": 0.05,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "STOXX50E",
+      "alpha": 0.025,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    },
+    {
+      "panel": "development",
+      "market": "STOXX50E",
+      "alpha": 0.01,
+      "max_score_error": 0.0,
+      "max_return_error": 0.0,
+      "max_score_effect_of_return_roundoff": 0.0
+    }
+  ],
+  "all_passed": true,
+  "validation_inputs": {
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_full_v1/AEX.npz": "0191ff900a3b47e8ceab7c8fcb1f59fa29fa1121932e0544d2e885ead095a999",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_full_v1/AORD.npz": "c639489f854ade9811acfb813b2ca2c52a8df78704749793490eb3eb754a2026",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_full_v1/BFX.npz": "32af89bd125d2a4cf9bbc1866dae1f6ae3a54a5312ed230c42f688c115bd435c",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_full_v1/BSESN.npz": "b21643f12c7599eea2c59b2b37fd07f9ac5b88051e174acd6bd3075653ff11b6",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_full_v1/BVSP.npz": "6ad13ecefe2c06d59a10a7b6250dab6defe02876a45a93f3d89a5675b34ffbeb",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_full_v1/DJI.npz": "a6f4487bdbd8932d569ea6427921b78ef1ad1f0e8bfe2922191482390e9ab0a9",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_full_v1/FCHI.npz": "b68d74ba01c11a68c6895ed810af246219026a7a1edfb5d0d2182a1ce61d6a80",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_full_v1/FTSE.npz": "2e1bc94b81acd9eb659c0c231e32e15cefd683ded240aa36a0836f83329d83d0",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_full_v1/GDAXI.npz": "223932cee98f373d91a4b3628e7573ad48cd833c68219694f6a7831b69cd708d",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_full_v1/GSPTSE.npz": "ca0030d95965a035201d21b0a9b213791793c0cb1cbed72a56962f4803c2978f",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_full_v1/HSI.npz": "80c8da6dcae8520e6ca38a059807ab17d14473704ec6e47a8b70be6ad354e874",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_full_v1/IBEX.npz": "4fc70bd2b29579bb96f0595318a2fc15207ff7ecf5cf3fc728bdf84fa38356ad",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_full_v1/IXIC.npz": "f895df798dd5165a7ca7ead0c51665da23a01176e87319b51bf289184219cbab",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_full_v1/KS11.npz": "cb8cdc77668fabe4f87c2c93cdb9330babb684227bb60b7b5af08e23e5f6dc3d",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_full_v1/KSE.npz": "e2d311df9fa2601662f8a498272d008d7e440ea0345814f81c67ccf512dfc187",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_full_v1/MXX.npz": "33326414f1d40e08d1b0be1f835516bcbda28f04428038e8b07f1da934ceafe3",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_full_v1/N225.npz": "50b68ff66027bba0f09967009fff891bcf08c4e1c709ce4bbb9fa39d6762045e",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_full_v1/NSEI.npz": "b742e75abbb8eecf0cd8a16f2ea55c83c15abbf0736e5c7d208e6b42a7cfd120",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_full_v1/OMXC20.npz": "30b646700f3e02e4fbc9386bccd4c804d212dcecdc413dff6a1396c8502f7c2d",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_full_v1/OMXHPI.npz": "db17013beff2362a7e52d7e9e8a4fc445d9e0b0a2b6e85a26b6a53a6dbea14fd",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_full_v1/OMXSPI.npz": "f1a135c34c68126e55383f75f633606608a53693507ad2654cedece04ba1c546",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_full_v1/OSEAX.npz": "b69b2bc191ac8bcc7412ca90d60b350a557e332efb7d59014a039c01c8be79df",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_full_v1/RUT.npz": "1b29de9189dd24b1831b4dde7f5e8d5b447138b85404ad1d5d85906e706a137b",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_full_v1/SMSI.npz": "c284fd8670105c1d3d4f064d01e0f3e673cce0d70fe61dc119ce0201d749c973",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_full_v1/SPX.npz": "d36f5e10c0b033a793edf5acb33a222d6e122722aad25c1ba5d701547d7f1f36",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_full_v1/SSEC.npz": "ddbe332d292a50a006d7f181918d1a5ccf7e2c47a0bccafe4ac950426f69ba98",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_full_v1/SSMI.npz": "59a0daef9914f86793974f11108d4417aed7d395262e478f3cb43d9cffbff463",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_full_v1/STOXX50E.npz": "27cb56870abfe13eeb81293d283f1df355300dc4bdeb474db19b7d6decbf5aee",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_v1/AEX.npz": "3c2ad4345eb04aac4faac7e7b34a2f702277abfb5a888c902c86a8e6554db667",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_v1/AORD.npz": "32089ee6ac47bb31c2ca49696b6f6cb67ebed719dc6fa1d5a62e0a660a3254ac",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_v1/BFX.npz": "7709e83309d29ace97c6c492cf9c3f7f0f84315e8ed9880acad60eb0f470a527",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_v1/BSESN.npz": "d4cd1a7648543097433999ad54e0a81d8fc5e980fca5117a25f1e0edab7e2769",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_v1/BVSP.npz": "97303e7e636be6e66a5201fb01f5e6b01a60cf46cf0f57a68b9962a5327736cf",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_v1/DJI.npz": "d2ed87df8a06ac647caf0ac17c3207c988e15e311ed723bc17cf5fdf9270515c",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_v1/FCHI.npz": "9da26df1381af98678f35797f264ec2cd830d7d6334a6ae80b37ca7ee30bbc3c",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_v1/FTSE.npz": "9dfd0a16cca243069bbf973e9c4c981479eac764244d75a59ab59d5a7f20a887",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_v1/GDAXI.npz": "90e7697c3675c69c09186276f7b164b1e6974a4e88519b810ceb8c4f564d4d6e",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_v1/GSPTSE.npz": "6115daa4a6bf855a9efd53e02ce3d082ac1f5683382f3328f431a4ea0053c948",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_v1/HSI.npz": "b29663c2d9e1ff9e73ddef11ffe6f11c75be1ddb0b9e447495207f0c5a7ac64e",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_v1/IBEX.npz": "9ecbdd7362f6327cfb011dbf564cdf704572eed221c557d76f1829f1bfa247a1",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_v1/IXIC.npz": "7a148003ba95466c33a8eec44d984b1a9dcd3836178f06d27d33f4a54b33fcab",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_v1/KS11.npz": "203bc53dd82a8a7cfd56584c2834dbd4b187a2ada07f8c2d2262d31b1b9e0507",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_v1/KSE.npz": "c0bbfb9afe7b32753924e15abea15186a6e88142d84125a383f41931be5f0e59",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_v1/MXX.npz": "ffb88e225d8c170eaf86898ad0df50d49b56d70645207805c1f0dbd4d74a09cc",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_v1/N225.npz": "933266f6f32f6b303e89927103552f3fe45281bdd844b3a429a7ca528abc7528",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_v1/NSEI.npz": "4ed82acbc80bdd6ab7baaa763c2693711c70a59612936434878b5e657da88caa",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_v1/OMXC20.npz": "a75518f92de77e6b57a3a13ebddd9c4df2debffe57cd00a78c3f5aa8f0df67ca",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_v1/OMXHPI.npz": "a1f027e16486cff53370a0eee5233bcc11076083a12eba1938c79b74a1ba5d4f",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_v1/OMXSPI.npz": "80eb5229b932d192373b12e3d3837c14a376fc880af4e6998e928d514c2096f5",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_v1/OSEAX.npz": "d8f56ed2878909583c3a9abedd824d41308a7673a5c1cdc2f04e5f1d51e2cc79",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_v1/RUT.npz": "443c631955ae41e3468c648bfba513a36a2c23e043e38defe90f155a4aac0da6",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_v1/SMSI.npz": "dcf17f48ce79c89f828a949ccc21b1e2d97bf807ae73fe964f6b7577fc1cf095",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_v1/SPX.npz": "02ea7236857874a8b5b1b330162b6894deab65b4e4556b4854db31f709e5b687",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_v1/SSEC.npz": "4316d81f589d224e5b35bb7b7950eec16f8957a64aad54710c5fc1805980f203",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_v1/SSMI.npz": "e6c452a3d107ae82dbae09c786eeb0ac99211aaeee9e35dd3762cbfab3607933",
+    "/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/dr-vf/research/outputs/attribution_extract_v1/STOXX50E.npz": "99c004d69f8e82e4b4668695176e2f0af3801803b0eb9e8514bbd147d06788b9"
+  },
+  "validation_source_sha256": "8b691c46b81d9d79dbe9f4a63e2de00692648c8fb05545e0834bb6d61d0a2431"
+}

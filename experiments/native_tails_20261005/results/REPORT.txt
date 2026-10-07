@@ -1,0 +1,100 @@
+VolPFN native-tail comparison — 5 October 2026
+
+Five of six later-panel primary comparisons meet the frozen Holm rule. Native VolPFN has lower FZ0 than GARCH-t at all three levels, and than GARCH FHS at 5% and 2.5%. Against FHS at 1%, the interval includes zero: a tie, not equivalence.
+
+The later panel was inspected before this study. These results do not constitute an untouched out-of-sample confirmation.
+
+MODEL AND MATCHING
+Five corrected broad-prior final checkpoints (seeds 8101–8105, 20,000 updates), identified by the existing repaired-study registry. No training or calibration. These are not the separately trained component-ablation full checkpoints or the historical-trained follow-up models.
+Parameters regenerated using the frozen corrected overlapping-window convention: L=1024, stride=512, causal running nonzero RMS normalisation, fixed checkpoint weights. At target t, the latest feature input is return t-1. This is the matched-prior window-ownership procedure, not the distinct daily benchmark’s resetting per-origin context.
+The forecast is one equally weighted density average over five seeds: 20 Student components. Mixture VaR is a root of that density’s CDF; ES is its closed-form lower partial expectation divided by alpha. No averaging of quantiles, ES values, or seed scores.
+All 28 markets and all archived panel dates match. No rows were dropped. Returns are open-to-close log returns in percentage units. The point statistic weights markets equally.
+development: 28,086 market–date observations; 970–1025 per market; 2011-01-03 through 2014-12-31.
+later: 50,073 market–date observations; 1734–1830 per market; 2015-01-01 through 2022-02-25.
+
+PRIMARY: LATER PANEL, HOLM ACROSS EXACTLY SIX
+All differences are native minus comparator; negative favours native. Intervals are marginal 95% calendar-block intervals, not multiplicity-adjusted intervals. Holm p-values provide the six-test adjustment. An interval containing zero is a tie.
+comparison | level | mean difference | 95% interval | raw p | Holm p | finding
+native minus GARCH FHS | 5% | -0.021499 | [-0.032543, -0.010040] | 0.0005 | 0.0030 | beats
+native minus GARCH-t | 5% | -0.026440 | [-0.041323, -0.012701] | 0.0005 | 0.0030 | beats
+native minus GARCH FHS | 2.5% | -0.022644 | [-0.036885, -0.007480] | 0.0030 | 0.0060 | beats
+native minus GARCH-t | 2.5% | -0.037548 | [-0.061323, -0.017707] | 0.0005 | 0.0030 | beats
+native minus GARCH FHS | 1% | -0.020792 | [-0.043764, +0.003340] | 0.0910 | 0.0910 | tie (interval includes zero)
+native minus GARCH-t | 1% | -0.052361 | [-0.095877, -0.018279] | 0.0010 | 0.0030 | beats
+
+SECONDARY: LATER PANEL, UNADJUSTED
+comparison | level | mean difference | 95% interval | raw p | Holm p | finding
+native minus GAS | 5% | -0.041994 | [-0.056848, -0.026852] | 0.0005 | not adjusted | lower FZ0 (unadjusted)
+native minus archived neural t8 | 5% | -0.004578 | [-0.008103, -0.001422] | 0.0040 | not adjusted | lower FZ0 (unadjusted)
+guard minus native | 5% | +0.000991 | [-0.001154, +0.003091] | 0.3660 | not adjusted | tie (interval includes zero)
+native minus GAS | 2.5% | -0.062359 | [-0.085245, -0.038758] | 0.0005 | not adjusted | lower FZ0 (unadjusted)
+native minus archived neural t8 | 2.5% | -0.010110 | [-0.017406, -0.003811] | 0.0005 | not adjusted | lower FZ0 (unadjusted)
+guard minus native | 2.5% | +0.004837 | [+0.000572, +0.009353] | 0.0170 | not adjusted | higher FZ0 (unadjusted)
+native minus GAS | 1% | -0.092019 | [-0.134945, -0.047436] | 0.0005 | not adjusted | lower FZ0 (unadjusted)
+native minus archived neural t8 | 1% | -0.021629 | [-0.038752, -0.007856] | 0.0010 | not adjusted | lower FZ0 (unadjusted)
+guard minus native | 1% | +0.004065 | [-0.004762, +0.012743] | 0.3700 | not adjusted | tie (interval includes zero)
+
+SECONDARY: DEVELOPMENT PANEL, UNADJUSTED
+comparison | level | mean difference | 95% interval | raw p | Holm p | finding
+native minus GARCH FHS | 5% | -0.020230 | [-0.034773, -0.006733] | 0.0010 | not adjusted | lower FZ0 (unadjusted)
+native minus GARCH-t | 5% | -0.021752 | [-0.043704, -0.004527] | 0.0060 | not adjusted | lower FZ0 (unadjusted)
+native minus GAS | 5% | -0.043199 | [-0.056093, -0.029260] | 0.0005 | not adjusted | lower FZ0 (unadjusted)
+native minus archived neural t8 | 5% | -0.001766 | [-0.005635, +0.001602] | 0.3190 | not adjusted | tie (interval includes zero)
+guard minus native | 5% | +0.001645 | [-0.000839, +0.003794] | 0.1970 | not adjusted | tie (interval includes zero)
+native minus GARCH FHS | 2.5% | -0.023408 | [-0.047155, -0.002430] | 0.0230 | not adjusted | lower FZ0 (unadjusted)
+native minus GARCH-t | 2.5% | -0.027612 | [-0.062065, -0.001949] | 0.0260 | not adjusted | lower FZ0 (unadjusted)
+native minus GAS | 2.5% | -0.066443 | [-0.090716, -0.039068] | 0.0005 | not adjusted | lower FZ0 (unadjusted)
+native minus archived neural t8 | 2.5% | -0.001501 | [-0.006373, +0.002627] | 0.4950 | not adjusted | tie (interval includes zero)
+guard minus native | 2.5% | +0.002679 | [-0.005551, +0.008840] | 0.4700 | not adjusted | tie (interval includes zero)
+native minus GARCH FHS | 1% | -0.031260 | [-0.074069, +0.004010] | 0.0860 | not adjusted | tie (interval includes zero)
+native minus GARCH-t | 1% | -0.040219 | [-0.104343, +0.004699] | 0.1050 | not adjusted | tie (interval includes zero)
+native minus GAS | 1% | -0.121361 | [-0.163683, -0.073654] | 0.0005 | not adjusted | lower FZ0 (unadjusted)
+native minus archived neural t8 | 1% | -0.000403 | [-0.006277, +0.005491] | 0.8770 | not adjusted | tie (interval includes zero)
+guard minus native | 1% | +0.003048 | [-0.002356, +0.007618] | 0.2460 | not adjusted | tie (interval includes zero)
+
+COVERAGE DIAGNOSTICS, UNADJUSTED
+The hit-frequency screen uses the historical panel-n convention: n=int(mean matched days), 1,788 later and 1,003 development. The per-market file also reports actual-market-n bands. A hit-band pass is not a conditional-coverage result.
+Both Christoffersen independence (LR, 1 df) and joint conditional coverage (LR_uc+LR_ind, 2 df) are reported to make the meaning of “Christoffersen” explicit. Counts below use unadjusted p<0.05 out of 28 markets.
+panel | method | level | inside hit band /28 | independence rejections /28 | conditional-coverage rejections /28
+development | guard | 1% | 27 | 0 | 0
+development | guard | 2.5% | 28 | 0 | 0
+development | guard | 5% | 27 | 3 | 1
+development | native | 1% | 27 | 0 | 0
+development | native | 2.5% | 28 | 0 | 0
+development | native | 5% | 27 | 3 | 1
+later | guard | 1% | 26 | 1 | 1
+later | guard | 2.5% | 25 | 0 | 0
+later | guard | 5% | 28 | 0 | 0
+later | native | 1% | 21 | 1 | 6
+later | native | 2.5% | 21 | 0 | 5
+later | native | 5% | 23 | 0 | 3
+
+INTERPRETATION
+The native guard’s later 2.5% FZ0 difference is positive with an interval excluding zero (unadjusted p=0.017); 5% and 1% intervals include zero. Improved hit-frequency or conditional-coverage counts do not imply an improved joint VaR/ES score.
+The archived neural t8 comparator uses the older retained neural variance path. Native versus archived neural t8 compares complete forecasting procedures, including different checkpoint and normalisation choices. It does not isolate the effect of changing only the tail conversion.
+
+PROTOCOL ADHERENCE AND IMPLEMENTATION QUALIFICATIONS
+No changes to the frozen protocol, primary family, thresholds, panels, comparator policy, bootstrap or guard settings. No data-driven model or rule selection was made after native scoring.
+The new experiment uses local MPS float32 inference, declared in the protocol; historical checkpoint training/evaluation used its recorded backend. A CPU-versus-MPS comparison passed at rtol=2e-4, atol=2e-5 for every mixture parameter over the first 1,100 AEX observations (seed 8101). This is a sampled numerical check, not a claim of bit-identical cross-device inference.
+Native forecasts start at index one because no history-only forecast exists at index zero. The guard starts from that first forecast, with the existing 250-observation warmup, 1,000-residual window, 1,000-score comparison window, 250 minimum comparisons and level-specific margins. The one-observation initialisation difference was fixed before scoring; no day-zero forecast was invented.
+Comparators reuse the Chapter 7 historical optimiser acceptance policy. The separately reported convergence-checked sensitivity was not substituted or rerun.
+Archived development returns differed from the current input in one checked cell by floating-point roundoff only: maximum 8.67e-19 percentage-return units; maximum effect on replayed t8 FZ0 was 0. Exact calendar matching was retained.
+Secondary findings are labelled lower/higher FZ0 (unadjusted); only the six primary comparisons are described as meeting the Holm “beats” rule. Intermediate comparisons.csv retains the scorer’s raw-p decision labels with primary=False; use results_table.csv for the reporting labels.
+
+VERIFICATION
+Eight unit tests passed, including single Gaussian, single Student-t, mixed-law numerical ES, equal-density averaging, causality/original-inference parity, Holm, coverage boundaries and guard causality.
+252 real-mixture ES quadrature checks passed; maximum absolute difference 2.28e-10. Maximum scored CDF residual 1e-13.
+Native scored cap activations: 0 VaR and 0 ES. The original FZ0 ES floor remains 1e-8.
+All 168 archived neural-t8 market/level/panel score cells replayed within tolerance, confirming units and the original score implementation.
+Bootstrap is the unchanged Chapter 7 implementation: 2,000 circular 60-calendar-date block resamples, seed 927601, dates synchronised across markets, minimum two-sided p=1/2,000. Per-market intervals and p-values are unadjusted and use the same panel calendar.
+All 646 protected original files retain their hashes. No existing scripts, results or tracked dissertation files were edited. No checkpoint was trained or changed.
+
+FILES
+results_table.csv: final 30 panel/level/contrast rows with mean differences, intervals, raw p, primary Holm p and findings.
+per_market_comparisons.csv: 840 matched per-market comparisons with individual intervals and unadjusted p-values.
+per_market_diagnostics.csv and diagnostic_summary.csv: hit counts, rates, both hit bands and Christoffersen tests.
+mixtures/: all 140 regenerated seed/market mixture archives, before density combination.
+tails/: full per-market raw and scoring tail pairs, plus guard forecasts.
+matched_dates.csv, numerical_audit.csv, es_quadrature_checks.csv, backend_check.json, archived_t8_replay_check.json, preservation.json: validation and provenance.
+
+No unresolved missing inputs or incomplete comparisons. Prior panel exposure, historical comparator fit acceptance and finite bootstrap resolution remain limits of the inference.

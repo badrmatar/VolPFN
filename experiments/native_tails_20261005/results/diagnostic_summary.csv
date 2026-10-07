@@ -1,0 +1,13 @@
+panel,method,alpha,markets,in_hit_band,in_market_n_band,christoffersen_ind_rejections,christoffersen_cc_rejections,panel_band_n
+development,guard,0.01,28,27,27,0,0,1003
+development,guard,0.025,28,28,28,0,0,1003
+development,guard,0.05,28,27,28,3,1,1003
+development,native,0.01,28,27,27,0,0,1003
+development,native,0.025,28,28,28,0,0,1003
+development,native,0.05,28,27,27,3,1,1003
+later,guard,0.01,28,26,26,1,1,1788
+later,guard,0.025,28,25,26,0,0,1788
+later,guard,0.05,28,28,28,0,0,1788
+later,native,0.01,28,21,21,1,6,1788
+later,native,0.025,28,21,21,0,5,1788
+later,native,0.05,28,23,23,0,3,1788

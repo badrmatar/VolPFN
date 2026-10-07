@@ -1,0 +1,13 @@
+test_coverage_boundary_and_clustered_hits (test_native.DecisionTests) ... ok
+test_guard_uses_only_past_outcomes (test_native.DecisionTests) ... ok
+test_holm_six_test_family (test_native.DecisionTests) ... ok
+test_causal_and_original_inference_parity (test_native.TailTests) ... ok
+test_equal_density_combination (test_native.TailTests) ... ok
+test_heterogeneous_mixture_quadrature (test_native.TailTests) ... ok
+test_single_gaussian (test_native.TailTests) ... ok
+test_single_student (test_native.TailTests) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.084s
+
+OK

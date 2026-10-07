@@ -1,0 +1,13 @@
+{
+  "created_utc": "2026-10-05T16:58:09.118317+00:00",
+  "purpose": "Code identity before market fitting and scoring",
+  "files": {
+    "freeze.py": "4b73d2d5fa889bbc85db6ae684006bb073b9f4bf8c714ab12f204c105897f9ae",
+    "legacy_gp_fz/benchmark_es_caviar.py": "0c2e6cd71754f07c3833bfebd0f9b5d06b314fc179359ad9204b8ec011c99815",
+    "legacy_gp_fz/gp_fz_phase0.py": "08a557e11481a12d66e76174a0765f39438b343ead868918868ae049964d11ab",
+    "legacy_gp_fz/gp_fz_phase1.py": "d8fa8b3672fde72c8951cbf1462ec21c1702efd61b9d4aacca3c9f00b2d19a29",
+    "models.py": "e739a81186b921e108b9c9897113cefdf941091cc8ffa3c9e9346db61880f578",
+    "run.py": "e3f1968c639c3988c5d58aa8e54a789f04a407ad220153324b6483cc441e26fb",
+    "test_models.py": "728cf99e2557d50bb05a96cd9168fa814aabe0005fb628437a1f7e4c5350c84d"
+  }
+}

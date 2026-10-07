@@ -1,0 +1,5 @@
+market,model,alpha,reason
+IXIC,es_caviar,0.05,invalid_scored_es_caviar_tail_path
+IXIC,es_caviar,0.025,invalid_scored_es_caviar_tail_path
+MXX,es_caviar,0.05,invalid_scored_es_caviar_tail_path
+MXX,es_caviar,0.025,invalid_scored_es_caviar_tail_path

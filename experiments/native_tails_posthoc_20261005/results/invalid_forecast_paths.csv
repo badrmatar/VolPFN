@@ -1,0 +1,5 @@
+market,model,alpha,reason,optimizer_status,invalid_scored_days,scored_days,first_invalid_date,first_invalid_var,first_invalid_es,selected_start,selected_optimizer_converged
+IXIC,ES-CAViaR,0.05,invalid_scored_es_caviar_tail_path,complete,1794,1794,2015-01-02,1.0061774315155634,1.2423296081464255,25,True
+IXIC,ES-CAViaR,0.025,invalid_scored_es_caviar_tail_path,complete,1794,1794,2015-01-02,0.46619543038209604,0.5185152728915586,9,True
+MXX,ES-CAViaR,0.05,invalid_scored_es_caviar_tail_path,complete,1791,1791,2015-01-02,0.24073913709309747,0.4151952544827698,22,True
+MXX,ES-CAViaR,0.025,invalid_scored_es_caviar_tail_path,complete,1791,1791,2015-01-02,0.4680287510288508,0.7015424109072487,24,True

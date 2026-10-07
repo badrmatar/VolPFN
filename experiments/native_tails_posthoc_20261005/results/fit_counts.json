@@ -1,0 +1,142 @@
+{
+  "AEX": {
+    "gjr_attempts": 92,
+    "gjr_rejected": 0,
+    "es_candidates": 90
+  },
+  "AORD": {
+    "gjr_attempts": 91,
+    "gjr_rejected": 0,
+    "es_candidates": 90
+  },
+  "BFX": {
+    "gjr_attempts": 92,
+    "gjr_rejected": 0,
+    "es_candidates": 90
+  },
+  "BSESN": {
+    "gjr_attempts": 89,
+    "gjr_rejected": 0,
+    "es_candidates": 90
+  },
+  "BVSP": {
+    "gjr_attempts": 88,
+    "gjr_rejected": 0,
+    "es_candidates": 90
+  },
+  "DJI": {
+    "gjr_attempts": 90,
+    "gjr_rejected": 0,
+    "es_candidates": 90
+  },
+  "FCHI": {
+    "gjr_attempts": 92,
+    "gjr_rejected": 0,
+    "es_candidates": 90
+  },
+  "FTSE": {
+    "gjr_attempts": 91,
+    "gjr_rejected": 0,
+    "es_candidates": 90
+  },
+  "GDAXI": {
+    "gjr_attempts": 91,
+    "gjr_rejected": 0,
+    "es_candidates": 90
+  },
+  "GSPTSE": {
+    "gjr_attempts": 90,
+    "gjr_rejected": 0,
+    "es_candidates": 90
+  },
+  "HSI": {
+    "gjr_attempts": 88,
+    "gjr_rejected": 0,
+    "es_candidates": 90
+  },
+  "IBEX": {
+    "gjr_attempts": 92,
+    "gjr_rejected": 0,
+    "es_candidates": 90
+  },
+  "IXIC": {
+    "gjr_attempts": 90,
+    "gjr_rejected": 0,
+    "es_candidates": 90
+  },
+  "KS11": {
+    "gjr_attempts": 88,
+    "gjr_rejected": 0,
+    "es_candidates": 90
+  },
+  "KSE": {
+    "gjr_attempts": 89,
+    "gjr_rejected": 0,
+    "es_candidates": 90
+  },
+  "MXX": {
+    "gjr_attempts": 90,
+    "gjr_rejected": 0,
+    "es_candidates": 90
+  },
+  "N225": {
+    "gjr_attempts": 87,
+    "gjr_rejected": 0,
+    "es_candidates": 90
+  },
+  "NSEI": {
+    "gjr_attempts": 89,
+    "gjr_rejected": 0,
+    "es_candidates": 90
+  },
+  "OMXC20": {
+    "gjr_attempts": 89,
+    "gjr_rejected": 0,
+    "es_candidates": 90
+  },
+  "OMXHPI": {
+    "gjr_attempts": 90,
+    "gjr_rejected": 0,
+    "es_candidates": 90
+  },
+  "OMXSPI": {
+    "gjr_attempts": 90,
+    "gjr_rejected": 0,
+    "es_candidates": 90
+  },
+  "OSEAX": {
+    "gjr_attempts": 89,
+    "gjr_rejected": 0,
+    "es_candidates": 90
+  },
+  "RUT": {
+    "gjr_attempts": 90,
+    "gjr_rejected": 0,
+    "es_candidates": 90
+  },
+  "SMSI": {
+    "gjr_attempts": 92,
+    "gjr_rejected": 0,
+    "es_candidates": 90
+  },
+  "SPX": {
+    "gjr_attempts": 90,
+    "gjr_rejected": 0,
+    "es_candidates": 90
+  },
+  "SSEC": {
+    "gjr_attempts": 87,
+    "gjr_rejected": 0,
+    "es_candidates": 90
+  },
+  "SSMI": {
+    "gjr_attempts": 90,
+    "gjr_rejected": 0,
+    "es_candidates": 90
+  },
+  "STOXX50E": {
+    "gjr_attempts": 91,
+    "gjr_rejected": 0,
+    "es_candidates": 90
+  }
+}

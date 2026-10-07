@@ -1,0 +1,17 @@
+test_compiled_objective_is_exact (test_models.ModelTests) ... ok
+test_compiled_recursion_is_exact (test_models.ModelTests) ... ok
+test_es_recursion_causal (test_models.ModelTests) ... ok
+test_gjr_and_fhs_causal (test_models.ModelTests) ... /Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/venv/lib/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:64: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+  prop = Group((name + Suppress("=") + comma_separated(value)) | oneOf(_CONSTANTS))
+/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/venv/lib/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  parse = parser.parseString(pattern)
+/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/venv/lib/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+  parser.resetCache()
+/Users/badrmatar/Downloads/Study/Dissertation Masters/Code/Diss_Project/venv/lib/python3.9/site-packages/matplotlib/_mathtext.py:45: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'
+  ParserElement.enablePackrat()
+ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 1.031s
+
+OK

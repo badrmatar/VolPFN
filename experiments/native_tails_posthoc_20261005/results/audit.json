@@ -1,0 +1,69 @@
+{
+  "source_seal_unchanged": true,
+  "post_hoc_protocol_unchanged": true,
+  "independent_holm_check": true,
+  "unavailable_comparisons": 2,
+  "invalid_forecast_cells": [
+    {
+      "market": "IXIC",
+      "model": "ES-CAViaR",
+      "alpha": 0.05,
+      "reason": "invalid_scored_es_caviar_tail_path",
+      "optimizer_status": "complete",
+      "invalid_scored_days": 1794,
+      "scored_days": 1794,
+      "first_invalid_date": "2015-01-02",
+      "first_invalid_var": 1.0061774315155634,
+      "first_invalid_es": 1.2423296081464255,
+      "selected_start": 25,
+      "selected_optimizer_converged": true
+    },
+    {
+      "market": "IXIC",
+      "model": "ES-CAViaR",
+      "alpha": 0.025,
+      "reason": "invalid_scored_es_caviar_tail_path",
+      "optimizer_status": "complete",
+      "invalid_scored_days": 1794,
+      "scored_days": 1794,
+      "first_invalid_date": "2015-01-02",
+      "first_invalid_var": 0.46619543038209604,
+      "first_invalid_es": 0.5185152728915586,
+      "selected_start": 9,
+      "selected_optimizer_converged": true
+    },
+    {
+      "market": "MXX",
+      "model": "ES-CAViaR",
+      "alpha": 0.05,
+      "reason": "invalid_scored_es_caviar_tail_path",
+      "optimizer_status": "complete",
+      "invalid_scored_days": 1791,
+      "scored_days": 1791,
+      "first_invalid_date": "2015-01-02",
+      "first_invalid_var": 0.24073913709309747,
+      "first_invalid_es": 0.4151952544827698,
+      "selected_start": 22,
+      "selected_optimizer_converged": true
+    },
+    {
+      "market": "MXX",
+      "model": "ES-CAViaR",
+      "alpha": 0.025,
+      "reason": "invalid_scored_es_caviar_tail_path",
+      "optimizer_status": "complete",
+      "invalid_scored_days": 1791,
+      "scored_days": 1791,
+      "first_invalid_date": "2015-01-02",
+      "first_invalid_var": 0.4680287510288508,
+      "first_invalid_es": 0.7015424109072487,
+      "selected_start": 24,
+      "selected_optimizer_converged": true
+    }
+  ],
+  "original_files_unchanged": 716,
+  "cap_counts": {
+    "var_caps": 0,
+    "es_caps": 0
+  }
+}

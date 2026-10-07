@@ -1,0 +1,12 @@
+{
+  "created_utc": "2026-10-05T16:36:30.656826+00:00",
+  "stage": "Before native tail scoring",
+  "files": {
+    "diagnostics.py": "243f74e35f99833228cc8ae2b07c2a2816f76dc3d9f941d663b27e9105c93e5d",
+    "freeze.py": "71857d0be06f2b8457468fca822088b7a52c9669ae594d5905a0faf530dd8fd5",
+    "mixtures.py": "f87abeced75a01be02218ecb263f51c7a702e9a88db102a1159afd00e02795dc",
+    "run.py": "7dd0de02b3c3e785cc54ee356e967fe18c3dfef81368ef10d50a36185b1c5bed",
+    "tails.py": "1033f3906e8fb0fde21d1aaaf16c9d877a3349b060fac176908655a9968564d7",
+    "test_native.py": "ed9da1b72c248436192a213fd01fd82d5372b80c1a2cff10d2761b587d116319"
+  }
+}

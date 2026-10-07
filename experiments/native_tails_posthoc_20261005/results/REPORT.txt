@@ -1,0 +1,54 @@
+POST-HOC: native VolPFN against three additional tail models
+5 October 2026
+
+Later 28-index panel, 2015–February 2022. Each complete comparison uses the same 50,073 market–date observations as the previous native-tail comparison. Native forecasts were reused unchanged.
+The panel and prior results were already inspected. This is an explicitly post-hoc extension, not independent confirmation.
+Differences are native VolPFN minus comparator FZ0: negative favours native. Means weight markets equally. Intervals are marginal 95% calendar-block intervals. Holm adjusts these nine comparisons only; previous comparisons are not pooled into this family.
+
+RESULTS
+model | level | mean difference | 95% interval | raw p | Holm p | decision
+GJR-GARCH-t | 5% | -0.024368 | [-0.036004, -0.013893] | 0.0005 | 0.0045 | beats
+GJR-GARCH-t | 2.5% | -0.034045 | [-0.052158, -0.018226] | 0.0005 | 0.0045 | beats
+GJR-GARCH-t | 1% | -0.042186 | [-0.071450, -0.018303] | 0.0005 | 0.0045 | beats
+FHS on GJR-GARCH | 5% | -0.010776 | [-0.016375, -0.005041] | 0.0005 | 0.0045 | beats
+FHS on GJR-GARCH | 2.5% | -0.009993 | [-0.018291, -0.001367] | 0.0270 | 0.1080 | no adjusted evidence
+FHS on GJR-GARCH | 1% | -0.003293 | [-0.016298, +0.010737] | 0.6350 | 1.0000 | tie
+ES-CAViaR | 5% | unavailable | unavailable | unavailable | unavailable | invalid paths: IXIC,MXX
+ES-CAViaR | 2.5% | unavailable | unavailable | unavailable | unavailable | invalid paths: IXIC,MXX
+ES-CAViaR | 1% | -0.406020 | [-0.562720, -0.281636] | 0.0005 | 0.0045 | beats
+
+VolPFN meets the frozen beats rule against GJR-GARCH-t at all three levels, FHS on GJR-GARCH at 5%, and ES-CAViaR at 1%. FHS-GJR at 2.5% does not survive Holm adjustment; FHS-GJR at 1% is a tie because its interval includes zero.
+
+FITTING AND FORECAST FAILURES
+GJR: 2517 scheduled fits, 0 rejected. All GJR-t and GJR-FHS market/level paths are complete.
+ES-CAViaR: 84 market/level fits and 2520 optimiser starts. No optimiser convergence failures were recorded. However, the selected fits generate invalid later tail forecasts in four market/level cells:
+  IXIC, 5%: 1794/1794 invalid scored days. First 2015-01-02: VaR=+1.006177, ES=+1.242330. The optimiser converged, but q>=0 and ES>VaR violate this benchmark's negative lower-tail multiplicative-ES specification.
+  IXIC, 2.5%: 1794/1794 invalid scored days. First 2015-01-02: VaR=+0.466195, ES=+0.518515. The optimiser converged, but q>=0 and ES>VaR violate this benchmark's negative lower-tail multiplicative-ES specification.
+  MXX, 5%: 1791/1791 invalid scored days. First 2015-01-02: VaR=+0.240739, ES=+0.415195. The optimiser converged, but q>=0 and ES>VaR violate this benchmark's negative lower-tail multiplicative-ES specification.
+  MXX, 2.5%: 1791/1791 invalid scored days. First 2015-01-02: VaR=+0.468029, ES=+0.701542. The optimiser converged, but q>=0 and ES>VaR violate this benchmark's negative lower-tail multiplicative-ES specification.
+The frozen failure rule therefore withholds the complete ES-CAViaR comparisons at 5% and 2.5%. No markets were dropped, no alternate optimiser candidate was selected, and no retuning or rescue fit was attempted. Both unavailable comparisons retain p=1 solely as reserved inputs to the nine-slot Holm calculation; their reported p-values remain unavailable.
+
+IMPLEMENTATIONS AND RULES
+GJR-GARCH-t reuses the existing Tier A implementation: constant mean, GJR(1,1), Student-t innovations, rolling 1,000 observations, refit every 20 sessions, one arch default start, maxiter=1000, existing convergence and parameter checks. This is its existing rolling procedure, not the expanding-fit schedule of the older Chapter 7 GARCH comparator.
+FHS uses those exact same accepted GJR-t fits and conditional variances. The empirical residual tail pair is estimated within each training window, excluding its first residual, using the existing fractional-boundary VaR/ES rule. It stays fixed between accepted refits; the conditional scale updates daily.
+ES-CAViaR reuses the original GP-FZ SAV recursion and multiplicative ES implementation without retuning: fit once on the first 1,000 observations, seed zero, 30 original random starts, original Nelder-Mead limits/tolerances, and the original smallest-objective selection. It is the fit-once benchmark, not the separately available rolling-refit variant.
+FZ0, percentage-return units, caps/floor, matched dates and the calendar bootstrap are unchanged: 2,000 circular 60-date block resamples, seed 927601, dates synchronised across markets. No scored cap activations occurred for available comparisons.
+Beats requires Holm p<0.05 and a negative difference. An interval containing zero takes precedence and is a tie. A negative interval without Holm significance is labelled no adjusted evidence, not beats.
+The inherited scoring block quotes the prior study’s policy for archived comparators; this extension’s new-model fitting is governed by the explicit GJR, FHS and ES-CAViaR blocks. No archived comparator was refitted or changed.
+
+VERIFICATION AND PRESERVATION
+Four unit tests passed: exact compiled/uncompiled CAViaR recursion and objective parity, ES-CAViaR forecast causality, and GJR/FHS causality.
+The full AEX 5% ES-CAViaR fit was independently repeated through the uncompiled original recursion: all 30 candidate results and selected parameters were bit-identical. Acceleration changed execution only, with no fastmath or altered optimisation.
+An independent statsmodels Holm calculation agreed with the nine-test adjustment.
+The POST_HOC_PROTOCOL.json file and all pre-fitting sealed analysis sources are unchanged. All 716 protected prior files, including the preceding experiment, original scripts and tracked dissertation files, retain their hashes.
+No protocol-rule deviations, retuning, native inference reruns or changes to existing results. Unavailable ES-CAViaR paths are retained as failures rather than repaired.
+
+FILES
+results_table.csv / results.json: the single nine-row results table.
+invalid_forecast_paths.csv and unavailable_models.csv: unusable market/level paths.
+failed_fit_attempts.csv: optimiser/refit failures (header only when none).
+fits/: all GJR refits, FHS residual estimates and all ES-CAViaR candidates.
+forecasts/: new comparator tail paths, dates and returns for available cells.
+audit.json, legacy_fit_parity.json, preservation.json and runtime.json: checks and provenance.
+
+Saved locally. No GitHub push and no dissertation edits.

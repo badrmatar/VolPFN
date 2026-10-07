@@ -1,0 +1,12 @@
+{
+  "test": "Seed 8101 AEX first 1100 returns; CPU versus MPS, all mixture parameters",
+  "rtol": 0.0002,
+  "atol": 2e-05,
+  "max_absolute_difference": {
+    "weight": 2.327336604546204e-07,
+    "location": 5.763049246709784e-07,
+    "scale": 5.4108567120181306e-06,
+    "df": 9.918212890625e-05
+  },
+  "passed": true
+}

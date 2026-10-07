@@ -1,0 +1,5980 @@
+{
+  "gjr": {
+    "gjr_status": "complete",
+    "metadata": {
+      "model": "gjr_garch_t",
+      "arch_version": "7.2.0",
+      "specification": {
+        "mean": "Constant",
+        "vol": "GARCH",
+        "p": 1,
+        "o": 1,
+        "q": 1,
+        "dist": "t",
+        "rescale": false
+      },
+      "history_window": 1000,
+      "refit_every": 20,
+      "evaluation_start": "2015-01-01",
+      "return_units": "percent",
+      "density_mean": "fitted_constant",
+      "variance_equals_second_moment": false,
+      "optimizer_policy": {
+        "attempts_per_refit": 1,
+        "starting_values": "arch_default",
+        "maxiter": 1000,
+        "selection": "accept sole candidate only when all checks pass",
+        "failed_refit": "carry last accepted parameters and continue daily filtering",
+        "initial_failure": "model unavailable; stop without rescue fits"
+      },
+      "parameter_constraint_tolerance": 1e-08,
+      "filter": "arch public volatility.forecast; training-only backcast and bounds",
+      "daily_information_cutoff": "strictly before forecast date",
+      "refit_attempt_count": 89,
+      "refit_failure_count": 0
+    },
+    "attempts": [
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 10,
+        "parameters": {
+          "mu": -0.07276725597580497,
+          "omega": 0.016979816515897004,
+          "alpha[1]": 0.004476060610191793,
+          "gamma[1]": 0.10412741119675935,
+          "beta[1]": 0.9250733831488096,
+          "nu": 10.590166951528737
+        },
+        "loglikelihood": -1295.575072365896,
+        "last_training_variance": 0.63359653615022,
+        "next_variance": 0.6041112888173304,
+        "next_second_moment": 0.6094063623595788,
+        "warnings": [],
+        "origin": "2015-01-01",
+        "origin_index": 3722,
+        "history_start": "2010-12-21",
+        "history_end": "2014-12-31",
+        "history_n": 1000,
+        "history_start_index": 2722,
+        "history_end_index": 3721,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 11,
+        "parameters": {
+          "mu": -0.062474162040946794,
+          "omega": 0.014984631171515694,
+          "alpha[1]": 0.006253253863036887,
+          "gamma[1]": 0.08882016271074053,
+          "beta[1]": 0.9315041123023834,
+          "nu": 9.775614529743267
+        },
+        "loglikelihood": -1288.642971728469,
+        "last_training_variance": 0.5291069535255827,
+        "next_variance": 0.510206616485488,
+        "next_second_moment": 0.5141096374082065,
+        "warnings": [],
+        "origin": "2015-01-30",
+        "origin_index": 3742,
+        "history_start": "2011-01-18",
+        "history_end": "2015-01-29",
+        "history_n": 1000,
+        "history_start_index": 2742,
+        "history_end_index": 3741,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 12,
+        "parameters": {
+          "mu": -0.06335620734174431,
+          "omega": 0.014451552634491766,
+          "alpha[1]": 0.007089421130370915,
+          "gamma[1]": 0.08168028074638385,
+          "beta[1]": 0.9349608115423569,
+          "nu": 9.403834834178772
+        },
+        "loglikelihood": -1278.2951008160558,
+        "last_training_variance": 0.7179492958867512,
+        "next_variance": 0.6997684959632878,
+        "next_second_moment": 0.7037825049720179,
+        "warnings": [],
+        "origin": "2015-02-28",
+        "origin_index": 3762,
+        "history_start": "2011-02-16",
+        "history_end": "2015-02-27",
+        "history_n": 1000,
+        "history_start_index": 2762,
+        "history_end_index": 3761,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 13,
+        "parameters": {
+          "mu": -0.0724566969237606,
+          "omega": 0.015042408642850877,
+          "alpha[1]": 0.006782965720623118,
+          "gamma[1]": 0.08045294070033443,
+          "beta[1]": 0.9352312668077286,
+          "nu": 9.145994893081296
+        },
+        "loglikelihood": -1274.002300077689,
+        "last_training_variance": 1.0824099559202398,
+        "next_variance": 1.055028827085075,
+        "next_second_moment": 1.0602788000141767,
+        "warnings": [],
+        "origin": "2015-03-30",
+        "origin_index": 3782,
+        "history_start": "2011-03-17",
+        "history_end": "2015-03-27",
+        "history_n": 1000,
+        "history_start_index": 2782,
+        "history_end_index": 3781,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 13,
+        "parameters": {
+          "mu": -0.07880778471475973,
+          "omega": 0.016686666555682787,
+          "alpha[1]": 0.00472020956063481,
+          "gamma[1]": 0.08793136798169109,
+          "beta[1]": 0.9313798843132094,
+          "nu": 9.839946349903549
+        },
+        "loglikelihood": -1269.7092054204022,
+        "last_training_variance": 1.154126698534414,
+        "next_variance": 1.1059667430150575,
+        "next_second_moment": 1.1121774099467054,
+        "warnings": [],
+        "origin": "2015-04-30",
+        "origin_index": 3802,
+        "history_start": "2011-04-18",
+        "history_end": "2015-04-29",
+        "history_n": 1000,
+        "history_start_index": 2802,
+        "history_end_index": 3801,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 12,
+        "parameters": {
+          "mu": -0.0722589434547822,
+          "omega": 0.017471583128529332,
+          "alpha[1]": 0.006845638044656682,
+          "gamma[1]": 0.08589177282320049,
+          "beta[1]": 0.9291602160638013,
+          "nu": 9.187933774671043
+        },
+        "loglikelihood": -1268.9651931303033,
+        "last_training_variance": 0.9692401762091356,
+        "next_variance": 0.9257259362519737,
+        "next_second_moment": 0.9309472911611751,
+        "warnings": [],
+        "origin": "2015-05-29",
+        "origin_index": 3822,
+        "history_start": "2011-05-17",
+        "history_end": "2015-05-28",
+        "history_n": 1000,
+        "history_start_index": 2822,
+        "history_end_index": 3821,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 14,
+        "parameters": {
+          "mu": -0.07228837692690122,
+          "omega": 0.013398477245570166,
+          "alpha[1]": 0.003074301646479289,
+          "gamma[1]": 0.0735357477168393,
+          "beta[1]": 0.943082690384131,
+          "nu": 8.951736821573176
+        },
+        "loglikelihood": -1275.7679305614383,
+        "last_training_variance": 1.0090639657894431,
+        "next_variance": 0.9682500214173075,
+        "next_second_moment": 0.9734756308560333,
+        "warnings": [],
+        "origin": "2015-06-26",
+        "origin_index": 3842,
+        "history_start": "2011-06-14",
+        "history_end": "2015-06-25",
+        "history_n": 1000,
+        "history_start_index": 2842,
+        "history_end_index": 3841,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 14,
+        "parameters": {
+          "mu": -0.06682051679769187,
+          "omega": 0.014042744570456234,
+          "alpha[1]": 0.002269616133038366,
+          "gamma[1]": 0.07468704997707461,
+          "beta[1]": 0.9416834153581601,
+          "nu": 8.974108506863562
+        },
+        "loglikelihood": -1268.9041264265575,
+        "last_training_variance": 0.5629175762035763,
+        "next_variance": 0.5716262978955328,
+        "next_second_moment": 0.5760912793606434,
+        "warnings": [],
+        "origin": "2015-07-24",
+        "origin_index": 3862,
+        "history_start": "2011-07-12",
+        "history_end": "2015-07-23",
+        "history_n": 1000,
+        "history_start_index": 2862,
+        "history_end_index": 3861,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 13,
+        "parameters": {
+          "mu": -0.07010736358782632,
+          "omega": 0.013967868648549483,
+          "alpha[1]": 3.99562164279274e-05,
+          "gamma[1]": 0.06876583467806259,
+          "beta[1]": 0.9455367020014104,
+          "nu": 9.473858340801465
+        },
+        "loglikelihood": -1262.6183709012384,
+        "last_training_variance": 0.5991362643740799,
+        "next_variance": 0.6534749068271675,
+        "next_second_moment": 0.6583899492564032,
+        "warnings": [],
+        "origin": "2015-08-21",
+        "origin_index": 3882,
+        "history_start": "2011-08-09",
+        "history_end": "2015-08-20",
+        "history_n": 1000,
+        "history_start_index": 2882,
+        "history_end_index": 3881,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 12,
+        "parameters": {
+          "mu": -0.07354373499505851,
+          "omega": 0.015310148772747556,
+          "alpha[1]": 0.0,
+          "gamma[1]": 0.07185689528662144,
+          "beta[1]": 0.9430071291705892,
+          "nu": 8.717131020521215
+        },
+        "loglikelihood": -1259.2803989469885,
+        "last_training_variance": 1.1827779144307236,
+        "next_variance": 1.1306781543064408,
+        "next_second_moment": 1.136086835263464,
+        "warnings": [],
+        "origin": "2015-09-21",
+        "origin_index": 3902,
+        "history_start": "2011-09-09",
+        "history_end": "2015-09-18",
+        "history_n": 1000,
+        "history_start_index": 2902,
+        "history_end_index": 3901,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 12,
+        "parameters": {
+          "mu": -0.0688624144537038,
+          "omega": 0.018620243439769677,
+          "alpha[1]": 0.0,
+          "gamma[1]": 0.07828977452674649,
+          "beta[1]": 0.934787373192651,
+          "nu": 8.474601323513202
+        },
+        "loglikelihood": -1253.546449162399,
+        "last_training_variance": 0.8224000569323522,
+        "next_variance": 0.7926378437468066,
+        "next_second_moment": 0.7973798758712003,
+        "warnings": [],
+        "origin": "2015-10-21",
+        "origin_index": 3922,
+        "history_start": "2011-10-10",
+        "history_end": "2015-10-20",
+        "history_n": 1000,
+        "history_start_index": 2922,
+        "history_end_index": 3921,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 12,
+        "parameters": {
+          "mu": -0.07248541635361046,
+          "omega": 0.018499336925814003,
+          "alpha[1]": 3.0773731315272924e-19,
+          "gamma[1]": 0.07158826834424825,
+          "beta[1]": 0.9372863911278554,
+          "nu": 8.360992442097222
+        },
+        "loglikelihood": -1246.4399679769626,
+        "last_training_variance": 0.7111198994224404,
+        "next_variance": 0.6850223411146766,
+        "next_second_moment": 0.6902764766986329,
+        "warnings": [],
+        "origin": "2015-11-23",
+        "origin_index": 3942,
+        "history_start": "2011-11-09",
+        "history_end": "2015-11-20",
+        "history_n": 1000,
+        "history_start_index": 2942,
+        "history_end_index": 3941,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 14,
+        "parameters": {
+          "mu": -0.0697254578094549,
+          "omega": 0.022889663455115915,
+          "alpha[1]": 4.573826631463963e-19,
+          "gamma[1]": 0.07766935126006508,
+          "beta[1]": 0.9273627736384199,
+          "nu": 8.229710049178399
+        },
+        "loglikelihood": -1231.2083804994156,
+        "last_training_variance": 0.5870746577389185,
+        "next_variance": 0.5673208463887055,
+        "next_second_moment": 0.5721824858554436,
+        "warnings": [],
+        "origin": "2015-12-22",
+        "origin_index": 3962,
+        "history_start": "2011-12-09",
+        "history_end": "2015-12-21",
+        "history_n": 1000,
+        "history_start_index": 2962,
+        "history_end_index": 3961,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 13,
+        "parameters": {
+          "mu": -0.06984966716535189,
+          "omega": 0.024998543103053935,
+          "alpha[1]": 0.0006641526916936978,
+          "gamma[1]": 0.07972466744597274,
+          "beta[1]": 0.9234653020767912,
+          "nu": 8.216326636055657
+        },
+        "loglikelihood": -1221.3468532933211,
+        "last_training_variance": 0.9194332536159667,
+        "next_variance": 0.874454839387992,
+        "next_second_moment": 0.8793338153911024,
+        "warnings": [],
+        "origin": "2016-01-20",
+        "origin_index": 3982,
+        "history_start": "2012-01-06",
+        "history_end": "2016-01-19",
+        "history_n": 1000,
+        "history_start_index": 2982,
+        "history_end_index": 3981,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 13,
+        "parameters": {
+          "mu": -0.08115211912695931,
+          "omega": 0.022453156957852927,
+          "alpha[1]": 8.199194886966433e-18,
+          "gamma[1]": 0.08244874028398323,
+          "beta[1]": 0.9273312233462612,
+          "nu": 8.13362472902259
+        },
+        "loglikelihood": -1229.670112203548,
+        "last_training_variance": 1.789926369632344,
+        "next_variance": 1.6823077670087463,
+        "next_second_moment": 1.6888934334475425,
+        "warnings": [],
+        "origin": "2016-02-18",
+        "origin_index": 4002,
+        "history_start": "2012-02-03",
+        "history_end": "2016-02-17",
+        "history_n": 1000,
+        "history_start_index": 3002,
+        "history_end_index": 4001,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 14,
+        "parameters": {
+          "mu": -0.08097373832073405,
+          "omega": 0.0244821216126969,
+          "alpha[1]": 0.0,
+          "gamma[1]": 0.08578207222441293,
+          "beta[1]": 0.92232826327968,
+          "nu": 8.290556983397908
+        },
+        "loglikelihood": -1225.7561428359563,
+        "last_training_variance": 0.8417883864497183,
+        "next_variance": 0.857291400379707,
+        "next_second_moment": 0.8638481466773417,
+        "warnings": [],
+        "origin": "2016-03-18",
+        "origin_index": 4022,
+        "history_start": "2012-03-03",
+        "history_end": "2016-03-17",
+        "history_n": 1000,
+        "history_start_index": 3022,
+        "history_end_index": 4021,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 14,
+        "parameters": {
+          "mu": -0.07600386249616507,
+          "omega": 0.026208086223005175,
+          "alpha[1]": 0.0,
+          "gamma[1]": 0.08859259314634688,
+          "beta[1]": 0.9185957204898545,
+          "nu": 8.060801007393009
+        },
+        "loglikelihood": -1216.670509968212,
+        "last_training_variance": 0.6821209533082461,
+        "next_variance": 0.6929718146532576,
+        "next_second_moment": 0.6987484017675936,
+        "warnings": [],
+        "origin": "2016-04-22",
+        "origin_index": 4042,
+        "history_start": "2012-04-02",
+        "history_end": "2016-04-21",
+        "history_n": 1000,
+        "history_start_index": 3042,
+        "history_end_index": 4041,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 13,
+        "parameters": {
+          "mu": -0.07390185907876756,
+          "omega": 0.0228336878606388,
+          "alpha[1]": 0.0,
+          "gamma[1]": 0.07671862461094937,
+          "beta[1]": 0.9271172271962327,
+          "nu": 8.599292829382792
+        },
+        "loglikelihood": -1216.312561941007,
+        "last_training_variance": 0.5301346948130966,
+        "next_variance": 0.6182529388812658,
+        "next_second_moment": 0.6237144236565638,
+        "warnings": [],
+        "origin": "2016-05-20",
+        "origin_index": 4062,
+        "history_start": "2012-05-03",
+        "history_end": "2016-05-19",
+        "history_n": 1000,
+        "history_start_index": 3062,
+        "history_end_index": 4061,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 14,
+        "parameters": {
+          "mu": -0.07307168576423084,
+          "omega": 0.026773556582996388,
+          "alpha[1]": 3.7922805520652293e-11,
+          "gamma[1]": 0.08561595995588844,
+          "beta[1]": 0.9161280688077945,
+          "nu": 8.702654167622144
+        },
+        "loglikelihood": -1203.6186868453813,
+        "last_training_variance": 0.4536388811147246,
+        "next_variance": 0.4630908228762123,
+        "next_second_moment": 0.4684302941366388,
+        "warnings": [],
+        "origin": "2016-06-17",
+        "origin_index": 4082,
+        "history_start": "2012-05-31",
+        "history_end": "2016-06-16",
+        "history_n": 1000,
+        "history_start_index": 3082,
+        "history_end_index": 4081,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 14,
+        "parameters": {
+          "mu": -0.06984157278421646,
+          "omega": 0.02366061771138168,
+          "alpha[1]": 1.4066329551318866e-12,
+          "gamma[1]": 0.08315399640022486,
+          "beta[1]": 0.9222792940801048,
+          "nu": 8.04306038275336
+        },
+        "loglikelihood": -1185.3887394501096,
+        "last_training_variance": 0.37057485522801353,
+        "next_variance": 0.37024882190402936,
+        "next_second_moment": 0.37512666719300236,
+        "warnings": [],
+        "origin": "2016-07-18",
+        "origin_index": 4102,
+        "history_start": "2012-06-28",
+        "history_end": "2016-07-15",
+        "history_n": 1000,
+        "history_start_index": 3102,
+        "history_end_index": 4101,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 13,
+        "parameters": {
+          "mu": -0.06792565898185839,
+          "omega": 0.025268466734562206,
+          "alpha[1]": 0.0,
+          "gamma[1]": 0.0824411842964375,
+          "beta[1]": 0.9199840182307422,
+          "nu": 8.432065508869037
+        },
+        "loglikelihood": -1189.5022523684283,
+        "last_training_variance": 0.5690113310348067,
+        "next_variance": 0.5487497974787867,
+        "next_second_moment": 0.5533636926269064,
+        "warnings": [],
+        "origin": "2016-08-16",
+        "origin_index": 4122,
+        "history_start": "2012-07-26",
+        "history_end": "2016-08-12",
+        "history_n": 1000,
+        "history_start_index": 3122,
+        "history_end_index": 4121,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 14,
+        "parameters": {
+          "mu": -0.07299176700373652,
+          "omega": 0.023491303850690818,
+          "alpha[1]": 0.0,
+          "gamma[1]": 0.0811591476724127,
+          "beta[1]": 0.9232271058885491,
+          "nu": 8.446579164748306
+        },
+        "loglikelihood": -1187.1614563810494,
+        "last_training_variance": 0.44328441835079013,
+        "next_variance": 0.4327434944901797,
+        "next_second_moment": 0.4380712925405074,
+        "warnings": [],
+        "origin": "2016-09-15",
+        "origin_index": 4142,
+        "history_start": "2012-08-27",
+        "history_end": "2016-09-14",
+        "history_n": 1000,
+        "history_start_index": 3142,
+        "history_end_index": 4141,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 14,
+        "parameters": {
+          "mu": -0.08175059253130507,
+          "omega": 0.022651558472962678,
+          "alpha[1]": 1.7420501994507128e-13,
+          "gamma[1]": 0.08056882358274838,
+          "beta[1]": 0.9251616225202599,
+          "nu": 8.367331533130411
+        },
+        "loglikelihood": -1182.9134740948148,
+        "last_training_variance": 0.6578727392482822,
+        "next_variance": 0.6312901693277518,
+        "next_second_moment": 0.6379733287069713,
+        "warnings": [],
+        "origin": "2016-10-17",
+        "origin_index": 4162,
+        "history_start": "2012-09-24",
+        "history_end": "2016-10-14",
+        "history_n": 1000,
+        "history_start_index": 3162,
+        "history_end_index": 4161,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 11,
+        "parameters": {
+          "mu": -0.08375144150480604,
+          "omega": 0.023318970468424485,
+          "alpha[1]": 2.6513213345946232e-14,
+          "gamma[1]": 0.08102822753951389,
+          "beta[1]": 0.9264421690885702,
+          "nu": 6.681321881631026
+        },
+        "loglikelihood": -1189.887263193753,
+        "last_training_variance": 0.46499006614201954,
+        "next_variance": 0.6644648829014486,
+        "next_second_moment": 0.6714791868555815,
+        "warnings": [],
+        "origin": "2016-11-15",
+        "origin_index": 4182,
+        "history_start": "2012-10-23",
+        "history_end": "2016-11-11",
+        "history_n": 1000,
+        "history_start_index": 3182,
+        "history_end_index": 4181,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 13,
+        "parameters": {
+          "mu": -0.08559959906907823,
+          "omega": 0.025580738457121353,
+          "alpha[1]": 0.003011686933819007,
+          "gamma[1]": 0.08115495637035358,
+          "beta[1]": 0.9208294093573987,
+          "nu": 6.535112264295216
+        },
+        "loglikelihood": -1199.6944557893603,
+        "last_training_variance": 0.7078973076267797,
+        "next_variance": 0.7070571170816856,
+        "next_second_moment": 0.7143844084424725,
+        "warnings": [],
+        "origin": "2016-12-13",
+        "origin_index": 4202,
+        "history_start": "2012-11-22",
+        "history_end": "2016-12-12",
+        "history_n": 1000,
+        "history_start_index": 3202,
+        "history_end_index": 4201,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 17,
+        "parameters": {
+          "mu": -0.08792343269204549,
+          "omega": 0.02882404718650265,
+          "alpha[1]": 0.0027493627442334023,
+          "gamma[1]": 0.0867578454732765,
+          "beta[1]": 0.9134893174566493,
+          "nu": 6.582288145570473
+        },
+        "loglikelihood": -1199.005036510154,
+        "last_training_variance": 0.46289824351328196,
+        "next_variance": 0.45534631405186615,
+        "next_second_moment": 0.4630768440682188,
+        "warnings": [],
+        "origin": "2017-01-10",
+        "origin_index": 4222,
+        "history_start": "2012-12-21",
+        "history_end": "2017-01-09",
+        "history_n": 1000,
+        "history_start_index": 3222,
+        "history_end_index": 4221,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 15,
+        "parameters": {
+          "mu": -0.07998692413629943,
+          "omega": 0.030455839460374747,
+          "alpha[1]": 0.0010237859051586496,
+          "gamma[1]": 0.08858278688240347,
+          "beta[1]": 0.9123229663592455,
+          "nu": 6.419308539486664
+        },
+        "loglikelihood": -1199.6951601870917,
+        "last_training_variance": 0.425842897774088,
+        "next_variance": 0.427525862334848,
+        "next_second_moment": 0.43392377036763413,
+        "warnings": [],
+        "origin": "2017-02-08",
+        "origin_index": 4242,
+        "history_start": "2013-01-21",
+        "history_end": "2017-02-07",
+        "history_n": 1000,
+        "history_start_index": 3242,
+        "history_end_index": 4241,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 15,
+        "parameters": {
+          "mu": -0.07539419093082252,
+          "omega": 0.02652736297153247,
+          "alpha[1]": 0.00023564059531062449,
+          "gamma[1]": 0.08744264306116721,
+          "beta[1]": 0.9180605037937657,
+          "nu": 6.434272458205667
+        },
+        "loglikelihood": -1199.6168927173474,
+        "last_training_variance": 0.4485971945533064,
+        "next_variance": 0.44173176787152624,
+        "next_second_moment": 0.44741605189763956,
+        "warnings": [],
+        "origin": "2017-03-09",
+        "origin_index": 4262,
+        "history_start": "2013-02-18",
+        "history_end": "2017-03-08",
+        "history_n": 1000,
+        "history_start_index": 3262,
+        "history_end_index": 4261,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 11,
+        "parameters": {
+          "mu": -0.07196187391541765,
+          "omega": 0.01838993581380884,
+          "alpha[1]": 0.005532093183011281,
+          "gamma[1]": 0.08419208968266634,
+          "beta[1]": 0.9252235759016653,
+          "nu": 6.1599119963692095
+        },
+        "loglikelihood": -1182.3155739416588,
+        "last_training_variance": 0.30135036612106575,
+        "next_variance": 0.3003811539611585,
+        "next_second_moment": 0.305559665258577,
+        "warnings": [],
+        "origin": "2017-04-10",
+        "origin_index": 4282,
+        "history_start": "2013-03-18",
+        "history_end": "2017-04-07",
+        "history_n": 1000,
+        "history_start_index": 3282,
+        "history_end_index": 4281,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 12,
+        "parameters": {
+          "mu": -0.07498605055341646,
+          "omega": 0.018198118477956084,
+          "alpha[1]": 0.0061901959855090016,
+          "gamma[1]": 0.08702307851329497,
+          "beta[1]": 0.9229886214426904,
+          "nu": 6.204030939008655
+        },
+        "loglikelihood": -1166.722231675862,
+        "last_training_variance": 0.38839859407501337,
+        "next_variance": 0.3783481735786851,
+        "next_second_moment": 0.38397108135628466,
+        "warnings": [],
+        "origin": "2017-05-10",
+        "origin_index": 4302,
+        "history_start": "2013-04-17",
+        "history_end": "2017-05-09",
+        "history_n": 1000,
+        "history_start_index": 3302,
+        "history_end_index": 4301,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 12,
+        "parameters": {
+          "mu": -0.07849432089508525,
+          "omega": 0.018628138908235975,
+          "alpha[1]": 0.004749042125939089,
+          "gamma[1]": 0.09541610429445137,
+          "beta[1]": 0.9196641835554961,
+          "nu": 6.205048809720955
+        },
+        "loglikelihood": -1152.2210163948714,
+        "last_training_variance": 0.30777442594155485,
+        "next_variance": 0.34061788357402983,
+        "next_second_moment": 0.3467792419868104,
+        "warnings": [],
+        "origin": "2017-06-07",
+        "origin_index": 4322,
+        "history_start": "2013-05-17",
+        "history_end": "2017-06-06",
+        "history_n": 1000,
+        "history_start_index": 3322,
+        "history_end_index": 4321,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 13,
+        "parameters": {
+          "mu": -0.07885562044782672,
+          "omega": 0.014197667277539428,
+          "alpha[1]": 0.007167389935959113,
+          "gamma[1]": 0.0922673451244066,
+          "beta[1]": 0.9253629105716884,
+          "nu": 6.125542694858909
+        },
+        "loglikelihood": -1138.130354122272,
+        "last_training_variance": 0.3208256797022046,
+        "next_variance": 0.3117030716378808,
+        "next_second_moment": 0.3179212805140925,
+        "warnings": [],
+        "origin": "2017-07-06",
+        "origin_index": 4342,
+        "history_start": "2013-06-14",
+        "history_end": "2017-07-05",
+        "history_n": 1000,
+        "history_start_index": 3342,
+        "history_end_index": 4341,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 12,
+        "parameters": {
+          "mu": -0.07351187987777774,
+          "omega": 0.01004646084245776,
+          "alpha[1]": 0.00833410884175032,
+          "gamma[1]": 0.07802696412719737,
+          "beta[1]": 0.936517134209602,
+          "nu": 5.93746056102092
+        },
+        "loglikelihood": -1123.5589307830587,
+        "last_training_variance": 0.2302518315917423,
+        "next_variance": 0.2661070670588252,
+        "next_second_moment": 0.27151106354199,
+        "warnings": [],
+        "origin": "2017-08-03",
+        "origin_index": 4362,
+        "history_start": "2013-07-12",
+        "history_end": "2017-08-02",
+        "history_n": 1000,
+        "history_start_index": 3362,
+        "history_end_index": 4361,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 14,
+        "parameters": {
+          "mu": -0.0726966255054891,
+          "omega": 0.011062608633413726,
+          "alpha[1]": 0.008292117505073412,
+          "gamma[1]": 0.06593479473667904,
+          "beta[1]": 0.9382475839154696,
+          "nu": 6.221035065381495
+        },
+        "loglikelihood": -1113.0468120192777,
+        "last_training_variance": 0.3730078691494545,
+        "next_variance": 0.3628414774479526,
+        "next_second_moment": 0.36812627680783794,
+        "warnings": [],
+        "origin": "2017-09-04",
+        "origin_index": 4382,
+        "history_start": "2013-08-12",
+        "history_end": "2017-09-01",
+        "history_n": 1000,
+        "history_start_index": 3382,
+        "history_end_index": 4381,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 15,
+        "parameters": {
+          "mu": -0.07942321417021388,
+          "omega": 0.005621499709951883,
+          "alpha[1]": 0.0056115333415328,
+          "gamma[1]": 0.05190577984285434,
+          "beta[1]": 0.9584573017939697,
+          "nu": 6.131664984209034
+        },
+        "loglikelihood": -1084.2126048311657,
+        "last_training_variance": 0.5147818214709591,
+        "next_variance": 0.5012897801000192,
+        "next_second_moment": 0.5075978270491469,
+        "warnings": [],
+        "origin": "2017-10-03",
+        "origin_index": 4402,
+        "history_start": "2013-09-11",
+        "history_end": "2017-09-29",
+        "history_n": 1000,
+        "history_start_index": 3402,
+        "history_end_index": 4401,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 15,
+        "parameters": {
+          "mu": -0.07719946780165304,
+          "omega": 0.004512928997193886,
+          "alpha[1]": 0.007161228869660347,
+          "gamma[1]": 0.0447488180258505,
+          "beta[1]": 0.962198984353253,
+          "nu": 5.869270287550915
+        },
+        "loglikelihood": -1066.7337473676898,
+        "last_training_variance": 0.338484564258402,
+        "next_variance": 0.3315629897163837,
+        "next_second_moment": 0.3375227475452422,
+        "warnings": [],
+        "origin": "2017-11-01",
+        "origin_index": 4422,
+        "history_start": "2013-10-10",
+        "history_end": "2017-10-31",
+        "history_n": 1000,
+        "history_start_index": 3422,
+        "history_end_index": 4421,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 16,
+        "parameters": {
+          "mu": -0.0775491276632664,
+          "omega": 0.00381177178002361,
+          "alpha[1]": 0.007758818693025509,
+          "gamma[1]": 0.04094411639870149,
+          "beta[1]": 0.9643526685886032,
+          "nu": 5.80520844444062
+        },
+        "loglikelihood": -1056.2414448608624,
+        "last_training_variance": 0.3091319596573719,
+        "next_variance": 0.3030259603987055,
+        "next_second_moment": 0.30903982760003906,
+        "warnings": [],
+        "origin": "2017-11-29",
+        "origin_index": 4442,
+        "history_start": "2013-11-08",
+        "history_end": "2017-11-28",
+        "history_n": 1000,
+        "history_start_index": 3442,
+        "history_end_index": 4441,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 14,
+        "parameters": {
+          "mu": -0.07806206767166954,
+          "omega": 0.004603379663322488,
+          "alpha[1]": 0.006851164500303651,
+          "gamma[1]": 0.04459574827396809,
+          "beta[1]": 0.9624910267292666,
+          "nu": 5.6421727932726675
+        },
+        "loglikelihood": -1053.3360928566462,
+        "last_training_variance": 0.35396064462962773,
+        "next_variance": 0.3546505483478854,
+        "next_second_moment": 0.3607442347570617,
+        "warnings": [],
+        "origin": "2017-12-28",
+        "origin_index": 4462,
+        "history_start": "2013-12-09",
+        "history_end": "2017-12-27",
+        "history_n": 1000,
+        "history_start_index": 3462,
+        "history_end_index": 4461,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 13,
+        "parameters": {
+          "mu": -0.07077429130353417,
+          "omega": 0.005723042231922511,
+          "alpha[1]": 0.009663174914471412,
+          "gamma[1]": 0.047205752565936766,
+          "beta[1]": 0.956118139440196,
+          "nu": 5.723918093780661
+        },
+        "loglikelihood": -1043.6607573434121,
+        "last_training_variance": 0.29599721792106287,
+        "next_variance": 0.28926336795263385,
+        "next_second_moment": 0.29427236826215136,
+        "warnings": [],
+        "origin": "2018-01-25",
+        "origin_index": 4482,
+        "history_start": "2014-01-07",
+        "history_end": "2018-01-24",
+        "history_n": 1000,
+        "history_start_index": 3482,
+        "history_end_index": 4481,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 13,
+        "parameters": {
+          "mu": -0.07016503736852299,
+          "omega": 0.00669251179415288,
+          "alpha[1]": 0.012046720568360895,
+          "gamma[1]": 0.050166649058605337,
+          "beta[1]": 0.9512383014294578,
+          "nu": 5.652529982726903
+        },
+        "loglikelihood": -1055.4988083607675,
+        "last_training_variance": 0.6187894953510095,
+        "next_variance": 0.6050245935785488,
+        "next_second_moment": 0.609947726047475,
+        "warnings": [],
+        "origin": "2018-02-26",
+        "origin_index": 4502,
+        "history_start": "2014-02-04",
+        "history_end": "2018-02-23",
+        "history_n": 1000,
+        "history_start_index": 3502,
+        "history_end_index": 4501,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 15,
+        "parameters": {
+          "mu": -0.07666545355036478,
+          "omega": 0.006144410995001816,
+          "alpha[1]": 0.009239628192039169,
+          "gamma[1]": 0.052931943233646625,
+          "beta[1]": 0.953769546214362,
+          "nu": 5.631236191810408
+        },
+        "loglikelihood": -1058.097462296103,
+        "last_training_variance": 0.6474323064906681,
+        "next_variance": 0.6455529041287259,
+        "next_second_moment": 0.651430495896809,
+        "warnings": [],
+        "origin": "2018-03-27",
+        "origin_index": 4522,
+        "history_start": "2014-03-05",
+        "history_end": "2018-03-26",
+        "history_n": 1000,
+        "history_start_index": 3522,
+        "history_end_index": 4521,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 16,
+        "parameters": {
+          "mu": -0.07782195074102889,
+          "omega": 0.004603343593263759,
+          "alpha[1]": 0.003080530512963941,
+          "gamma[1]": 0.05032765713440625,
+          "beta[1]": 0.9628749689978781,
+          "nu": 5.6267404460698405
+        },
+        "loglikelihood": -1055.8843172233508,
+        "last_training_variance": 0.43673611560392545,
+        "next_variance": 0.43013257602195726,
+        "next_second_moment": 0.43618883203909636,
+        "warnings": [],
+        "origin": "2018-04-26",
+        "origin_index": 4542,
+        "history_start": "2014-04-02",
+        "history_end": "2018-04-25",
+        "history_n": 1000,
+        "history_start_index": 3542,
+        "history_end_index": 4541,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 16,
+        "parameters": {
+          "mu": -0.07756693222222746,
+          "omega": 0.005836246533812795,
+          "alpha[1]": 0.0010439808135487233,
+          "gamma[1]": 0.05898446077149145,
+          "beta[1]": 0.9571630269468198,
+          "nu": 5.996725367979474
+        },
+        "loglikelihood": -1051.6871988652583,
+        "last_training_variance": 0.4261090956807464,
+        "next_variance": 0.4142290728300851,
+        "next_second_moment": 0.4202457018044527,
+        "warnings": [],
+        "origin": "2018-05-25",
+        "origin_index": 4562,
+        "history_start": "2014-05-07",
+        "history_end": "2018-05-24",
+        "history_n": 1000,
+        "history_start_index": 3562,
+        "history_end_index": 4561,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 16,
+        "parameters": {
+          "mu": -0.07553810927794982,
+          "omega": 0.005021361490036586,
+          "alpha[1]": 0.0015731010319695873,
+          "gamma[1]": 0.05394559196434668,
+          "beta[1]": 0.9603804171912247,
+          "nu": 6.130458245674864
+        },
+        "loglikelihood": -1040.0696602939984,
+        "last_training_variance": 0.3505855602423486,
+        "next_variance": 0.3545841171102381,
+        "next_second_moment": 0.36029012306352554,
+        "warnings": [],
+        "origin": "2018-06-22",
+        "origin_index": 4582,
+        "history_start": "2014-06-04",
+        "history_end": "2018-06-21",
+        "history_n": 1000,
+        "history_start_index": 3582,
+        "history_end_index": 4581,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 16,
+        "parameters": {
+          "mu": -0.0747221392426975,
+          "omega": 0.00547128410027566,
+          "alpha[1]": 0.0023235493110809274,
+          "gamma[1]": 0.05611771359084348,
+          "beta[1]": 0.9576384902934079,
+          "nu": 6.26007853267042
+        },
+        "loglikelihood": -1034.4785557465561,
+        "last_training_variance": 0.34378962113081185,
+        "next_variance": 0.33592124119929295,
+        "next_second_moment": 0.341504639292298,
+        "warnings": [],
+        "origin": "2018-07-20",
+        "origin_index": 4602,
+        "history_start": "2014-07-02",
+        "history_end": "2018-07-19",
+        "history_n": 1000,
+        "history_start_index": 3602,
+        "history_end_index": 4601,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 16,
+        "parameters": {
+          "mu": -0.06926966722696982,
+          "omega": 0.005744833130054906,
+          "alpha[1]": 0.0032126051400878136,
+          "gamma[1]": 0.06200335747235889,
+          "beta[1]": 0.9531000362235268,
+          "nu": 6.723696946010107
+        },
+        "loglikelihood": -1020.8619678370727,
+        "last_training_variance": 0.24689358025738573,
+        "next_variance": 0.2413978905561784,
+        "next_second_moment": 0.24619617735391355,
+        "warnings": [],
+        "origin": "2018-08-20",
+        "origin_index": 4622,
+        "history_start": "2014-07-31",
+        "history_end": "2018-08-17",
+        "history_n": 1000,
+        "history_start_index": 3622,
+        "history_end_index": 4621,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 15,
+        "parameters": {
+          "mu": -0.07512533453591749,
+          "omega": 0.005493739340460167,
+          "alpha[1]": 0.000839616246848048,
+          "gamma[1]": 0.06163090626328777,
+          "beta[1]": 0.9566461940980203,
+          "nu": 6.565995353297452
+        },
+        "loglikelihood": -1025.8509803214454,
+        "last_training_variance": 0.5136201620556263,
+        "next_variance": 0.5312500534229012,
+        "next_second_moment": 0.5368938693120348,
+        "warnings": [],
+        "origin": "2018-09-19",
+        "origin_index": 4642,
+        "history_start": "2014-09-01",
+        "history_end": "2018-09-18",
+        "history_n": 1000,
+        "history_start_index": 3642,
+        "history_end_index": 4641,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 16,
+        "parameters": {
+          "mu": -0.07841320247095625,
+          "omega": 0.008196740725183728,
+          "alpha[1]": 0.0031531105739905497,
+          "gamma[1]": 0.08235924034808685,
+          "beta[1]": 0.9399670464056719,
+          "nu": 7.188854832894072
+        },
+        "loglikelihood": -1036.333662472171,
+        "last_training_variance": 1.3714083564678503,
+        "next_variance": 1.297285683559364,
+        "next_second_moment": 1.3034343138811153,
+        "warnings": [],
+        "origin": "2018-10-22",
+        "origin_index": 4662,
+        "history_start": "2014-09-29",
+        "history_end": "2018-10-19",
+        "history_n": 1000,
+        "history_start_index": 3662,
+        "history_end_index": 4661,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 15,
+        "parameters": {
+          "mu": -0.0785686419604286,
+          "omega": 0.009702197172949768,
+          "alpha[1]": 0.004858439860682612,
+          "gamma[1]": 0.08642412752258978,
+          "beta[1]": 0.933134753541631,
+          "nu": 7.124954992251346
+        },
+        "loglikelihood": -1040.5335586132437,
+        "last_training_variance": 0.6929418906151221,
+        "next_variance": 0.6574627106489007,
+        "next_second_moment": 0.6636357421484067,
+        "warnings": [],
+        "origin": "2018-11-20",
+        "origin_index": 4682,
+        "history_start": "2014-11-03",
+        "history_end": "2018-11-19",
+        "history_n": 1000,
+        "history_start_index": 3682,
+        "history_end_index": 4681,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 17,
+        "parameters": {
+          "mu": -0.07832874392923798,
+          "omega": 0.007201628105232283,
+          "alpha[1]": 0.002473354554429236,
+          "gamma[1]": 0.07619001441535819,
+          "beta[1]": 0.9446877179052828,
+          "nu": 7.037172702076145
+        },
+        "loglikelihood": -1050.1407833622432,
+        "last_training_variance": 0.45919817573420074,
+        "next_variance": 0.44213742369040837,
+        "next_second_moment": 0.44827281581594053,
+        "warnings": [],
+        "origin": "2018-12-19",
+        "origin_index": 4702,
+        "history_start": "2014-12-03",
+        "history_end": "2018-12-18",
+        "history_n": 1000,
+        "history_start_index": 3702,
+        "history_end_index": 4701,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 17,
+        "parameters": {
+          "mu": -0.0772081055547187,
+          "omega": 0.006949690707237581,
+          "alpha[1]": 0.0033468540915021863,
+          "gamma[1]": 0.07287490162698579,
+          "beta[1]": 0.9457599638556181,
+          "nu": 6.9809490571045165
+        },
+        "loglikelihood": -1049.5706362898982,
+        "last_training_variance": 0.485908017223601,
+        "next_variance": 0.4666313855861725,
+        "next_second_moment": 0.4725924771495211,
+        "warnings": [],
+        "origin": "2019-01-17",
+        "origin_index": 4722,
+        "history_start": "2015-01-01",
+        "history_end": "2019-01-16",
+        "history_n": 1000,
+        "history_start_index": 3722,
+        "history_end_index": 4721,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 15,
+        "parameters": {
+          "mu": -0.08231997953507972,
+          "omega": 0.007800848887012188,
+          "alpha[1]": 0.004331900899330842,
+          "gamma[1]": 0.07896022666801986,
+          "beta[1]": 0.9401610833904978,
+          "nu": 7.535639934835085
+        },
+        "loglikelihood": -1045.9688970739276,
+        "last_training_variance": 0.4034038374298228,
+        "next_variance": 0.444897201109938,
+        "next_second_moment": 0.45167378014059395,
+        "warnings": [],
+        "origin": "2019-02-14",
+        "origin_index": 4742,
+        "history_start": "2015-01-30",
+        "history_end": "2019-02-13",
+        "history_n": 1000,
+        "history_start_index": 3742,
+        "history_end_index": 4741,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 15,
+        "parameters": {
+          "mu": -0.07677852294477316,
+          "omega": 0.008219301505645576,
+          "alpha[1]": 0.004752074057351202,
+          "gamma[1]": 0.08108991250663782,
+          "beta[1]": 0.9373850583742874,
+          "nu": 7.547990904895367
+        },
+        "loglikelihood": -1039.288614837944,
+        "last_training_variance": 0.31735473054759006,
+        "next_variance": 0.30788797174637805,
+        "next_second_moment": 0.3137829133319591,
+        "warnings": [],
+        "origin": "2019-03-15",
+        "origin_index": 4762,
+        "history_start": "2015-02-28",
+        "history_end": "2019-03-14",
+        "history_n": 1000,
+        "history_start_index": 3762,
+        "history_end_index": 4761,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 17,
+        "parameters": {
+          "mu": -0.07302062970786725,
+          "omega": 0.009000498614050976,
+          "alpha[1]": 0.005763762307836652,
+          "gamma[1]": 0.08661745142400495,
+          "beta[1]": 0.9321726546600786,
+          "nu": 7.932074258568878
+        },
+        "loglikelihood": -1030.0472599495831,
+        "last_training_variance": 0.3471741469720733,
+        "next_variance": 0.33291599203907973,
+        "next_second_moment": 0.3382480044020132,
+        "warnings": [],
+        "origin": "2019-04-15",
+        "origin_index": 4782,
+        "history_start": "2015-03-30",
+        "history_end": "2019-04-12",
+        "history_n": 1000,
+        "history_start_index": 3782,
+        "history_end_index": 4781,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 15,
+        "parameters": {
+          "mu": -0.07396065456536684,
+          "omega": 0.01051842022708037,
+          "alpha[1]": 0.007358887954706159,
+          "gamma[1]": 0.09074978842670514,
+          "beta[1]": 0.9256483784418932,
+          "nu": 8.15525931780597
+        },
+        "loglikelihood": -1026.11916094465,
+        "last_training_variance": 0.6025691177409193,
+        "next_variance": 0.5747163917219861,
+        "next_second_moment": 0.5801865701457236,
+        "warnings": [],
+        "origin": "2019-05-17",
+        "origin_index": 4802,
+        "history_start": "2015-04-30",
+        "history_end": "2019-05-16",
+        "history_n": 1000,
+        "history_start_index": 3802,
+        "history_end_index": 4801,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 15,
+        "parameters": {
+          "mu": -0.07351546398453149,
+          "omega": 0.014650836638078212,
+          "alpha[1]": 0.013113656741212317,
+          "gamma[1]": 0.11251996774931569,
+          "beta[1]": 0.9021289302219766,
+          "nu": 8.565724845979382
+        },
+        "loglikelihood": -1025.3173259243276,
+        "last_training_variance": 0.5646675527275619,
+        "next_variance": 0.5888881402030062,
+        "next_second_moment": 0.5942926636478671,
+        "warnings": [],
+        "origin": "2019-06-17",
+        "origin_index": 4822,
+        "history_start": "2015-05-29",
+        "history_end": "2019-06-14",
+        "history_n": 1000,
+        "history_start_index": 3822,
+        "history_end_index": 4821,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 15,
+        "parameters": {
+          "mu": -0.07599440343104209,
+          "omega": 0.018535422749297824,
+          "alpha[1]": 0.015133669124361487,
+          "gamma[1]": 0.13102372230988002,
+          "beta[1]": 0.8844772499131066,
+          "nu": 8.485110844729633
+        },
+        "loglikelihood": -1018.6859898499234,
+        "last_training_variance": 0.6979214069887634,
+        "next_variance": 0.6576829265800292,
+        "next_second_moment": 0.6634580759328692,
+        "warnings": [],
+        "origin": "2019-07-15",
+        "origin_index": 4842,
+        "history_start": "2015-06-26",
+        "history_end": "2019-07-12",
+        "history_n": 1000,
+        "history_start_index": 3842,
+        "history_end_index": 4841,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 15,
+        "parameters": {
+          "mu": -0.08008480797324279,
+          "omega": 0.018835099027153974,
+          "alpha[1]": 0.012985382812003246,
+          "gamma[1]": 0.13734985467551336,
+          "beta[1]": 0.8829208596650335,
+          "nu": 8.420353397955738
+        },
+        "loglikelihood": -1018.3955052353266,
+        "last_training_variance": 0.6369281187139023,
+        "next_variance": 0.5824461773351242,
+        "next_second_moment": 0.5888597538032353,
+        "warnings": [],
+        "origin": "2019-08-13",
+        "origin_index": 4862,
+        "history_start": "2015-07-24",
+        "history_end": "2019-08-09",
+        "history_n": 1000,
+        "history_start_index": 3862,
+        "history_end_index": 4861,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 17,
+        "parameters": {
+          "mu": -0.0781305219911571,
+          "omega": 0.017621902217006248,
+          "alpha[1]": 0.013421452522626325,
+          "gamma[1]": 0.1233620335888754,
+          "beta[1]": 0.8898010049969263,
+          "nu": 8.625545696845654
+        },
+        "loglikelihood": -1020.5610707225294,
+        "last_training_variance": 0.6080186931949717,
+        "next_variance": 0.6044966426518884,
+        "next_second_moment": 0.6106010211184991,
+        "warnings": [],
+        "origin": "2019-09-13",
+        "origin_index": 4882,
+        "history_start": "2015-08-21",
+        "history_end": "2019-09-12",
+        "history_n": 1000,
+        "history_start_index": 3882,
+        "history_end_index": 4881,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 14,
+        "parameters": {
+          "mu": -0.07798780848014131,
+          "omega": 0.018434174151106528,
+          "alpha[1]": 0.011145309847647403,
+          "gamma[1]": 0.1423428525856311,
+          "beta[1]": 0.8849116491964795,
+          "nu": 7.748660894603741
+        },
+        "loglikelihood": -1023.0528105735247,
+        "last_training_variance": 0.93989502686622,
+        "next_variance": 0.8503468097284953,
+        "next_second_moment": 0.8564289080000305,
+        "warnings": [],
+        "origin": "2019-10-15",
+        "origin_index": 4902,
+        "history_start": "2015-09-21",
+        "history_end": "2019-10-14",
+        "history_n": 1000,
+        "history_start_index": 3902,
+        "history_end_index": 4901,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 15,
+        "parameters": {
+          "mu": -0.07849214630180276,
+          "omega": 0.016306118960729036,
+          "alpha[1]": 0.00827859308983516,
+          "gamma[1]": 0.1392963025645034,
+          "beta[1]": 0.8936486865009652,
+          "nu": 7.805137172376351
+        },
+        "loglikelihood": -1012.6002847001081,
+        "last_training_variance": 0.3392549239916771,
+        "next_variance": 0.3583640267288265,
+        "next_second_moment": 0.3645250437598901,
+        "warnings": [],
+        "origin": "2019-11-14",
+        "origin_index": 4922,
+        "history_start": "2015-10-21",
+        "history_end": "2019-11-13",
+        "history_n": 1000,
+        "history_start_index": 3922,
+        "history_end_index": 4921,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 15,
+        "parameters": {
+          "mu": -0.07891615320787339,
+          "omega": 0.018260400424497603,
+          "alpha[1]": 0.010569161339076805,
+          "gamma[1]": 0.1498172275916448,
+          "beta[1]": 0.8823720473563244,
+          "nu": 7.794331708720593
+        },
+        "loglikelihood": -1003.7299247019846,
+        "last_training_variance": 0.49861767728209655,
+        "next_variance": 0.45980702660873096,
+        "next_second_moment": 0.4660347858458595,
+        "warnings": [],
+        "origin": "2019-12-12",
+        "origin_index": 4942,
+        "history_start": "2015-11-23",
+        "history_end": "2019-12-11",
+        "history_n": 1000,
+        "history_start_index": 3942,
+        "history_end_index": 4941,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 14,
+        "parameters": {
+          "mu": -0.07616014375049253,
+          "omega": 0.015275713704896254,
+          "alpha[1]": 0.008565655718299228,
+          "gamma[1]": 0.12805461276761734,
+          "beta[1]": 0.8987053414172456,
+          "nu": 7.598845070013986
+        },
+        "loglikelihood": -1001.2205849324675,
+        "last_training_variance": 0.48143150036246557,
+        "next_variance": 0.4519169765245591,
+        "next_second_moment": 0.4577173440206548,
+        "warnings": [],
+        "origin": "2020-01-10",
+        "origin_index": 4962,
+        "history_start": "2015-12-22",
+        "history_end": "2020-01-09",
+        "history_n": 1000,
+        "history_start_index": 3962,
+        "history_end_index": 4961,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 15,
+        "parameters": {
+          "mu": -0.07605037548984998,
+          "omega": 0.016776769606691343,
+          "alpha[1]": 0.00888022359818026,
+          "gamma[1]": 0.13487913007119812,
+          "beta[1]": 0.8922032702405042,
+          "nu": 7.4330014418987425
+        },
+        "loglikelihood": -1000.9542769453172,
+        "last_training_variance": 1.2454367343218595,
+        "next_variance": 1.1333416753092564,
+        "next_second_moment": 1.1391253349214037,
+        "warnings": [],
+        "origin": "2020-02-06",
+        "origin_index": 4982,
+        "history_start": "2016-01-20",
+        "history_end": "2020-02-05",
+        "history_n": 1000,
+        "history_start_index": 3982,
+        "history_end_index": 4981,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 14,
+        "parameters": {
+          "mu": -0.07816520909514778,
+          "omega": 0.02035083968681777,
+          "alpha[1]": 0.011030746109320729,
+          "gamma[1]": 0.14494356927640667,
+          "beta[1]": 0.8778955183055323,
+          "nu": 7.366422837019648
+        },
+        "loglikelihood": -990.0259041326475,
+        "last_training_variance": 1.2666308416886223,
+        "next_variance": 1.145535718039324,
+        "next_second_moment": 1.151645517952212,
+        "warnings": [],
+        "origin": "2020-03-06",
+        "origin_index": 5002,
+        "history_start": "2016-02-18",
+        "history_end": "2020-03-05",
+        "history_n": 1000,
+        "history_start_index": 4002,
+        "history_end_index": 5001,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 12,
+        "parameters": {
+          "mu": -0.0832823841715673,
+          "omega": 0.028987758168902214,
+          "alpha[1]": 0.021828998690544665,
+          "gamma[1]": 0.2317925775612795,
+          "beta[1]": 0.8212637160077212,
+          "nu": 7.092801120214696
+        },
+        "loglikelihood": -1024.7465127159353,
+        "last_training_variance": 9.401675298208003,
+        "next_variance": 8.113884859634224,
+        "next_second_moment": 8.120820815147525,
+        "warnings": [],
+        "origin": "2020-04-08",
+        "origin_index": 5022,
+        "history_start": "2016-03-18",
+        "history_end": "2020-04-07",
+        "history_n": 1000,
+        "history_start_index": 4022,
+        "history_end_index": 5021,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 13,
+        "parameters": {
+          "mu": -0.0838872895911295,
+          "omega": 0.029409083498563738,
+          "alpha[1]": 0.021900602941072475,
+          "gamma[1]": 0.2277937705527825,
+          "beta[1]": 0.8204440593493767,
+          "nu": 7.118129733139297
+        },
+        "loglikelihood": -1035.5596402348021,
+        "last_training_variance": 2.0591247836178885,
+        "next_variance": 2.116854825791884,
+        "next_second_moment": 2.12389190314683,
+        "warnings": [],
+        "origin": "2020-05-11",
+        "origin_index": 5042,
+        "history_start": "2016-04-22",
+        "history_end": "2020-05-08",
+        "history_n": 1000,
+        "history_start_index": 4042,
+        "history_end_index": 5041,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 13,
+        "parameters": {
+          "mu": -0.08487572088221408,
+          "omega": 0.027543391895138818,
+          "alpha[1]": 0.02057414738350508,
+          "gamma[1]": 0.23011359657092598,
+          "beta[1]": 0.8250480532529043,
+          "nu": 7.22478800859223
+        },
+        "loglikelihood": -1046.903636109035,
+        "last_training_variance": 0.6820180731483937,
+        "next_variance": 1.015753803460385,
+        "next_second_moment": 1.0229576914556606,
+        "warnings": [],
+        "origin": "2020-06-09",
+        "origin_index": 5062,
+        "history_start": "2016-05-20",
+        "history_end": "2020-06-08",
+        "history_n": 1000,
+        "history_start_index": 4062,
+        "history_end_index": 5061,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 13,
+        "parameters": {
+          "mu": -0.08488083736803309,
+          "omega": 0.02566858049951348,
+          "alpha[1]": 0.02335147499512214,
+          "gamma[1]": 0.23099901522422797,
+          "beta[1]": 0.8275992873901309,
+          "nu": 7.149852635629496
+        },
+        "loglikelihood": -1061.5863657526645,
+        "last_training_variance": 0.6561415510164993,
+        "next_variance": 0.5760387878514518,
+        "next_second_moment": 0.5832435444037503,
+        "warnings": [],
+        "origin": "2020-07-07",
+        "origin_index": 5082,
+        "history_start": "2016-06-17",
+        "history_end": "2020-07-06",
+        "history_n": 1000,
+        "history_start_index": 4082,
+        "history_end_index": 5081,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 13,
+        "parameters": {
+          "mu": -0.09193488895999524,
+          "omega": 0.02440881442411211,
+          "alpha[1]": 0.02330094132673741,
+          "gamma[1]": 0.22865104922150936,
+          "beta[1]": 0.8330907939990898,
+          "nu": 7.318409170491206
+        },
+        "loglikelihood": -1072.024095508253,
+        "last_training_variance": 0.8352714180301604,
+        "next_variance": 1.1461852580415242,
+        "next_second_moment": 1.154637281849611,
+        "warnings": [],
+        "origin": "2020-08-04",
+        "origin_index": 5102,
+        "history_start": "2016-07-18",
+        "history_end": "2020-08-03",
+        "history_n": 1000,
+        "history_start_index": 4102,
+        "history_end_index": 5101,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 13,
+        "parameters": {
+          "mu": -0.08858722407100864,
+          "omega": 0.02471723411870436,
+          "alpha[1]": 0.023176335872546132,
+          "gamma[1]": 0.2220703228598576,
+          "beta[1]": 0.838517974112135,
+          "nu": 6.21195423998666
+        },
+        "loglikelihood": -1075.7468030439534,
+        "last_training_variance": 0.3058185660247593,
+        "next_variance": 3.354795623291104,
+        "next_second_moment": 3.362643319559711,
+        "warnings": [],
+        "origin": "2020-09-01",
+        "origin_index": 5122,
+        "history_start": "2016-08-16",
+        "history_end": "2020-08-31",
+        "history_n": 1000,
+        "history_start_index": 4122,
+        "history_end_index": 5121,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 13,
+        "parameters": {
+          "mu": -0.08805644757557078,
+          "omega": 0.023131034361607794,
+          "alpha[1]": 0.022901920385054567,
+          "gamma[1]": 0.20065527177017156,
+          "beta[1]": 0.8491872981602838,
+          "nu": 6.0449898121837755
+        },
+        "loglikelihood": -1089.3779559439201,
+        "last_training_variance": 1.8261360730789655,
+        "next_variance": 1.6005829791765727,
+        "next_second_moment": 1.6083369171362019,
+        "warnings": [],
+        "origin": "2020-09-29",
+        "origin_index": 5142,
+        "history_start": "2016-09-15",
+        "history_end": "2020-09-28",
+        "history_n": 1000,
+        "history_start_index": 4142,
+        "history_end_index": 5141,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 12,
+        "parameters": {
+          "mu": -0.08102004389344032,
+          "omega": 0.02244942504422355,
+          "alpha[1]": 0.02318414536345707,
+          "gamma[1]": 0.18249403209881296,
+          "beta[1]": 0.8567222411425461,
+          "nu": 5.727593465793593
+        },
+        "loglikelihood": -1095.7484960888078,
+        "last_training_variance": 1.1334137941055789,
+        "next_variance": 1.0055428712596879,
+        "next_second_moment": 1.0121071187721828,
+        "warnings": [],
+        "origin": "2020-10-28",
+        "origin_index": 5162,
+        "history_start": "2016-10-17",
+        "history_end": "2020-10-27",
+        "history_n": 1000,
+        "history_start_index": 4162,
+        "history_end_index": 5161,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 11,
+        "parameters": {
+          "mu": -0.07599990604807232,
+          "omega": 0.0173877045248577,
+          "alpha[1]": 0.010514418031468882,
+          "gamma[1]": 0.16460647674791978,
+          "beta[1]": 0.8784279013267228,
+          "nu": 7.003403483681752
+        },
+        "loglikelihood": -1090.1679251782184,
+        "last_training_variance": 0.32331997585955546,
+        "next_variance": 0.3053755625651829,
+        "next_second_moment": 0.3111515482844987,
+        "warnings": [],
+        "origin": "2020-11-25",
+        "origin_index": 5182,
+        "history_start": "2016-11-15",
+        "history_end": "2020-11-24",
+        "history_n": 1000,
+        "history_start_index": 4182,
+        "history_end_index": 5181,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 12,
+        "parameters": {
+          "mu": -0.07103463371432191,
+          "omega": 0.015340428498522464,
+          "alpha[1]": 0.006649090354179899,
+          "gamma[1]": 0.14986023213089797,
+          "beta[1]": 0.8953781448076538,
+          "nu": 6.054194504719927
+        },
+        "loglikelihood": -1090.60682195823,
+        "last_training_variance": 1.7885954205407943,
+        "next_variance": 1.6242611232225719,
+        "next_second_moment": 1.6293070424094998,
+        "warnings": [],
+        "origin": "2020-12-24",
+        "origin_index": 5202,
+        "history_start": "2016-12-13",
+        "history_end": "2020-12-23",
+        "history_n": 1000,
+        "history_start_index": 4202,
+        "history_end_index": 5201,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 14,
+        "parameters": {
+          "mu": -0.06861561195753443,
+          "omega": 0.013483548837347422,
+          "alpha[1]": 0.005650344664310563,
+          "gamma[1]": 0.13643219030681736,
+          "beta[1]": 0.9038892903053865,
+          "nu": 6.084225292371958
+        },
+        "loglikelihood": -1097.2860431432778,
+        "last_training_variance": 0.7828669647186428,
+        "next_variance": 0.7762657670131123,
+        "next_second_moment": 0.7809738692174193,
+        "warnings": [],
+        "origin": "2021-01-22",
+        "origin_index": 5222,
+        "history_start": "2017-01-10",
+        "history_end": "2021-01-21",
+        "history_n": 1000,
+        "history_start_index": 4222,
+        "history_end_index": 5221,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 12,
+        "parameters": {
+          "mu": -0.07724300124916726,
+          "omega": 0.015263877748022793,
+          "alpha[1]": 0.00325134976833766,
+          "gamma[1]": 0.15688245494951866,
+          "beta[1]": 0.8953578215955942,
+          "nu": 6.089960007182634
+        },
+        "loglikelihood": -1106.290215463689,
+        "last_training_variance": 0.6789040203472881,
+        "next_variance": 0.6499701512721665,
+        "next_second_moment": 0.6559366325141454,
+        "warnings": [],
+        "origin": "2021-02-22",
+        "origin_index": 5242,
+        "history_start": "2017-02-08",
+        "history_end": "2021-02-19",
+        "history_n": 1000,
+        "history_start_index": 4242,
+        "history_end_index": 5241,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 13,
+        "parameters": {
+          "mu": -0.07566881381236377,
+          "omega": 0.013516629276201461,
+          "alpha[1]": 0.0003601985647184559,
+          "gamma[1]": 0.14517643383714976,
+          "beta[1]": 0.907286414615936,
+          "nu": 6.022614333545949
+        },
+        "loglikelihood": -1126.0477342320105,
+        "last_training_variance": 1.675656566980963,
+        "next_variance": 1.533826072585053,
+        "next_second_moment": 1.5395518419688232,
+        "warnings": [],
+        "origin": "2021-03-23",
+        "origin_index": 5262,
+        "history_start": "2017-03-09",
+        "history_end": "2021-03-22",
+        "history_n": 1000,
+        "history_start_index": 4262,
+        "history_end_index": 5261,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 13,
+        "parameters": {
+          "mu": -0.07944393300438748,
+          "omega": 0.015737702550547177,
+          "alpha[1]": 0.0005797852551369847,
+          "gamma[1]": 0.14862119998047432,
+          "beta[1]": 0.9021319942348347,
+          "nu": 6.118527332647439
+        },
+        "loglikelihood": -1150.558671502038,
+        "last_training_variance": 1.1455780776988622,
+        "next_variance": 1.0492059390355055,
+        "next_second_moment": 1.0555172775267112,
+        "warnings": [],
+        "origin": "2021-04-26",
+        "origin_index": 5282,
+        "history_start": "2017-04-10",
+        "history_end": "2021-04-23",
+        "history_n": 1000,
+        "history_start_index": 4282,
+        "history_end_index": 5281,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 14,
+        "parameters": {
+          "mu": -0.07270696809424346,
+          "omega": 0.01631862663347829,
+          "alpha[1]": 0.0005911145330777734,
+          "gamma[1]": 0.14888142787632694,
+          "beta[1]": 0.900624421231042,
+          "nu": 6.1425743528600965
+        },
+        "loglikelihood": -1161.0787914899624,
+        "last_training_variance": 0.5252111275380121,
+        "next_variance": 0.49144454396383547,
+        "next_second_moment": 0.4967308471732928,
+        "warnings": [],
+        "origin": "2021-05-25",
+        "origin_index": 5302,
+        "history_start": "2017-05-10",
+        "history_end": "2021-05-24",
+        "history_n": 1000,
+        "history_start_index": 4302,
+        "history_end_index": 5301,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 12,
+        "parameters": {
+          "mu": -0.07176888779989901,
+          "omega": 0.017246656041072547,
+          "alpha[1]": 0.0013370392753379327,
+          "gamma[1]": 0.14857516397706974,
+          "beta[1]": 0.8989519951882587,
+          "nu": 5.9156947457402556
+        },
+        "loglikelihood": -1159.8899590063738,
+        "last_training_variance": 0.29022024944171493,
+        "next_variance": 0.28145806395463113,
+        "next_second_moment": 0.2866088372106656,
+        "warnings": [],
+        "origin": "2021-06-22",
+        "origin_index": 5322,
+        "history_start": "2017-06-07",
+        "history_end": "2021-06-21",
+        "history_n": 1000,
+        "history_start_index": 4322,
+        "history_end_index": 5321,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 14,
+        "parameters": {
+          "mu": -0.0661551422890623,
+          "omega": 0.018890011132608887,
+          "alpha[1]": 0.002082927609194766,
+          "gamma[1]": 0.1489088036676894,
+          "beta[1]": 0.8948177999367114,
+          "nu": 5.89288201893299
+        },
+        "loglikelihood": -1163.669494584385,
+        "last_training_variance": 0.30271027404021755,
+        "next_variance": 0.2897997923015458,
+        "next_second_moment": 0.2941762951528319,
+        "warnings": [],
+        "origin": "2021-07-20",
+        "origin_index": 5342,
+        "history_start": "2017-07-06",
+        "history_end": "2021-07-19",
+        "history_n": 1000,
+        "history_start_index": 4342,
+        "history_end_index": 5341,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 12,
+        "parameters": {
+          "mu": -0.06811740526707537,
+          "omega": 0.017962214250668528,
+          "alpha[1]": 0.0010788241713996303,
+          "gamma[1]": 0.14932453529491987,
+          "beta[1]": 0.8972088868832553,
+          "nu": 5.803530370126434
+        },
+        "loglikelihood": -1167.1273686659301,
+        "last_training_variance": 0.22090301531626114,
+        "next_variance": 0.21641654451097145,
+        "next_second_moment": 0.22105652541129042,
+        "warnings": [],
+        "origin": "2021-08-18",
+        "origin_index": 5362,
+        "history_start": "2017-08-03",
+        "history_end": "2021-08-17",
+        "history_n": 1000,
+        "history_start_index": 4362,
+        "history_end_index": 5361,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 13,
+        "parameters": {
+          "mu": -0.058874138831531725,
+          "omega": 0.01969190040126252,
+          "alpha[1]": 0.0020588476829845152,
+          "gamma[1]": 0.1479666875837704,
+          "beta[1]": 0.8946142722114171,
+          "nu": 5.653449083011586
+        },
+        "loglikelihood": -1166.0026110370773,
+        "last_training_variance": 0.2407006512127029,
+        "next_variance": 0.2355351899522048,
+        "next_second_moment": 0.23900135417535925,
+        "warnings": [],
+        "origin": "2021-09-17",
+        "origin_index": 5382,
+        "history_start": "2017-09-04",
+        "history_end": "2021-09-16",
+        "history_n": 1000,
+        "history_start_index": 4382,
+        "history_end_index": 5381,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 14,
+        "parameters": {
+          "mu": -0.05381176430486743,
+          "omega": 0.021064599846836965,
+          "alpha[1]": 0.000843986523494985,
+          "gamma[1]": 0.14672243536769905,
+          "beta[1]": 0.8938626265023186,
+          "nu": 6.024832793954915
+        },
+        "loglikelihood": -1168.459440564442,
+        "last_training_variance": 0.39645780076229337,
+        "next_variance": 0.3755483312720468,
+        "next_second_moment": 0.37844403724964937,
+        "warnings": [],
+        "origin": "2021-10-18",
+        "origin_index": 5402,
+        "history_start": "2017-10-03",
+        "history_end": "2021-10-14",
+        "history_n": 1000,
+        "history_start_index": 4402,
+        "history_end_index": 5401,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 12,
+        "parameters": {
+          "mu": -0.06272874989031504,
+          "omega": 0.023338614861685102,
+          "alpha[1]": 0.0020135426917079354,
+          "gamma[1]": 0.14885828897464423,
+          "beta[1]": 0.8894542759620339,
+          "nu": 6.107770652376544
+        },
+        "loglikelihood": -1178.7167340253804,
+        "last_training_variance": 0.523814044755895,
+        "next_variance": 0.4983380075116549,
+        "next_second_moment": 0.5022729035744566,
+        "warnings": [],
+        "origin": "2021-11-16",
+        "origin_index": 5422,
+        "history_start": "2017-11-01",
+        "history_end": "2021-11-15",
+        "history_n": 1000,
+        "history_start_index": 4422,
+        "history_end_index": 5421,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 13,
+        "parameters": {
+          "mu": -0.06546478101091203,
+          "omega": 0.02443608899482465,
+          "alpha[1]": 0.00024220121868978996,
+          "gamma[1]": 0.15870621045122363,
+          "beta[1]": 0.8859316578150551,
+          "nu": 6.403752114213022
+        },
+        "loglikelihood": -1195.8043198277167,
+        "last_training_variance": 1.1269918995010426,
+        "next_variance": 1.0228935338092664,
+        "next_second_moment": 1.027179171362073,
+        "warnings": [],
+        "origin": "2021-12-15",
+        "origin_index": 5442,
+        "history_start": "2017-11-29",
+        "history_end": "2021-12-14",
+        "history_n": 1000,
+        "history_start_index": 4442,
+        "history_end_index": 5441,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 12,
+        "parameters": {
+          "mu": -0.0596943479915175,
+          "omega": 0.024975730530858224,
+          "alpha[1]": 0.002704598998375762,
+          "gamma[1]": 0.1546525323259491,
+          "beta[1]": 0.8838526626154914,
+          "nu": 6.376643353643933
+        },
+        "loglikelihood": -1198.2134925365388,
+        "last_training_variance": 0.438687096467781,
+        "next_variance": 0.4130599101133417,
+        "next_second_moment": 0.4166233252954741,
+        "warnings": [],
+        "origin": "2022-01-12",
+        "origin_index": 5462,
+        "history_start": "2017-12-28",
+        "history_end": "2022-01-11",
+        "history_n": 1000,
+        "history_start_index": 4462,
+        "history_end_index": 5461,
+        "action": "install_fitted_parameters"
+      },
+      {
+        "attempt_id": "arch_default",
+        "maxiter": 1000,
+        "starting_values": null,
+        "accepted": true,
+        "rejection_reasons": [],
+        "convergence_flag": 0,
+        "optimizer_message": "Optimization terminated successfully",
+        "optimizer_iterations": 12,
+        "parameters": {
+          "mu": -0.06565103614709324,
+          "omega": 0.02283977366086176,
+          "alpha[1]": 0.0,
+          "gamma[1]": 0.1496336861998304,
+          "beta[1]": 0.892121876358609,
+          "nu": 6.473961649797852
+        },
+        "loglikelihood": -1211.2241331536738,
+        "last_training_variance": 1.1302393570295448,
+        "next_variance": 1.031151029588407,
+        "next_second_moment": 1.035461088135594,
+        "warnings": [],
+        "origin": "2022-02-10",
+        "origin_index": 5482,
+        "history_start": "2018-01-25",
+        "history_end": "2022-02-09",
+        "history_n": 1000,
+        "history_start_index": 4482,
+        "history_end_index": 5481,
+        "action": "install_fitted_parameters"
+      }
+    ],
+    "failures": [],
+    "fhs_fits": [
+      {
+        "origin": "2015-01-01",
+        "history_start": "2010-12-21",
+        "history_end": "2014-12-31",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6682793668160576,
+            -2.2033763828797817
+          ],
+          "0.025": [
+            -2.165939559355351,
+            -2.5321422370073323
+          ],
+          "0.01": [
+            -2.509304916124163,
+            -2.8950794704267016
+          ]
+        }
+      },
+      {
+        "origin": "2015-01-30",
+        "history_start": "2011-01-18",
+        "history_end": "2015-01-29",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.671958551465485,
+            -2.2228117667389906
+          ],
+          "0.025": [
+            -2.180195173025318,
+            -2.5795051877066952
+          ],
+          "0.01": [
+            -2.5420669970059295,
+            -2.9792331572806297
+          ]
+        }
+      },
+      {
+        "origin": "2015-02-28",
+        "history_start": "2011-02-16",
+        "history_end": "2015-02-27",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6463663551466265,
+            -2.2359394175329514
+          ],
+          "0.025": [
+            -2.2125723588267405,
+            -2.593306710931979
+          ],
+          "0.01": [
+            -2.5360941629869282,
+            -2.982029398905288
+          ]
+        }
+      },
+      {
+        "origin": "2015-03-30",
+        "history_start": "2011-03-17",
+        "history_end": "2015-03-27",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6437184261147348,
+            -2.2452748937375695
+          ],
+          "0.025": [
+            -2.203450131446741,
+            -2.608941319115364
+          ],
+          "0.01": [
+            -2.5598512726422467,
+            -2.9936971654123594
+          ]
+        }
+      },
+      {
+        "origin": "2015-04-30",
+        "history_start": "2011-04-18",
+        "history_end": "2015-04-29",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6514786688564673,
+            -2.255052080570381
+          ],
+          "0.025": [
+            -2.204997613273065,
+            -2.614258978845974
+          ],
+          "0.01": [
+            -2.570394897905776,
+            -2.999432123768199
+          ]
+        }
+      },
+      {
+        "origin": "2015-05-29",
+        "history_start": "2011-05-17",
+        "history_end": "2015-05-28",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6753570089634124,
+            -2.2773937865545295
+          ],
+          "0.025": [
+            -2.2061777320657896,
+            -2.641930948666483
+          ],
+          "0.01": [
+            -2.617718931267878,
+            -3.0158624726426937
+          ]
+        }
+      },
+      {
+        "origin": "2015-06-26",
+        "history_start": "2011-06-14",
+        "history_end": "2015-06-25",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6872830710932145,
+            -2.2920188729210813
+          ],
+          "0.025": [
+            -2.2230830977335945,
+            -2.6498707060793305
+          ],
+          "0.01": [
+            -2.6066619987756767,
+            -3.038204456517799
+          ]
+        }
+      },
+      {
+        "origin": "2015-07-24",
+        "history_start": "2011-07-12",
+        "history_end": "2015-07-23",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.7024721793840754,
+            -2.2998154197404825
+          ],
+          "0.025": [
+            -2.195860446308024,
+            -2.6615422054414335
+          ],
+          "0.01": [
+            -2.6277651260433013,
+            -3.0541859531469355
+          ]
+        }
+      },
+      {
+        "origin": "2015-08-21",
+        "history_start": "2011-08-09",
+        "history_end": "2015-08-20",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6943500556589173,
+            -2.281633513641881
+          ],
+          "0.025": [
+            -2.1784128675382157,
+            -2.661591600225523
+          ],
+          "0.01": [
+            -2.682049104139781,
+            -3.0933411876116907
+          ]
+        }
+      },
+      {
+        "origin": "2015-09-21",
+        "history_start": "2011-09-09",
+        "history_end": "2015-09-18",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6597932417637995,
+            -2.3033407236068197
+          ],
+          "0.025": [
+            -2.1685278399334584,
+            -2.707602168604076
+          ],
+          "0.01": [
+            -2.6911647802867193,
+            -3.172981952934125
+          ]
+        }
+      },
+      {
+        "origin": "2015-10-21",
+        "history_start": "2011-10-10",
+        "history_end": "2015-10-20",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6613438921879071,
+            -2.32729442838435
+          ],
+          "0.025": [
+            -2.1738183552475365,
+            -2.735268272151741
+          ],
+          "0.01": [
+            -2.7055302278890276,
+            -3.1790971031564825
+          ]
+        }
+      },
+      {
+        "origin": "2015-11-23",
+        "history_start": "2011-11-09",
+        "history_end": "2015-11-20",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6590359460049238,
+            -2.3157964326344227
+          ],
+          "0.025": [
+            -2.172551830873468,
+            -2.74616711994531
+          ],
+          "0.01": [
+            -2.7146759327963084,
+            -3.2022983917666026
+          ]
+        }
+      },
+      {
+        "origin": "2015-12-22",
+        "history_start": "2011-12-09",
+        "history_end": "2015-12-21",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6529168122413944,
+            -2.3259733474583233
+          ],
+          "0.025": [
+            -2.1970503692109715,
+            -2.7575086971361613
+          ],
+          "0.01": [
+            -2.731091602940831,
+            -3.2126394950804427
+          ]
+        }
+      },
+      {
+        "origin": "2016-01-20",
+        "history_start": "2012-01-06",
+        "history_end": "2016-01-19",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6381822045155017,
+            -2.333682202117193
+          ],
+          "0.025": [
+            -2.2195325366261205,
+            -2.755657148338875
+          ],
+          "0.01": [
+            -2.7178470272383115,
+            -3.2033308551356803
+          ]
+        }
+      },
+      {
+        "origin": "2016-02-18",
+        "history_start": "2012-02-03",
+        "history_end": "2016-02-17",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6377283156574123,
+            -2.3285098402470146
+          ],
+          "0.025": [
+            -2.260083914174844,
+            -2.750694829025372
+          ],
+          "0.01": [
+            -2.7228944919324634,
+            -3.2185897795153977
+          ]
+        }
+      },
+      {
+        "origin": "2016-03-18",
+        "history_start": "2012-03-03",
+        "history_end": "2016-03-17",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.622910031694437,
+            -2.29797831263728
+          ],
+          "0.025": [
+            -2.16783591102467,
+            -2.723624342146648
+          ],
+          "0.01": [
+            -2.714337609164374,
+            -3.1806329481389093
+          ]
+        }
+      },
+      {
+        "origin": "2016-04-22",
+        "history_start": "2012-04-02",
+        "history_end": "2016-04-21",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6334546078812149,
+            -2.307352656683405
+          ],
+          "0.025": [
+            -2.1701400162919815,
+            -2.7199947486043077
+          ],
+          "0.01": [
+            -2.7271307272396332,
+            -3.183999945325524
+          ]
+        }
+      },
+      {
+        "origin": "2016-05-20",
+        "history_start": "2012-05-03",
+        "history_end": "2016-05-19",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6492097371963448,
+            -2.2938055921274243
+          ],
+          "0.025": [
+            -2.1723257416501203,
+            -2.722844600991171
+          ],
+          "0.01": [
+            -2.748973305321027,
+            -3.2212258719199434
+          ]
+        }
+      },
+      {
+        "origin": "2016-06-17",
+        "history_start": "2012-05-31",
+        "history_end": "2016-06-16",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.628856003593764,
+            -2.294032213342146
+          ],
+          "0.025": [
+            -2.1612928539214025,
+            -2.7389617699586664
+          ],
+          "0.01": [
+            -2.793225927192773,
+            -3.2457348250219686
+          ]
+        }
+      },
+      {
+        "origin": "2016-07-18",
+        "history_start": "2012-06-28",
+        "history_end": "2016-07-15",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6235734258701735,
+            -2.2837470740513974
+          ],
+          "0.025": [
+            -2.185822652914249,
+            -2.732999584192622
+          ],
+          "0.01": [
+            -2.755814564196929,
+            -3.2289838771960944
+          ]
+        }
+      },
+      {
+        "origin": "2016-08-16",
+        "history_start": "2012-07-26",
+        "history_end": "2016-08-12",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6256246906430676,
+            -2.2802537196150134
+          ],
+          "0.025": [
+            -2.167432832631559,
+            -2.735389343438984
+          ],
+          "0.01": [
+            -2.768016704112234,
+            -3.2375208876347688
+          ]
+        }
+      },
+      {
+        "origin": "2016-09-15",
+        "history_start": "2012-08-27",
+        "history_end": "2016-09-14",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.628874038469151,
+            -2.2798853242913513
+          ],
+          "0.025": [
+            -2.1734840950937846,
+            -2.734841242534556
+          ],
+          "0.01": [
+            -2.7636059571127354,
+            -3.2365366537436375
+          ]
+        }
+      },
+      {
+        "origin": "2016-10-17",
+        "history_start": "2012-09-24",
+        "history_end": "2016-10-14",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6281681475989924,
+            -2.2977824445443558
+          ],
+          "0.025": [
+            -2.1690028379031676,
+            -2.7497587165576554
+          ],
+          "0.01": [
+            -2.760336099893009,
+            -3.2316140697369717
+          ]
+        }
+      },
+      {
+        "origin": "2016-11-15",
+        "history_start": "2012-10-23",
+        "history_end": "2016-11-11",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.5937799617472015,
+            -2.267974450707447
+          ],
+          "0.025": [
+            -2.147601689000078,
+            -2.7120013146913555
+          ],
+          "0.01": [
+            -2.7094400155188,
+            -3.177784116960186
+          ]
+        }
+      },
+      {
+        "origin": "2016-12-13",
+        "history_start": "2012-11-22",
+        "history_end": "2016-12-12",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.5951778379978487,
+            -2.27470066366004
+          ],
+          "0.025": [
+            -2.172727059069059,
+            -2.719092357512148
+          ],
+          "0.01": [
+            -2.7072786889964107,
+            -3.1680543813069324
+          ]
+        }
+      },
+      {
+        "origin": "2017-01-10",
+        "history_start": "2012-12-21",
+        "history_end": "2017-01-09",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.60436459444542,
+            -2.278607685464144
+          ],
+          "0.025": [
+            -2.1822857700433205,
+            -2.726192964345195
+          ],
+          "0.01": [
+            -2.750443941585261,
+            -3.1843308026991863
+          ]
+        }
+      },
+      {
+        "origin": "2017-02-08",
+        "history_start": "2013-01-21",
+        "history_end": "2017-02-07",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6051226274655273,
+            -2.277508587933918
+          ],
+          "0.025": [
+            -2.1755589695013686,
+            -2.7256324184038068
+          ],
+          "0.01": [
+            -2.7542374294690575,
+            -3.1798071533880545
+          ]
+        }
+      },
+      {
+        "origin": "2017-03-09",
+        "history_start": "2013-02-18",
+        "history_end": "2017-03-08",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.612288359876004,
+            -2.2893082004095073
+          ],
+          "0.025": [
+            -2.178085170316125,
+            -2.73095970827472
+          ],
+          "0.01": [
+            -2.7337166192959086,
+            -3.18885091149093
+          ]
+        }
+      },
+      {
+        "origin": "2017-04-10",
+        "history_start": "2013-03-18",
+        "history_end": "2017-04-07",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.613586388785841,
+            -2.2845788051759777
+          ],
+          "0.025": [
+            -2.195971497221655,
+            -2.721277943947849
+          ],
+          "0.01": [
+            -2.7736249612921204,
+            -3.2039372409372255
+          ]
+        }
+      },
+      {
+        "origin": "2017-05-10",
+        "history_start": "2013-04-17",
+        "history_end": "2017-05-09",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6311069931157713,
+            -2.2858508476104786
+          ],
+          "0.025": [
+            -2.2072854288824084,
+            -2.7338808039432565
+          ],
+          "0.01": [
+            -2.7916214150145753,
+            -3.2200026024188997
+          ]
+        }
+      },
+      {
+        "origin": "2017-06-07",
+        "history_start": "2013-05-17",
+        "history_end": "2017-06-06",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6293581111084763,
+            -2.2691272876724824
+          ],
+          "0.025": [
+            -2.184297642044521,
+            -2.716766257223896
+          ],
+          "0.01": [
+            -2.763277888351344,
+            -3.2046011911969647
+          ]
+        }
+      },
+      {
+        "origin": "2017-07-06",
+        "history_start": "2013-06-14",
+        "history_end": "2017-07-05",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6057150853045588,
+            -2.2587663763022126
+          ],
+          "0.025": [
+            -2.115876862411131,
+            -2.704679165236753
+          ],
+          "0.01": [
+            -2.7816156062395008,
+            -3.2145298154047293
+          ]
+        }
+      },
+      {
+        "origin": "2017-08-03",
+        "history_start": "2013-07-12",
+        "history_end": "2017-08-02",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.5804107269732022,
+            -2.2536684467083603
+          ],
+          "0.025": [
+            -2.1040759299943725,
+            -2.6979115462299554
+          ],
+          "0.01": [
+            -2.76991236995233,
+            -3.212574561049532
+          ]
+        }
+      },
+      {
+        "origin": "2017-09-04",
+        "history_start": "2013-08-12",
+        "history_end": "2017-09-01",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6469960282843896,
+            -2.2418405887414745
+          ],
+          "0.025": [
+            -2.1234866268773938,
+            -2.671215118815372
+          ],
+          "0.01": [
+            -2.721414465706302,
+            -3.1692444168333624
+          ]
+        }
+      },
+      {
+        "origin": "2017-10-03",
+        "history_start": "2013-09-11",
+        "history_end": "2017-09-29",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6449158140635844,
+            -2.2316260182130945
+          ],
+          "0.025": [
+            -2.133725390116341,
+            -2.658433135613222
+          ],
+          "0.01": [
+            -2.7098177352077406,
+            -3.17034264134329
+          ]
+        }
+      },
+      {
+        "origin": "2017-11-01",
+        "history_start": "2013-10-10",
+        "history_end": "2017-10-31",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6601026220742763,
+            -2.2430824391420128
+          ],
+          "0.025": [
+            -2.137968532717717,
+            -2.664608445687746
+          ],
+          "0.01": [
+            -2.716917745935233,
+            -3.1833426052285967
+          ]
+        }
+      },
+      {
+        "origin": "2017-11-29",
+        "history_start": "2013-11-08",
+        "history_end": "2017-11-28",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.684542912599852,
+            -2.2606705169362877
+          ],
+          "0.025": [
+            -2.1460187548421095,
+            -2.6791364181396347
+          ],
+          "0.01": [
+            -2.7336772787966077,
+            -3.2060820130420327
+          ]
+        }
+      },
+      {
+        "origin": "2017-12-28",
+        "history_start": "2013-12-09",
+        "history_end": "2017-12-27",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6557804698784477,
+            -2.2563751936638106
+          ],
+          "0.025": [
+            -2.1483651513886572,
+            -2.6637235881754937
+          ],
+          "0.01": [
+            -2.7117579962881115,
+            -3.180710311043161
+          ]
+        }
+      },
+      {
+        "origin": "2018-01-25",
+        "history_start": "2014-01-07",
+        "history_end": "2018-01-24",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.660361039692868,
+            -2.2601205835056994
+          ],
+          "0.025": [
+            -2.159852479705544,
+            -2.6780188861951513
+          ],
+          "0.01": [
+            -2.6877347413843427,
+            -3.1756545793301783
+          ]
+        }
+      },
+      {
+        "origin": "2018-02-26",
+        "history_start": "2014-02-04",
+        "history_end": "2018-02-23",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6826744943809644,
+            -2.27020323878701
+          ],
+          "0.025": [
+            -2.1512147222569498,
+            -2.690601157941846
+          ],
+          "0.01": [
+            -2.7335432299309392,
+            -3.201542492550368
+          ]
+        }
+      },
+      {
+        "origin": "2018-03-27",
+        "history_start": "2014-03-05",
+        "history_end": "2018-03-26",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6692987855482897,
+            -2.271788161678374
+          ],
+          "0.025": [
+            -2.140056575313146,
+            -2.6952530168941875
+          ],
+          "0.01": [
+            -2.7188498705082416,
+            -3.197053035677559
+          ]
+        }
+      },
+      {
+        "origin": "2018-04-26",
+        "history_start": "2014-04-02",
+        "history_end": "2018-04-25",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6782684573006221,
+            -2.3035486265836593
+          ],
+          "0.025": [
+            -2.1702780061000806,
+            -2.729434674321269
+          ],
+          "0.01": [
+            -2.839809102155274,
+            -3.2471185816997163
+          ]
+        }
+      },
+      {
+        "origin": "2018-05-25",
+        "history_start": "2014-05-07",
+        "history_end": "2018-05-24",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6780591572536037,
+            -2.3186691077139567
+          ],
+          "0.025": [
+            -2.167391879952143,
+            -2.7444893618909574
+          ],
+          "0.01": [
+            -2.8769722098491397,
+            -3.2574017906478865
+          ]
+        }
+      },
+      {
+        "origin": "2018-06-22",
+        "history_start": "2014-06-04",
+        "history_end": "2018-06-21",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.7048980892372092,
+            -2.3439783370733074
+          ],
+          "0.025": [
+            -2.1931532144253714,
+            -2.7640525441908492
+          ],
+          "0.01": [
+            -2.8899116479546123,
+            -3.2867254360364826
+          ]
+        }
+      },
+      {
+        "origin": "2018-07-20",
+        "history_start": "2014-07-02",
+        "history_end": "2018-07-19",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6852104104513996,
+            -2.3249472099958686
+          ],
+          "0.025": [
+            -2.1807618092129557,
+            -2.7481569465469162
+          ],
+          "0.01": [
+            -2.8930855199416086,
+            -3.2582241765621713
+          ]
+        }
+      },
+      {
+        "origin": "2018-08-20",
+        "history_start": "2014-07-31",
+        "history_end": "2018-08-17",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6717839595733013,
+            -2.310460051270155
+          ],
+          "0.025": [
+            -2.145379127199594,
+            -2.729349621496176
+          ],
+          "0.01": [
+            -2.8142657318434994,
+            -3.202382461069181
+          ]
+        }
+      },
+      {
+        "origin": "2018-09-19",
+        "history_start": "2014-09-01",
+        "history_end": "2018-09-18",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6847453739652658,
+            -2.3327818751804847
+          ],
+          "0.025": [
+            -2.176478886595233,
+            -2.7450003655619652
+          ],
+          "0.01": [
+            -2.857563844936462,
+            -3.205855245617577
+          ]
+        }
+      },
+      {
+        "origin": "2018-10-22",
+        "history_start": "2014-09-29",
+        "history_end": "2018-10-19",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.693538512753581,
+            -2.318524442389029
+          ],
+          "0.025": [
+            -2.1398429824802703,
+            -2.7042751359052217
+          ],
+          "0.01": [
+            -2.835100485090325,
+            -3.1673246108500677
+          ]
+        }
+      },
+      {
+        "origin": "2018-11-20",
+        "history_start": "2014-11-03",
+        "history_end": "2018-11-19",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6778557453776697,
+            -2.3107757344504116
+          ],
+          "0.025": [
+            -2.144665307451966,
+            -2.708041465557288
+          ],
+          "0.01": [
+            -2.763316949886795,
+            -3.168003830697223
+          ]
+        }
+      },
+      {
+        "origin": "2018-12-19",
+        "history_start": "2014-12-03",
+        "history_end": "2018-12-18",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.650893364623237,
+            -2.3137953561642837
+          ],
+          "0.025": [
+            -2.1643929272904687,
+            -2.7129906213926316
+          ],
+          "0.01": [
+            -2.8423007886507774,
+            -3.1661677478510097
+          ]
+        }
+      },
+      {
+        "origin": "2019-01-17",
+        "history_start": "2015-01-01",
+        "history_end": "2019-01-16",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.7028866110416387,
+            -2.32266873681477
+          ],
+          "0.025": [
+            -2.182774211611916,
+            -2.708051006922878
+          ],
+          "0.01": [
+            -2.84077121438103,
+            -3.1292583028829943
+          ]
+        }
+      },
+      {
+        "origin": "2019-02-14",
+        "history_start": "2015-01-30",
+        "history_end": "2019-02-13",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6514270858397895,
+            -2.268278656465716
+          ],
+          "0.025": [
+            -2.1428078343861676,
+            -2.649941818521465
+          ],
+          "0.01": [
+            -2.6573201232777293,
+            -3.08269808942988
+          ]
+        }
+      },
+      {
+        "origin": "2019-03-15",
+        "history_start": "2015-02-28",
+        "history_end": "2019-03-14",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6408760869082255,
+            -2.2661473505957135
+          ],
+          "0.025": [
+            -2.156377621593764,
+            -2.645267641411614
+          ],
+          "0.01": [
+            -2.670558279787861,
+            -3.080589991947913
+          ]
+        }
+      },
+      {
+        "origin": "2019-04-15",
+        "history_start": "2015-03-30",
+        "history_end": "2019-04-12",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6206993583366787,
+            -2.24281220801295
+          ],
+          "0.025": [
+            -2.1484514643028634,
+            -2.6402495413477376
+          ],
+          "0.01": [
+            -2.700772043361432,
+            -3.0836629326509
+          ]
+        }
+      },
+      {
+        "origin": "2019-05-17",
+        "history_start": "2015-04-30",
+        "history_end": "2019-05-16",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6439064511356514,
+            -2.2292665378497167
+          ],
+          "0.025": [
+            -2.145969663819888,
+            -2.620284693824628
+          ],
+          "0.01": [
+            -2.707366885660483,
+            -3.0562283272975876
+          ]
+        }
+      },
+      {
+        "origin": "2019-06-17",
+        "history_start": "2015-05-29",
+        "history_end": "2019-06-14",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.590878640681668,
+            -2.1936249923680764
+          ],
+          "0.025": [
+            -2.125429024849402,
+            -2.569053322703595
+          ],
+          "0.01": [
+            -2.565340533648529,
+            -3.0339982991834917
+          ]
+        }
+      },
+      {
+        "origin": "2019-07-15",
+        "history_start": "2015-06-26",
+        "history_end": "2019-07-12",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.606382439384212,
+            -2.1821136135734727
+          ],
+          "0.025": [
+            -2.083578662144466,
+            -2.5427433602398684
+          ],
+          "0.01": [
+            -2.594221176922321,
+            -3.031536177425771
+          ]
+        }
+      },
+      {
+        "origin": "2019-08-13",
+        "history_start": "2015-07-24",
+        "history_end": "2019-08-09",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6228945716976004,
+            -2.185973884003403
+          ],
+          "0.025": [
+            -2.100315851286058,
+            -2.545700594426623
+          ],
+          "0.01": [
+            -2.5801161117279343,
+            -3.0277920002879273
+          ]
+        }
+      },
+      {
+        "origin": "2019-09-13",
+        "history_start": "2015-08-21",
+        "history_end": "2019-09-12",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.655574728523673,
+            -2.1964903552405897
+          ],
+          "0.025": [
+            -2.126798705526668,
+            -2.5214852720580447
+          ],
+          "0.01": [
+            -2.604300496447592,
+            -2.906463235291388
+          ]
+        }
+      },
+      {
+        "origin": "2019-10-15",
+        "history_start": "2015-09-21",
+        "history_end": "2019-10-14",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6651151420984165,
+            -2.1723531026372154
+          ],
+          "0.025": [
+            -2.085304553376214,
+            -2.478769468305172
+          ],
+          "0.01": [
+            -2.5094171371824685,
+            -2.8713218876352267
+          ]
+        }
+      },
+      {
+        "origin": "2019-11-14",
+        "history_start": "2015-10-21",
+        "history_end": "2019-11-13",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6345671704520963,
+            -2.1483951062056805
+          ],
+          "0.025": [
+            -2.0660271842878672,
+            -2.456615547702779
+          ],
+          "0.01": [
+            -2.493121587135978,
+            -2.8474999562600622
+          ]
+        }
+      },
+      {
+        "origin": "2019-12-12",
+        "history_start": "2015-11-23",
+        "history_end": "2019-12-11",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6568620999238846,
+            -2.1580344583023727
+          ],
+          "0.025": [
+            -2.084576932087647,
+            -2.46079084358715
+          ],
+          "0.01": [
+            -2.51138551221809,
+            -2.860492521279474
+          ]
+        }
+      },
+      {
+        "origin": "2020-01-10",
+        "history_start": "2015-12-22",
+        "history_end": "2020-01-09",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.706150641263468,
+            -2.174679562977028
+          ],
+          "0.025": [
+            -2.075657581047869,
+            -2.4801297685966617
+          ],
+          "0.01": [
+            -2.508485059292309,
+            -2.848117726306351
+          ]
+        }
+      },
+      {
+        "origin": "2020-02-06",
+        "history_start": "2016-01-20",
+        "history_end": "2020-02-05",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6960058577878172,
+            -2.193841247857119
+          ],
+          "0.025": [
+            -2.1070860758624144,
+            -2.5187495189338427
+          ],
+          "0.01": [
+            -2.568571739868284,
+            -2.894155312250399
+          ]
+        }
+      },
+      {
+        "origin": "2020-03-06",
+        "history_start": "2016-02-18",
+        "history_end": "2020-03-05",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.7154223138109665,
+            -2.1968650406924497
+          ],
+          "0.025": [
+            -2.135113729866496,
+            -2.4895556820129747
+          ],
+          "0.01": [
+            -2.5540231316294433,
+            -2.8167520776662736
+          ]
+        }
+      },
+      {
+        "origin": "2020-04-08",
+        "history_start": "2016-03-18",
+        "history_end": "2020-04-07",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6782828485096224,
+            -2.21117578479352
+          ],
+          "0.025": [
+            -2.133267194414967,
+            -2.504252660067183
+          ],
+          "0.01": [
+            -2.5692294471036097,
+            -2.8226356108408845
+          ]
+        }
+      },
+      {
+        "origin": "2020-05-11",
+        "history_start": "2016-04-22",
+        "history_end": "2020-05-08",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6861027617614703,
+            -2.2011150600131932
+          ],
+          "0.025": [
+            -2.1396219771416356,
+            -2.4969741329783286
+          ],
+          "0.01": [
+            -2.5344970548503425,
+            -2.8180970938318297
+          ]
+        }
+      },
+      {
+        "origin": "2020-06-09",
+        "history_start": "2016-05-20",
+        "history_end": "2020-06-08",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6412163608931831,
+            -2.200952501317575
+          ],
+          "0.025": [
+            -2.1309647588737297,
+            -2.507817007493443
+          ],
+          "0.01": [
+            -2.518989573245502,
+            -2.826994353597203
+          ]
+        }
+      },
+      {
+        "origin": "2020-07-07",
+        "history_start": "2016-06-17",
+        "history_end": "2020-07-06",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6611188087613051,
+            -2.1973004508528065
+          ],
+          "0.025": [
+            -2.110728910205578,
+            -2.4991053467064863
+          ],
+          "0.01": [
+            -2.530622166503926,
+            -2.8359107883295374
+          ]
+        }
+      },
+      {
+        "origin": "2020-08-04",
+        "history_start": "2016-07-18",
+        "history_end": "2020-08-03",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6894999543189702,
+            -2.1815719665058064
+          ],
+          "0.025": [
+            -2.0781018745584543,
+            -2.482031086259962
+          ],
+          "0.01": [
+            -2.5162086781973425,
+            -2.8242227105594506
+          ]
+        }
+      },
+      {
+        "origin": "2020-09-01",
+        "history_start": "2016-08-16",
+        "history_end": "2020-08-31",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6581681991583945,
+            -2.245526685163517
+          ],
+          "0.025": [
+            -2.092989796615458,
+            -2.623797275734817
+          ],
+          "0.01": [
+            -2.5550880009334485,
+            -3.1720476197471323
+          ]
+        }
+      },
+      {
+        "origin": "2020-09-29",
+        "history_start": "2016-09-15",
+        "history_end": "2020-09-28",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6821322830765157,
+            -2.2632968884420084
+          ],
+          "0.025": [
+            -2.0828270505458697,
+            -2.6466777257332246
+          ],
+          "0.01": [
+            -2.591851426627377,
+            -3.175764313188084
+          ]
+        }
+      },
+      {
+        "origin": "2020-10-28",
+        "history_start": "2016-10-17",
+        "history_end": "2020-10-27",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6999974698698204,
+            -2.289194215046092
+          ],
+          "0.025": [
+            -2.0850967945997745,
+            -2.7015337382410953
+          ],
+          "0.01": [
+            -2.569986929333086,
+            -3.303452958592159
+          ]
+        }
+      },
+      {
+        "origin": "2020-11-25",
+        "history_start": "2016-11-15",
+        "history_end": "2020-11-24",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6962564950494854,
+            -2.3171379541180523
+          ],
+          "0.025": [
+            -2.1112607770691616,
+            -2.744460028719809
+          ],
+          "0.01": [
+            -2.6510996335533865,
+            -3.3416119453036663
+          ]
+        }
+      },
+      {
+        "origin": "2020-12-24",
+        "history_start": "2016-12-13",
+        "history_end": "2020-12-23",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6900204380616757,
+            -2.3882499286055068
+          ],
+          "0.025": [
+            -2.1065567425790235,
+            -2.8882710309832844
+          ],
+          "0.01": [
+            -2.7026727449296017,
+            -3.637905347896104
+          ]
+        }
+      },
+      {
+        "origin": "2021-01-22",
+        "history_start": "2017-01-10",
+        "history_end": "2021-01-21",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.7243952460225922,
+            -2.403639732433345
+          ],
+          "0.025": [
+            -2.127059505436866,
+            -2.897975893661361
+          ],
+          "0.01": [
+            -2.754565842576051,
+            -3.633220384262755
+          ]
+        }
+      },
+      {
+        "origin": "2021-02-22",
+        "history_start": "2017-02-08",
+        "history_end": "2021-02-19",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.7002449041619725,
+            -2.4003620055033057
+          ],
+          "0.025": [
+            -2.1091246715013106,
+            -2.895694613112863
+          ],
+          "0.01": [
+            -2.7026884823860025,
+            -3.657319024878503
+          ]
+        }
+      },
+      {
+        "origin": "2021-03-23",
+        "history_start": "2017-03-09",
+        "history_end": "2021-03-22",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.7024991687758866,
+            -2.4065002034803458
+          ],
+          "0.025": [
+            -2.1476629001518113,
+            -2.8885496490386453
+          ],
+          "0.01": [
+            -2.7606633133914915,
+            -3.598853301004245
+          ]
+        }
+      },
+      {
+        "origin": "2021-04-26",
+        "history_start": "2017-04-10",
+        "history_end": "2021-04-23",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.7148387906437967,
+            -2.4091391679781435
+          ],
+          "0.025": [
+            -2.151759671466078,
+            -2.8854424753530883
+          ],
+          "0.01": [
+            -2.7464614044541467,
+            -3.597890032352652
+          ]
+        }
+      },
+      {
+        "origin": "2021-05-25",
+        "history_start": "2017-05-10",
+        "history_end": "2021-05-24",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6849932953575137,
+            -2.409732265875555
+          ],
+          "0.025": [
+            -2.156227016520518,
+            -2.8883812119373173
+          ],
+          "0.01": [
+            -2.741063802051245,
+            -3.6018791131738617
+          ]
+        }
+      },
+      {
+        "origin": "2021-06-22",
+        "history_start": "2017-06-07",
+        "history_end": "2021-06-21",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6749089391709644,
+            -2.4037288074450265
+          ],
+          "0.025": [
+            -2.147346795699025,
+            -2.879941979795418
+          ],
+          "0.01": [
+            -2.7353944287357295,
+            -3.588215792980922
+          ]
+        }
+      },
+      {
+        "origin": "2021-07-20",
+        "history_start": "2017-07-06",
+        "history_end": "2021-07-19",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.7211643210862206,
+            -2.412117960638235
+          ],
+          "0.025": [
+            -2.150693022668356,
+            -2.8862800273315923
+          ],
+          "0.01": [
+            -2.7313696717511284,
+            -3.5952043907679463
+          ]
+        }
+      },
+      {
+        "origin": "2021-08-18",
+        "history_start": "2017-08-03",
+        "history_end": "2021-08-17",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.731842993305548,
+            -2.4103315418
+          ],
+          "0.025": [
+            -2.1566993554611664,
+            -2.885056509526761
+          ],
+          "0.01": [
+            -2.7323867159011788,
+            -3.5957679106505114
+          ]
+        }
+      },
+      {
+        "origin": "2021-09-17",
+        "history_start": "2017-09-04",
+        "history_end": "2021-09-16",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6780125232327296,
+            -2.401452313470522
+          ],
+          "0.025": [
+            -2.1461684125201113,
+            -2.8775945458204117
+          ],
+          "0.01": [
+            -2.719403153362677,
+            -3.5693413956282796
+          ]
+        }
+      },
+      {
+        "origin": "2021-10-18",
+        "history_start": "2017-10-03",
+        "history_end": "2021-10-14",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6808137919077737,
+            -2.3812589389126533
+          ],
+          "0.025": [
+            -2.1067644215280588,
+            -2.8490880549206326
+          ],
+          "0.01": [
+            -2.731176763752527,
+            -3.558308794817296
+          ]
+        }
+      },
+      {
+        "origin": "2021-11-16",
+        "history_start": "2017-11-01",
+        "history_end": "2021-11-15",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6786710525185606,
+            -2.3794896794587483
+          ],
+          "0.025": [
+            -2.096105285307966,
+            -2.838093031172652
+          ],
+          "0.01": [
+            -2.726116890498236,
+            -3.5439090173227057
+          ]
+        }
+      },
+      {
+        "origin": "2021-12-15",
+        "history_start": "2017-11-29",
+        "history_end": "2021-12-14",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6778426292540198,
+            -2.37943975331684
+          ],
+          "0.025": [
+            -2.0895528985639285,
+            -2.843966173878231
+          ],
+          "0.01": [
+            -2.6863473170677317,
+            -3.5483467081703837
+          ]
+        }
+      },
+      {
+        "origin": "2022-01-12",
+        "history_start": "2017-12-28",
+        "history_end": "2022-01-11",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.6942282132890754,
+            -2.3869757957744935
+          ],
+          "0.025": [
+            -2.106060166154319,
+            -2.8534038619842015
+          ],
+          "0.01": [
+            -2.7027225021893795,
+            -3.557639870189203
+          ]
+        }
+      },
+      {
+        "origin": "2022-02-10",
+        "history_start": "2018-01-25",
+        "history_end": "2022-02-09",
+        "residual_count": 999,
+        "residual_pairs": {
+          "0.05": [
+            -1.706208602660337,
+            -2.39395272911162
+          ],
+          "0.025": [
+            -2.1509394799099772,
+            -2.848216172119183
+          ],
+          "0.01": [
+            -2.7091616168591313,
+            -3.5399590792354503
+          ]
+        }
+      }
+    ],
+    "fhs_errors": []
+  },
+  "es_caviar": {
+    "0.05": {
+      "alpha": 0.05,
+      "fit_n": 1000,
+      "seed": 0,
+      "candidates": [
+        {
+          "start": 0,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1506.4389207881613,
+          "nit": 505,
+          "nfev": 859,
+          "parameters": [
+            -0.06745849816149213,
+            0.8087664201986009,
+            -0.30219704115806845,
+            -0.9064325723847325
+          ]
+        },
+        {
+          "start": 1,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1506.4388828988117,
+          "nit": 341,
+          "nfev": 579,
+          "parameters": [
+            -0.06748780349858849,
+            0.8087406342508683,
+            -0.3022173308067639,
+            -0.9066393612627139
+          ]
+        },
+        {
+          "start": 2,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1506.4388829057084,
+          "nit": 490,
+          "nfev": 830,
+          "parameters": [
+            -0.06748551272964237,
+            0.8087433321109576,
+            -0.30221474171079016,
+            -0.9066282200342796
+          ]
+        },
+        {
+          "start": 3,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1506.438882900487,
+          "nit": 463,
+          "nfev": 777,
+          "parameters": [
+            -0.06748634946000684,
+            0.8087423467640567,
+            -0.30221568734085047,
+            -0.9066325247586802
+          ]
+        },
+        {
+          "start": 4,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1506.4388842499297,
+          "nit": 279,
+          "nfev": 471,
+          "parameters": [
+            -0.06745776107284496,
+            0.8087760205696928,
+            -0.30218336861404194,
+            -0.9065262453513419
+          ]
+        },
+        {
+          "start": 5,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1506.4388830978241,
+          "nit": 340,
+          "nfev": 572,
+          "parameters": [
+            -0.06747727095018666,
+            0.8087530398679055,
+            -0.3022054248032875,
+            -0.9066344531757262
+          ]
+        },
+        {
+          "start": 6,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1506.4388828971728,
+          "nit": 494,
+          "nfev": 830,
+          "parameters": [
+            -0.06748685476004432,
+            0.8087417516491058,
+            -0.3022162584352689,
+            -0.9066396166350081
+          ]
+        },
+        {
+          "start": 7,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1506.4388828981791,
+          "nit": 388,
+          "nfev": 661,
+          "parameters": [
+            -0.06748641120218316,
+            0.8087422740958434,
+            -0.30221575705807757,
+            -0.9066447874368424
+          ]
+        },
+        {
+          "start": 8,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1506.4388828971546,
+          "nit": 334,
+          "nfev": 573,
+          "parameters": [
+            -0.06748736834183737,
+            0.8087411469254788,
+            -0.3022168385396376,
+            -0.9066418154982548
+          ]
+        },
+        {
+          "start": 9,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1506.4388828963624,
+          "nit": 327,
+          "nfev": 538,
+          "parameters": [
+            -0.06748742997444912,
+            0.8087410741839034,
+            -0.30221690860298,
+            -0.9066465448530057
+          ]
+        },
+        {
+          "start": 10,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1506.439492130072,
+          "nit": 274,
+          "nfev": 476,
+          "parameters": [
+            -0.06707987990522192,
+            0.80922146125431,
+            -0.3017554916225078,
+            -0.9019786637614977
+          ]
+        },
+        {
+          "start": 11,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1506.4388849857041,
+          "nit": 562,
+          "nfev": 955,
+          "parameters": [
+            -0.06748435519471647,
+            0.8087442014876938,
+            -0.3022141596668455,
+            -0.9066250204963331
+          ]
+        },
+        {
+          "start": 12,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1506.4388926298752,
+          "nit": 286,
+          "nfev": 486,
+          "parameters": [
+            -0.06740866023663361,
+            0.8088338652940846,
+            -0.3021278410447084,
+            -0.9062451944237433
+          ]
+        },
+        {
+          "start": 13,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1506.4388829022491,
+          "nit": 308,
+          "nfev": 530,
+          "parameters": [
+            -0.06748762952957081,
+            0.808740839097631,
+            -0.30221713425269287,
+            -0.9066574769119915
+          ]
+        },
+        {
+          "start": 14,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1506.4388831244114,
+          "nit": 557,
+          "nfev": 941,
+          "parameters": [
+            -0.06748734013666338,
+            0.8087412374352276,
+            -0.3022166513427653,
+            -0.9066511323526946
+          ]
+        },
+        {
+          "start": 15,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1506.4388829447544,
+          "nit": 216,
+          "nfev": 380,
+          "parameters": [
+            -0.06748179613117844,
+            0.8087477099066702,
+            -0.30221054021963334,
+            -0.9066141139062662
+          ]
+        },
+        {
+          "start": 16,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1506.4388828964804,
+          "nit": 611,
+          "nfev": 1012,
+          "parameters": [
+            -0.06748714287829985,
+            0.8087414123361669,
+            -0.30221658404400065,
+            -0.9066431040281415
+          ]
+        },
+        {
+          "start": 17,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1506.438885743702,
+          "nit": 316,
+          "nfev": 535,
+          "parameters": [
+            -0.06751618185280894,
+            0.8087072118323069,
+            -0.3022494036278275,
+            -0.9069626240273783
+          ]
+        },
+        {
+          "start": 18,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1506.4388828981328,
+          "nit": 535,
+          "nfev": 893,
+          "parameters": [
+            -0.06748646229594135,
+            0.8087422139692149,
+            -0.30221581467003844,
+            -0.9066446486334473
+          ]
+        },
+        {
+          "start": 19,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1506.4389016806317,
+          "nit": 336,
+          "nfev": 572,
+          "parameters": [
+            -0.06743364804425506,
+            0.8088044257711562,
+            -0.3021561036567044,
+            -0.907001776303064
+          ]
+        },
+        {
+          "start": 20,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1506.4388907233692,
+          "nit": 192,
+          "nfev": 334,
+          "parameters": [
+            -0.06748005245548003,
+            0.8087497628988989,
+            -0.3022085678412196,
+            -0.9070454218495726
+          ]
+        },
+        {
+          "start": 21,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1506.4388828966598,
+          "nit": 405,
+          "nfev": 693,
+          "parameters": [
+            -0.06748773393016612,
+            0.8087407161834907,
+            -0.3022172521653179,
+            -0.9066450861215372
+          ]
+        },
+        {
+          "start": 22,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1506.438882898192,
+          "nit": 468,
+          "nfev": 796,
+          "parameters": [
+            -0.0674883443760768,
+            0.8087399972679133,
+            -0.30221794199189606,
+            -0.906648624306303
+          ]
+        },
+        {
+          "start": 23,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1506.4388830612631,
+          "nit": 767,
+          "nfev": 1285,
+          "parameters": [
+            -0.06748703484324785,
+            0.8087415808868341,
+            -0.30221634997643676,
+            -0.9066504190633878
+          ]
+        },
+        {
+          "start": 24,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1506.4388828963897,
+          "nit": 563,
+          "nfev": 942,
+          "parameters": [
+            -0.06748700988487179,
+            0.8087415689839301,
+            -0.3022164337387747,
+            -0.9066446745500167
+          ]
+        },
+        {
+          "start": 25,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1506.4388829213603,
+          "nit": 312,
+          "nfev": 520,
+          "parameters": [
+            -0.06748905524997312,
+            0.8087391609296293,
+            -0.30221874296261375,
+            -0.9066322517631102
+          ]
+        },
+        {
+          "start": 26,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1506.4388828963213,
+          "nit": 355,
+          "nfev": 595,
+          "parameters": [
+            -0.06748745744128805,
+            0.8087410418567209,
+            -0.30221693959548923,
+            -0.9066455452681825
+          ]
+        },
+        {
+          "start": 27,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1506.438882899099,
+          "nit": 344,
+          "nfev": 579,
+          "parameters": [
+            -0.06748730868547481,
+            0.8087412173019468,
+            -0.30221677068441966,
+            -0.9066393832846491
+          ]
+        },
+        {
+          "start": 28,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1506.438882898246,
+          "nit": 638,
+          "nfev": 1081,
+          "parameters": [
+            -0.06748820319450471,
+            0.8087401635046159,
+            -0.3022177824447787,
+            -0.9066472641161951
+          ]
+        },
+        {
+          "start": 29,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1506.4388831496053,
+          "nit": 485,
+          "nfev": 821,
+          "parameters": [
+            -0.06748964713120886,
+            0.8087384627960957,
+            -0.30221941473505387,
+            -0.9065777182695742
+          ]
+        }
+      ],
+      "selected_start": 26,
+      "q0": -1.0411454812153536,
+      "status": "complete",
+      "warnings": [],
+      "parameters": [
+        -0.06748745744128805,
+        0.8087410418567209,
+        -0.30221693959548923,
+        -0.9066455452681825
+      ],
+      "history_start": "2000-01-03",
+      "history_end": "2004-01-14"
+    },
+    "0.025": {
+      "alpha": 0.025,
+      "fit_n": 1000,
+      "seed": 0,
+      "candidates": [
+        {
+          "start": 0,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1674.6197562651464,
+          "nit": 671,
+          "nfev": 1127,
+          "parameters": [
+            -0.12706714885645576,
+            0.7872981987139578,
+            -0.3687649467270143,
+            -1.1581620491258113
+          ]
+        },
+        {
+          "start": 1,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1674.6197562430891,
+          "nit": 355,
+          "nfev": 588,
+          "parameters": [
+            -0.12706723173100176,
+            0.7872980441447454,
+            -0.36876521470127455,
+            -1.158174513123841
+          ]
+        },
+        {
+          "start": 2,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1674.619765514837,
+          "nit": 345,
+          "nfev": 581,
+          "parameters": [
+            -0.12711629468012875,
+            0.7872071731090018,
+            -0.3689224520257698,
+            -1.1580107990402146
+          ]
+        },
+        {
+          "start": 3,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1738.0087107615088,
+          "nit": 620,
+          "nfev": 1051,
+          "parameters": [
+            -0.03850064938186014,
+            0.9259028415883706,
+            -0.12920346707155264,
+            -0.5013327287434709
+          ]
+        },
+        {
+          "start": 4,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1674.619756240697,
+          "nit": 373,
+          "nfev": 625,
+          "parameters": [
+            -0.1270672219477315,
+            0.7872980622798103,
+            -0.3687651832905311,
+            -1.1581706750869518
+          ]
+        },
+        {
+          "start": 5,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1674.6197562394727,
+          "nit": 389,
+          "nfev": 650,
+          "parameters": [
+            -0.12706723286395066,
+            0.7872980420494546,
+            -0.3687652183218508,
+            -1.1581658366487853
+          ]
+        },
+        {
+          "start": 6,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1674.619895634094,
+          "nit": 476,
+          "nfev": 804,
+          "parameters": [
+            -0.12704064714962005,
+            0.7873472796596506,
+            -0.3686800185294782,
+            -1.160408355077207
+          ]
+        },
+        {
+          "start": 7,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1674.6197562388527,
+          "nit": 472,
+          "nfev": 779,
+          "parameters": [
+            -0.12706715668363394,
+            0.7872981831655561,
+            -0.3687649741032333,
+            -1.1581630667705674
+          ]
+        },
+        {
+          "start": 8,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1674.6197601038648,
+          "nit": 226,
+          "nfev": 386,
+          "parameters": [
+            -0.12703769504070292,
+            0.7873527573271043,
+            -0.3686705289173796,
+            -1.158084592453029
+          ]
+        },
+        {
+          "start": 9,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1674.6197562419784,
+          "nit": 605,
+          "nfev": 1009,
+          "parameters": [
+            -0.1270675148682191,
+            0.7872975197516977,
+            -0.36876612205912884,
+            -1.1581615558010065
+          ]
+        },
+        {
+          "start": 10,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1674.6197562387329,
+          "nit": 420,
+          "nfev": 701,
+          "parameters": [
+            -0.1270671521500491,
+            0.7872981915592472,
+            -0.36876495958070515,
+            -1.158163382994848
+          ]
+        },
+        {
+          "start": 11,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1674.6197562392797,
+          "nit": 445,
+          "nfev": 730,
+          "parameters": [
+            -0.12706732284431033,
+            0.7872978753799305,
+            -0.3687655067260319,
+            -1.1581648732433263
+          ]
+        },
+        {
+          "start": 12,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1674.6197562387192,
+          "nit": 330,
+          "nfev": 549,
+          "parameters": [
+            -0.12706707349576662,
+            0.78729833724932,
+            -0.3687647074656383,
+            -1.1581631766569247
+          ]
+        },
+        {
+          "start": 13,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1674.6197562391058,
+          "nit": 622,
+          "nfev": 1041,
+          "parameters": [
+            -0.1270668113322748,
+            0.7872988228516837,
+            -0.36876386713535525,
+            -1.158162465125769
+          ]
+        },
+        {
+          "start": 14,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1674.671076259031,
+          "nit": 329,
+          "nfev": 561,
+          "parameters": [
+            -0.1275392839514608,
+            0.7873313889198226,
+            -0.3672309277425555,
+            -1.1454661461391482
+          ]
+        },
+        {
+          "start": 15,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1674.6197562390641,
+          "nit": 277,
+          "nfev": 458,
+          "parameters": [
+            -0.12706709547902129,
+            0.7872982965232556,
+            -0.3687647779528517,
+            -1.1581658680394733
+          ]
+        },
+        {
+          "start": 16,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1674.6197562391426,
+          "nit": 495,
+          "nfev": 834,
+          "parameters": [
+            -0.1270669720427734,
+            0.7872985251709999,
+            -0.368764382262476,
+            -1.1581652061020573
+          ]
+        },
+        {
+          "start": 17,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1674.619756262433,
+          "nit": 350,
+          "nfev": 589,
+          "parameters": [
+            -0.12706861495689276,
+            0.7872954822365362,
+            -0.36876964793142153,
+            -1.1581783548170468
+          ]
+        },
+        {
+          "start": 18,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1674.6197573995037,
+          "nit": 748,
+          "nfev": 1227,
+          "parameters": [
+            -0.12706668660616754,
+            0.7872990040359957,
+            -0.3687636346748855,
+            -1.158148788298134
+          ]
+        },
+        {
+          "start": 19,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1674.619756238941,
+          "nit": 346,
+          "nfev": 574,
+          "parameters": [
+            -0.1270672374478343,
+            0.7872980335666708,
+            -0.36876523298287067,
+            -1.1581640566064455
+          ]
+        },
+        {
+          "start": 20,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1674.619939468406,
+          "nit": 697,
+          "nfev": 1182,
+          "parameters": [
+            -0.1270923492716142,
+            0.7872515279837011,
+            -0.3688457037441203,
+            -1.1555963670960407
+          ]
+        },
+        {
+          "start": 21,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1674.6197744797687,
+          "nit": 217,
+          "nfev": 378,
+          "parameters": [
+            -0.12706368800862666,
+            0.7873046082033288,
+            -0.36875385545778605,
+            -1.1573727858622422
+          ]
+        },
+        {
+          "start": 22,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1674.6197562394218,
+          "nit": 476,
+          "nfev": 784,
+          "parameters": [
+            -0.12706702714653562,
+            0.7872984231099194,
+            -0.36876455888628135,
+            -1.1581664459510133
+          ]
+        },
+        {
+          "start": 23,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1674.6197562391342,
+          "nit": 406,
+          "nfev": 677,
+          "parameters": [
+            -0.12706709703823715,
+            0.7872982936437233,
+            -0.3687647829310775,
+            -1.158164979692435
+          ]
+        },
+        {
+          "start": 24,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1674.6197569705967,
+          "nit": 590,
+          "nfev": 986,
+          "parameters": [
+            -0.1270631288914044,
+            0.7873056565470571,
+            -0.36875202071406255,
+            -1.1581839287554891
+          ]
+        },
+        {
+          "start": 25,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1674.619785664116,
+          "nit": 383,
+          "nfev": 645,
+          "parameters": [
+            -0.12713301366624052,
+            0.7871762108990537,
+            -0.3689760205936631,
+            -1.1573498113507656
+          ]
+        },
+        {
+          "start": 26,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1674.6197562403668,
+          "nit": 402,
+          "nfev": 668,
+          "parameters": [
+            -0.12706653218065686,
+            0.7872993399248105,
+            -0.3687629723411329,
+            -1.158160864201497
+          ]
+        },
+        {
+          "start": 27,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1674.6197562964335,
+          "nit": 241,
+          "nfev": 413,
+          "parameters": [
+            -0.12706404922078546,
+            0.7873039391327064,
+            -0.36875501350904727,
+            -1.1581942256783364
+          ]
+        },
+        {
+          "start": 28,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1674.6197562404668,
+          "nit": 453,
+          "nfev": 757,
+          "parameters": [
+            -0.1270666843760545,
+            0.787299057984536,
+            -0.36876346028221874,
+            -1.158159982383102
+          ]
+        },
+        {
+          "start": 29,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1749.5324796867294,
+          "nit": 650,
+          "nfev": 1111,
+          "parameters": [
+            -0.01736648659126152,
+            0.8991148316478017,
+            -0.25083698063314075,
+            -0.3871668867813457
+          ]
+        }
+      ],
+      "selected_start": 12,
+      "q0": -1.524432758121184,
+      "status": "complete",
+      "warnings": [],
+      "parameters": [
+        -0.12706707349576662,
+        0.78729833724932,
+        -0.3687647074656383,
+        -1.1581631766569247
+      ],
+      "history_start": "2000-01-03",
+      "history_end": "2004-01-14"
+    },
+    "0.01": {
+      "alpha": 0.01,
+      "fit_n": 1000,
+      "seed": 0,
+      "candidates": [
+        {
+          "start": 0,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1926.3053125796528,
+          "nit": 725,
+          "nfev": 1215,
+          "parameters": [
+            -0.10399258151878688,
+            0.7940767520957546,
+            -0.5421070016310259,
+            -0.8672559471325898
+          ]
+        },
+        {
+          "start": 1,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1915.5486943717794,
+          "nit": 396,
+          "nfev": 654,
+          "parameters": [
+            -0.14712107983234793,
+            0.761186169241197,
+            -0.5829371435672628,
+            -0.9912758184318068
+          ]
+        },
+        {
+          "start": 2,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1915.548694369899,
+          "nit": 469,
+          "nfev": 781,
+          "parameters": [
+            -0.14712107451119744,
+            0.761186175117806,
+            -0.5829371367018378,
+            -0.9912811112707349
+          ]
+        },
+        {
+          "start": 3,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 2028.6628904488198,
+          "nit": 231,
+          "nfev": 402,
+          "parameters": [
+            -0.03021267580436642,
+            0.931131081632691,
+            -0.1778991264962994,
+            -0.20720183850468016
+          ]
+        },
+        {
+          "start": 4,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1915.5486943727856,
+          "nit": 417,
+          "nfev": 685,
+          "parameters": [
+            -0.14712141993129818,
+            0.7611857927624365,
+            -0.5829375890831197,
+            -0.9912712128094123
+          ]
+        },
+        {
+          "start": 5,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1915.6778296814732,
+          "nit": 304,
+          "nfev": 530,
+          "parameters": [
+            -0.15465540512207254,
+            0.7528479244868433,
+            -0.5927809704220721,
+            -0.9437036880487029
+          ]
+        },
+        {
+          "start": 6,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1996.0732638528252,
+          "nit": 802,
+          "nfev": 1346,
+          "parameters": [
+            -0.11602260524505098,
+            0.7752073760316238,
+            -0.4526517751493333,
+            0.2189714136681876
+          ]
+        },
+        {
+          "start": 7,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1915.5492342998082,
+          "nit": 746,
+          "nfev": 1236,
+          "parameters": [
+            -0.14709074454000903,
+            0.7612241141600955,
+            -0.5828578726091793,
+            -0.9925565522980199
+          ]
+        },
+        {
+          "start": 8,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1915.5486943699448,
+          "nit": 414,
+          "nfev": 691,
+          "parameters": [
+            -0.14712106644309336,
+            0.7611861840482572,
+            -0.582937126137714,
+            -0.9912799185596367
+          ]
+        },
+        {
+          "start": 9,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 2007.007923259565,
+          "nit": 272,
+          "nfev": 470,
+          "parameters": [
+            -0.08695283022195585,
+            0.9100725654273394,
+            -0.12767062623392053,
+            -0.18192327800190466
+          ]
+        },
+        {
+          "start": 10,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1915.5486966974736,
+          "nit": 447,
+          "nfev": 741,
+          "parameters": [
+            -0.14712678152667802,
+            0.7611799003485665,
+            -0.5829444377957584,
+            -0.9912010632587669
+          ]
+        },
+        {
+          "start": 11,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1919.9698541516843,
+          "nit": 565,
+          "nfev": 954,
+          "parameters": [
+            -0.16763764532317316,
+            0.7718567770478187,
+            -0.46237080887257304,
+            -0.7100469206469858
+          ]
+        },
+        {
+          "start": 12,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1915.5486943833932,
+          "nit": 362,
+          "nfev": 603,
+          "parameters": [
+            -0.14712072291809772,
+            0.7611865643187127,
+            -0.5829366761853415,
+            -0.9912630110732257
+          ]
+        },
+        {
+          "start": 13,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1915.5486943699448,
+          "nit": 529,
+          "nfev": 856,
+          "parameters": [
+            -0.1471208793904279,
+            0.761186391104731,
+            -0.5829368811414929,
+            -0.9912808500916459
+          ]
+        },
+        {
+          "start": 14,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1915.5486943843553,
+          "nit": 598,
+          "nfev": 982,
+          "parameters": [
+            -0.1471218986837784,
+            0.7611852628121395,
+            -0.5829382161466153,
+            -0.991296253017381
+          ]
+        },
+        {
+          "start": 15,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1915.5486944314675,
+          "nit": 615,
+          "nfev": 1022,
+          "parameters": [
+            -0.1471200898762593,
+            0.7611872650532572,
+            -0.5829358470515509,
+            -0.991323310908582
+          ]
+        },
+        {
+          "start": 16,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1915.548694370202,
+          "nit": 348,
+          "nfev": 590,
+          "parameters": [
+            -0.1471213201861315,
+            0.7611859031742123,
+            -0.5829374584565139,
+            -0.9912804130156896
+          ]
+        },
+        {
+          "start": 17,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1915.5486943699893,
+          "nit": 536,
+          "nfev": 883,
+          "parameters": [
+            -0.1471211148656168,
+            0.7611861304477241,
+            -0.5829371895570854,
+            -0.9912812181794384
+          ]
+        },
+        {
+          "start": 18,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1915.548694369888,
+          "nit": 373,
+          "nfev": 626,
+          "parameters": [
+            -0.1471211042622076,
+            0.7611861421857105,
+            -0.5829371756660937,
+            -0.9912799468473701
+          ]
+        },
+        {
+          "start": 19,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1915.548694370029,
+          "nit": 436,
+          "nfev": 730,
+          "parameters": [
+            -0.14712112244316827,
+            0.7611861220627738,
+            -0.5829371994670186,
+            -0.9912793895566503
+          ]
+        },
+        {
+          "start": 20,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 2015.6507077017984,
+          "nit": 546,
+          "nfev": 928,
+          "parameters": [
+            -0.03188935119016838,
+            0.9325220427276693,
+            -0.18256394760996028,
+            -0.8355984408008686
+          ]
+        },
+        {
+          "start": 21,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1915.54869437035,
+          "nit": 359,
+          "nfev": 600,
+          "parameters": [
+            -0.14712114489419317,
+            0.7611860972170809,
+            -0.5829372288485855,
+            -0.9912808727026895
+          ]
+        },
+        {
+          "start": 22,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1915.5486943698893,
+          "nit": 645,
+          "nfev": 1048,
+          "parameters": [
+            -0.1471210902134717,
+            0.761186157736957,
+            -0.5829371572650932,
+            -0.9912805225100088
+          ]
+        },
+        {
+          "start": 23,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1915.548694909025,
+          "nit": 587,
+          "nfev": 989,
+          "parameters": [
+            -0.14713133718312404,
+            0.7611748180369473,
+            -0.5829505504527027,
+            -0.991235077651035
+          ]
+        },
+        {
+          "start": 24,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 2001.8616674007137,
+          "nit": 702,
+          "nfev": 1178,
+          "parameters": [
+            -0.12382799065324396,
+            0.8959821702127181,
+            -0.13974815744521307,
+            -0.9880872165532721
+          ]
+        },
+        {
+          "start": 25,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1915.5486945072662,
+          "nit": 903,
+          "nfev": 1510,
+          "parameters": [
+            -0.1471204128759931,
+            0.7611869087254186,
+            -0.5829362590917573,
+            -0.9912728086255821
+          ]
+        },
+        {
+          "start": 26,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1915.548694370091,
+          "nit": 368,
+          "nfev": 599,
+          "parameters": [
+            -0.14712085431461905,
+            0.7611864188650446,
+            -0.5829368482881974,
+            -0.9912807741578511
+          ]
+        },
+        {
+          "start": 27,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1915.5487142565328,
+          "nit": 595,
+          "nfev": 1008,
+          "parameters": [
+            -0.14713355882252804,
+            0.7611727468603695,
+            -0.5829518921208026,
+            -0.9911990428930004
+          ]
+        },
+        {
+          "start": 28,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1988.6785811377558,
+          "nit": 904,
+          "nfev": 1514,
+          "parameters": [
+            -0.09586486654276707,
+            0.8609500414901752,
+            -0.22463327110080236,
+            -0.01911964809860216
+          ]
+        },
+        {
+          "start": 29,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "objective": 1997.5291255683796,
+          "nit": 600,
+          "nfev": 1023,
+          "parameters": [
+            -0.05150623181769584,
+            0.9014069841152708,
+            -0.21471293709435252,
+            -0.12626296523333802
+          ]
+        }
+      ],
+      "selected_start": 18,
+      "q0": -1.7257195867260133,
+      "status": "complete",
+      "warnings": [],
+      "parameters": [
+        -0.1471211042622076,
+        0.7611861421857105,
+        -0.5829371756660937,
+        -0.9912799468473701
+      ],
+      "history_start": "2000-01-03",
+      "history_end": "2004-01-14"
+    }
+  },
+  "market": "NSEI",
+  "states": {
+    "gjr_garch_t|0.05": {
+      "status": "complete"
+    },
+    "fhs_gjr_garch|0.05": {
+      "status": "complete"
+    },
+    "gjr_garch_t|0.025": {
+      "status": "complete"
+    },
+    "fhs_gjr_garch|0.025": {
+      "status": "complete"
+    },
+    "gjr_garch_t|0.01": {
+      "status": "complete"
+    },
+    "fhs_gjr_garch|0.01": {
+      "status": "complete"
+    },
+    "es_caviar|0.05": {
+      "status": "complete"
+    },
+    "es_caviar|0.025": {
+      "status": "complete"
+    },
+    "es_caviar|0.01": {
+      "status": "complete"
+    }
+  },
+  "caps": [
+    {
+      "model_level": "gjr_garch_t|0.05",
+      "var_caps": 0,
+      "es_caps": 0
+    },
+    {
+      "model_level": "fhs_gjr_garch|0.05",
+      "var_caps": 0,
+      "es_caps": 0
+    },
+    {
+      "model_level": "gjr_garch_t|0.025",
+      "var_caps": 0,
+      "es_caps": 0
+    },
+    {
+      "model_level": "fhs_gjr_garch|0.025",
+      "var_caps": 0,
+      "es_caps": 0
+    },
+    {
+      "model_level": "gjr_garch_t|0.01",
+      "var_caps": 0,
+      "es_caps": 0
+    },
+    {
+      "model_level": "fhs_gjr_garch|0.01",
+      "var_caps": 0,
+      "es_caps": 0
+    },
+    {
+      "model_level": "es_caviar|0.05",
+      "var_caps": 0,
+      "es_caps": 0
+    },
+    {
+      "model_level": "es_caviar|0.025",
+      "var_caps": 0,
+      "es_caps": 0
+    },
+    {
+      "model_level": "es_caviar|0.01",
+      "var_caps": 0,
+      "es_caps": 0
+    }
+  ],
+  "seconds": 3.870406150817871,
+  "scored_days": 1772
+}
